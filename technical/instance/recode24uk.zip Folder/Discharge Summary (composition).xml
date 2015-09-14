@@ -1,0 +1,994 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<compositionResponseData xmlns:ns2="http://schemas.openehr.org/v1">
+	<meta>
+		<href>https://rest.ehrscape.com/rest/v1/composition/99517983-267f-4a14-b620-841a961b9e1e::handi.ehrscape.com::1</href>
+	</meta>
+	<composition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns2:COMPOSITION" archetype_node_id="openEHR-EHR-COMPOSITION.report.v1">
+		<ns2:name>
+			<ns2:value>Discharge Medication Summary</ns2:value>
+		</ns2:name>
+		<ns2:uid xsi:type="ns2:OBJECT_VERSION_ID">
+			<ns2:value>99517983-267f-4a14-b620-841a961b9e1e::handi.ehrscape.com::1</ns2:value>
+		</ns2:uid>
+		<ns2:archetype_details>
+			<ns2:archetype_id>
+				<ns2:value>openEHR-EHR-COMPOSITION.report.v1</ns2:value>
+			</ns2:archetype_id>
+			<ns2:template_id>
+				<ns2:value>Discharge Summary (composition)</ns2:value>
+			</ns2:template_id>
+			<ns2:rm_version>1.0.2</ns2:rm_version>
+		</ns2:archetype_details>
+		<ns2:language>
+			<ns2:terminology_id>
+				<ns2:value>ISO_639-1</ns2:value>
+			</ns2:terminology_id>
+			<ns2:code_string>en</ns2:code_string>
+		</ns2:language>
+		<ns2:territory>
+			<ns2:terminology_id>
+				<ns2:value>ISO_3166-1</ns2:value>
+			</ns2:terminology_id>
+			<ns2:code_string>GB</ns2:code_string>
+		</ns2:territory>
+		<ns2:category>
+			<ns2:value>event</ns2:value>
+			<ns2:defining_code>
+				<ns2:terminology_id>
+					<ns2:value>openehr</ns2:value>
+				</ns2:terminology_id>
+				<ns2:code_string>433</ns2:code_string>
+			</ns2:defining_code>
+		</ns2:category>
+		<ns2:composer xsi:type="ns2:PARTY_IDENTIFIED">
+			<ns2:name>Dr Shaun Jones</ns2:name>
+		</ns2:composer>
+		<ns2:context>
+			<ns2:start_time>
+				<ns2:value>2014-09-23T00:11:02.518+02:00</ns2:value>
+			</ns2:start_time>
+			<ns2:setting>
+				<ns2:value>other care</ns2:value>
+				<ns2:defining_code>
+					<ns2:terminology_id>
+						<ns2:value>openehr</ns2:value>
+					</ns2:terminology_id>
+					<ns2:code_string>238</ns2:code_string>
+				</ns2:defining_code>
+			</ns2:setting>
+			<ns2:health_care_facility>
+				<ns2:external_ref>
+					<ns2:id xsi:type="ns2:GENERIC_ID">
+						<ns2:value>999999-1</ns2:value>
+					</ns2:id>
+					<ns2:type>PARTY</ns2:type>
+				</ns2:external_ref>
+				<ns2:name>St Overhere NHS Hospitals Trust</ns2:name>
+			</ns2:health_care_facility>
+		</ns2:context>
+		<ns2:content xsi:type="ns2:SECTION" archetype_node_id="openEHR-EHR-SECTION.medication_medical_devices_rcp.v1">
+			<ns2:name>
+				<ns2:value>Medication and medical devices</ns2:value>
+			</ns2:name>
+			<ns2:archetype_details>
+				<ns2:archetype_id>
+					<ns2:value>openEHR-EHR-SECTION.medication_medical_devices_rcp.v1</ns2:value>
+				</ns2:archetype_id>
+				<ns2:rm_version>1.0.2</ns2:rm_version>
+			</ns2:archetype_details>
+			<ns2:items xsi:type="ns2:SECTION" archetype_node_id="openEHR-EHR-SECTION.current_medication_rcp.v1">
+				<ns2:name>
+					<ns2:value>Current medication</ns2:value>
+				</ns2:name>
+				<ns2:archetype_details>
+					<ns2:archetype_id>
+						<ns2:value>openEHR-EHR-SECTION.current_medication_rcp.v1</ns2:value>
+					</ns2:archetype_id>
+					<ns2:rm_version>1.0.2</ns2:rm_version>
+				</ns2:archetype_details>
+				<ns2:items xsi:type="ns2:EVALUATION" archetype_node_id="openEHR-EHR-EVALUATION.medication_statement_uk.v1">
+					<ns2:name>
+						<ns2:value>Medication statement</ns2:value>
+					</ns2:name>
+					<ns2:archetype_details>
+						<ns2:archetype_id>
+							<ns2:value>openEHR-EHR-EVALUATION.medication_statement_uk.v1</ns2:value>
+						</ns2:archetype_id>
+						<ns2:rm_version>1.0.2</ns2:rm_version>
+					</ns2:archetype_details>
+					<ns2:language>
+						<ns2:terminology_id>
+							<ns2:value>ISO_639-1</ns2:value>
+						</ns2:terminology_id>
+						<ns2:code_string>en</ns2:code_string>
+					</ns2:language>
+					<ns2:encoding>
+						<ns2:terminology_id>
+							<ns2:value>IANA_character-sets</ns2:value>
+						</ns2:terminology_id>
+						<ns2:code_string>UTF-8</ns2:code_string>
+					</ns2:encoding>
+					<ns2:subject xsi:type="ns2:PARTY_SELF"/>
+					<ns2:data xsi:type="ns2:ITEM_TREE" archetype_node_id="at0001">
+						<ns2:name>
+							<ns2:value>Tree</ns2:value>
+						</ns2:name>
+						<ns2:items xsi:type="ns2:CLUSTER" archetype_node_id="openEHR-EHR-CLUSTER.medication_item.v1">
+							<ns2:name>
+								<ns2:value>Medication item</ns2:value>
+							</ns2:name>
+							<ns2:archetype_details>
+								<ns2:archetype_id>
+									<ns2:value>openEHR-EHR-CLUSTER.medication_item.v1</ns2:value>
+								</ns2:archetype_id>
+								<ns2:rm_version>1.0.2</ns2:rm_version>
+							</ns2:archetype_details>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0001">
+								<ns2:name>
+									<ns2:value>Medication name</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_CODED_TEXT">
+									<ns2:value>Simvastatin</ns2:value>
+									<ns2:defining_code>
+										<ns2:terminology_id>
+											<ns2:value>SNOMED-CT</ns2:value>
+										</ns2:terminology_id>
+										<ns2:code_string>96304005</ns2:code_string>
+									</ns2:defining_code>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0002">
+								<ns2:name>
+									<ns2:value>Route</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_CODED_TEXT">
+									<ns2:value>44611018</ns2:value>
+									<ns2:defining_code>
+										<ns2:terminology_id>
+											<ns2:value>SNOMED-CT</ns2:value>
+										</ns2:terminology_id>
+										<ns2:code_string>Oral route</ns2:code_string>
+									</ns2:defining_code>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0020">
+								<ns2:name>
+									<ns2:value>Dose amount description</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_TEXT">
+									<ns2:value>10mg</ns2:value>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0021">
+								<ns2:name>
+									<ns2:value>Dose timing description</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_TEXT">
+									<ns2:value>at night</ns2:value>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0033">
+								<ns2:name>
+									<ns2:value>Parsable dose directions</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_PARSABLE">
+									<ns2:value>10mg n</ns2:value>
+									<ns2:formalism>text/plain</ns2:formalism>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0005">
+								<ns2:name xsi:type="ns2:DV_CODED_TEXT">
+									<ns2:value>Additional instruction</ns2:value>
+									<ns2:defining_code>
+										<ns2:terminology_id>
+											<ns2:value>local</ns2:value>
+										</ns2:terminology_id>
+										<ns2:code_string>at0005</ns2:code_string>
+									</ns2:defining_code>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_TEXT">
+									<ns2:value>for high cholesterol</ns2:value>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:CLUSTER" archetype_node_id="at0046">
+								<ns2:name>
+									<ns2:value>Course details</ns2:value>
+								</ns2:name>
+								<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0049">
+									<ns2:name>
+										<ns2:value>Course status</ns2:value>
+									</ns2:name>
+									<ns2:value xsi:type="ns2:DV_CODED_TEXT">
+										<ns2:value>Active</ns2:value>
+										<ns2:defining_code>
+											<ns2:terminology_id>
+												<ns2:value>local</ns2:value>
+											</ns2:terminology_id>
+											<ns2:code_string>at0050</ns2:code_string>
+										</ns2:defining_code>
+									</ns2:value>
+								</ns2:items>
+								<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0039">
+									<ns2:name>
+										<ns2:value>Start datetime</ns2:value>
+									</ns2:name>
+									<ns2:value xsi:type="ns2:DV_DATE_TIME">
+										<ns2:value>2002-10-02T00:11:02.520+02:00</ns2:value>
+									</ns2:value>
+								</ns2:items>
+								<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0047">
+									<ns2:name>
+										<ns2:value>Indication</ns2:value>
+									</ns2:name>
+									<ns2:value xsi:type="ns2:DV_CODED_TEXT">
+										<ns2:value>hypercholesterolaemia</ns2:value>
+										<ns2:defining_code>
+											<ns2:terminology_id>
+												<ns2:value>SNOMED-CT</ns2:value>
+											</ns2:terminology_id>
+											<ns2:code_string>13644009</ns2:code_string>
+										</ns2:defining_code>
+									</ns2:value>
+								</ns2:items>
+							</ns2:items>
+						</ns2:items>
+						<ns2:items xsi:type="ns2:CLUSTER" archetype_node_id="openEHR-EHR-CLUSTER.medication_event_summary.v1">
+							<ns2:name>
+								<ns2:value>Medication event summary</ns2:value>
+							</ns2:name>
+							<ns2:archetype_details>
+								<ns2:archetype_id>
+									<ns2:value>openEHR-EHR-CLUSTER.medication_event_summary.v1</ns2:value>
+								</ns2:archetype_id>
+								<ns2:rm_version>1.0.2</ns2:rm_version>
+							</ns2:archetype_details>
+							<ns2:items xsi:type="ns2:CLUSTER" archetype_node_id="at0070">
+								<ns2:name>
+									<ns2:value>First authorised</ns2:value>
+								</ns2:name>
+								<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0047">
+									<ns2:name xsi:type="ns2:DV_CODED_TEXT">
+										<ns2:value>Date first authorised</ns2:value>
+										<ns2:defining_code>
+											<ns2:terminology_id>
+												<ns2:value>local</ns2:value>
+											</ns2:terminology_id>
+											<ns2:code_string>at0061</ns2:code_string>
+										</ns2:defining_code>
+									</ns2:name>
+									<ns2:value xsi:type="ns2:DV_DATE_TIME">
+										<ns2:value>2014-09-10T19:11:44.684+02:00</ns2:value>
+									</ns2:value>
+								</ns2:items>
+							</ns2:items>
+						</ns2:items>
+						<ns2:items xsi:type="ns2:CLUSTER" archetype_node_id="openEHR-EHR-CLUSTER.medication_reconciliation_admit_uk.v1">
+							<ns2:name>
+								<ns2:value>Medication reconciliation</ns2:value>
+							</ns2:name>
+							<ns2:archetype_details>
+								<ns2:archetype_id>
+									<ns2:value>openEHR-EHR-CLUSTER.medication_reconciliation_admit_uk.v1</ns2:value>
+								</ns2:archetype_id>
+								<ns2:rm_version>1.0.2</ns2:rm_version>
+							</ns2:archetype_details>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0003">
+								<ns2:name>
+									<ns2:value>Reconciliation action</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_CODED_TEXT">
+									<ns2:value>Add medication</ns2:value>
+									<ns2:defining_code>
+										<ns2:terminology_id>
+											<ns2:value>local</ns2:value>
+										</ns2:terminology_id>
+										<ns2:code_string>at0023</ns2:code_string>
+									</ns2:defining_code>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0006">
+								<ns2:name>
+									<ns2:value>Date reconciled</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_DATE_TIME">
+									<ns2:value>2014-09-10T19:11:44.685+02:00</ns2:value>
+								</ns2:value>
+							</ns2:items>
+						</ns2:items>
+					</ns2:data>
+				</ns2:items>
+				<ns2:items xsi:type="ns2:EVALUATION" archetype_node_id="openEHR-EHR-EVALUATION.medication_statement_uk.v1">
+					<ns2:name>
+						<ns2:value>Medication statement #2</ns2:value>
+					</ns2:name>
+					<ns2:archetype_details>
+						<ns2:archetype_id>
+							<ns2:value>openEHR-EHR-EVALUATION.medication_statement_uk.v1</ns2:value>
+						</ns2:archetype_id>
+						<ns2:rm_version>1.0.2</ns2:rm_version>
+					</ns2:archetype_details>
+					<ns2:language>
+						<ns2:terminology_id>
+							<ns2:value>ISO_639-1</ns2:value>
+						</ns2:terminology_id>
+						<ns2:code_string>en</ns2:code_string>
+					</ns2:language>
+					<ns2:encoding>
+						<ns2:terminology_id>
+							<ns2:value>IANA_character-sets</ns2:value>
+						</ns2:terminology_id>
+						<ns2:code_string>UTF-8</ns2:code_string>
+					</ns2:encoding>
+					<ns2:subject xsi:type="ns2:PARTY_SELF"/>
+					<ns2:data xsi:type="ns2:ITEM_TREE" archetype_node_id="at0001">
+						<ns2:name>
+							<ns2:value>Tree</ns2:value>
+						</ns2:name>
+						<ns2:items xsi:type="ns2:CLUSTER" archetype_node_id="openEHR-EHR-CLUSTER.medication_item.v1">
+							<ns2:name>
+								<ns2:value>Medication item</ns2:value>
+							</ns2:name>
+							<ns2:archetype_details>
+								<ns2:archetype_id>
+									<ns2:value>openEHR-EHR-CLUSTER.medication_item.v1</ns2:value>
+								</ns2:archetype_id>
+								<ns2:rm_version>1.0.2</ns2:rm_version>
+							</ns2:archetype_details>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0001">
+								<ns2:name>
+									<ns2:value>Medication name</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_CODED_TEXT">
+									<ns2:value>Salbutamol 100micrograms/dose breath actuated inhaler CFC free</ns2:value>
+									<ns2:defining_code>
+										<ns2:terminology_id>
+											<ns2:value>SNOMED-CT</ns2:value>
+										</ns2:terminology_id>
+										<ns2:code_string>320151000</ns2:code_string>
+									</ns2:defining_code>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0002">
+								<ns2:name>
+									<ns2:value>Route</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_CODED_TEXT">
+									<ns2:value>inhalation</ns2:value>
+									<ns2:defining_code>
+										<ns2:terminology_id>
+											<ns2:value>SNOMED-CT</ns2:value>
+										</ns2:terminology_id>
+										<ns2:code_string>64072601000001116</ns2:code_string>
+									</ns2:defining_code>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0020">
+								<ns2:name>
+									<ns2:value>Dose amount description</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_TEXT">
+									<ns2:value>2 puffs</ns2:value>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0021">
+								<ns2:name>
+									<ns2:value>Dose timing description</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_TEXT">
+									<ns2:value>as required</ns2:value>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0033">
+								<ns2:name>
+									<ns2:value>Parsable dose directions</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_PARSABLE">
+									<ns2:value>2p prn</ns2:value>
+									<ns2:formalism>text/plain</ns2:formalism>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0005">
+								<ns2:name xsi:type="ns2:DV_CODED_TEXT">
+									<ns2:value>Additional instruction</ns2:value>
+									<ns2:defining_code>
+										<ns2:terminology_id>
+											<ns2:value>local</ns2:value>
+										</ns2:terminology_id>
+										<ns2:code_string>at0005</ns2:code_string>
+									</ns2:defining_code>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_TEXT">
+									<ns2:value>for wheeze</ns2:value>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:CLUSTER" archetype_node_id="at0046">
+								<ns2:name>
+									<ns2:value>Course details</ns2:value>
+								</ns2:name>
+								<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0049">
+									<ns2:name>
+										<ns2:value>Course status</ns2:value>
+									</ns2:name>
+									<ns2:value xsi:type="ns2:DV_CODED_TEXT">
+										<ns2:value>Active</ns2:value>
+										<ns2:defining_code>
+											<ns2:terminology_id>
+												<ns2:value>local</ns2:value>
+											</ns2:terminology_id>
+											<ns2:code_string>at0050</ns2:code_string>
+										</ns2:defining_code>
+									</ns2:value>
+								</ns2:items>
+								<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0039">
+									<ns2:name>
+										<ns2:value>Start datetime</ns2:value>
+									</ns2:name>
+									<ns2:value xsi:type="ns2:DV_DATE_TIME">
+										<ns2:value>2002-10-02T00:11:02.520+02:00</ns2:value>
+									</ns2:value>
+								</ns2:items>
+								<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0047">
+									<ns2:name>
+										<ns2:value>Indication</ns2:value>
+									</ns2:name>
+									<ns2:value xsi:type="ns2:DV_CODED_TEXT">
+										<ns2:value> Mild asthma</ns2:value>
+										<ns2:defining_code>
+											<ns2:terminology_id>
+												<ns2:value>SNOMED-CT</ns2:value>
+											</ns2:terminology_id>
+											<ns2:code_string>370218001</ns2:code_string>
+										</ns2:defining_code>
+									</ns2:value>
+								</ns2:items>
+							</ns2:items>
+						</ns2:items>
+						<ns2:items xsi:type="ns2:CLUSTER" archetype_node_id="openEHR-EHR-CLUSTER.medication_event_summary.v1">
+							<ns2:name>
+								<ns2:value>Medication event summary</ns2:value>
+							</ns2:name>
+							<ns2:archetype_details>
+								<ns2:archetype_id>
+									<ns2:value>openEHR-EHR-CLUSTER.medication_event_summary.v1</ns2:value>
+								</ns2:archetype_id>
+								<ns2:rm_version>1.0.2</ns2:rm_version>
+							</ns2:archetype_details>
+							<ns2:items xsi:type="ns2:CLUSTER" archetype_node_id="at0070">
+								<ns2:name>
+									<ns2:value>First authorised</ns2:value>
+								</ns2:name>
+								<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0047">
+									<ns2:name xsi:type="ns2:DV_CODED_TEXT">
+										<ns2:value>Date first authorised</ns2:value>
+										<ns2:defining_code>
+											<ns2:terminology_id>
+												<ns2:value>local</ns2:value>
+											</ns2:terminology_id>
+											<ns2:code_string>at0061</ns2:code_string>
+										</ns2:defining_code>
+									</ns2:name>
+									<ns2:value xsi:type="ns2:DV_DATE_TIME">
+										<ns2:value>2006-10-23T00:11:02.520+02:00</ns2:value>
+									</ns2:value>
+								</ns2:items>
+							</ns2:items>
+						</ns2:items>
+						<ns2:items xsi:type="ns2:CLUSTER" archetype_node_id="openEHR-EHR-CLUSTER.medication_reconciliation_admit_uk.v1">
+							<ns2:name>
+								<ns2:value>Medication reconciliation</ns2:value>
+							</ns2:name>
+							<ns2:archetype_details>
+								<ns2:archetype_id>
+									<ns2:value>openEHR-EHR-CLUSTER.medication_reconciliation_admit_uk.v1</ns2:value>
+								</ns2:archetype_id>
+								<ns2:rm_version>1.0.2</ns2:rm_version>
+							</ns2:archetype_details>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0003">
+								<ns2:name>
+									<ns2:value>Reconciliation action</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_CODED_TEXT">
+									<ns2:value>Continue unchanged</ns2:value>
+									<ns2:defining_code>
+										<ns2:terminology_id>
+											<ns2:value>local</ns2:value>
+										</ns2:terminology_id>
+										<ns2:code_string>at0031</ns2:code_string>
+									</ns2:defining_code>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0006">
+								<ns2:name>
+									<ns2:value>Date reconciled</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_DATE_TIME">
+									<ns2:value>2014-09-10T19:11:44.685+02:00</ns2:value>
+								</ns2:value>
+							</ns2:items>
+						</ns2:items>
+					</ns2:data>
+				</ns2:items>
+			</ns2:items>
+			<ns2:items xsi:type="ns2:SECTION" archetype_node_id="openEHR-EHR-SECTION.current_medication_rcp.v1">
+				<ns2:name>
+					<ns2:value>Discontinued GP medication</ns2:value>
+				</ns2:name>
+				<ns2:archetype_details>
+					<ns2:archetype_id>
+						<ns2:value>openEHR-EHR-SECTION.current_medication_rcp.v1</ns2:value>
+					</ns2:archetype_id>
+					<ns2:rm_version>1.0.2</ns2:rm_version>
+				</ns2:archetype_details>
+				<ns2:items xsi:type="ns2:EVALUATION" archetype_node_id="openEHR-EHR-EVALUATION.medication_statement_uk.v1">
+					<ns2:name>
+						<ns2:value>Medication statement</ns2:value>
+					</ns2:name>
+					<ns2:archetype_details>
+						<ns2:archetype_id>
+							<ns2:value>openEHR-EHR-EVALUATION.medication_statement_uk.v1</ns2:value>
+						</ns2:archetype_id>
+						<ns2:rm_version>1.0.2</ns2:rm_version>
+					</ns2:archetype_details>
+					<ns2:language>
+						<ns2:terminology_id>
+							<ns2:value>ISO_639-1</ns2:value>
+						</ns2:terminology_id>
+						<ns2:code_string>en</ns2:code_string>
+					</ns2:language>
+					<ns2:encoding>
+						<ns2:terminology_id>
+							<ns2:value>IANA_character-sets</ns2:value>
+						</ns2:terminology_id>
+						<ns2:code_string>UTF-8</ns2:code_string>
+					</ns2:encoding>
+					<ns2:subject xsi:type="ns2:PARTY_SELF"/>
+					<ns2:data xsi:type="ns2:ITEM_TREE" archetype_node_id="at0001">
+						<ns2:name>
+							<ns2:value>Tree</ns2:value>
+						</ns2:name>
+						<ns2:items xsi:type="ns2:CLUSTER" archetype_node_id="openEHR-EHR-CLUSTER.medication_item.v1">
+							<ns2:name>
+								<ns2:value>Medication item</ns2:value>
+							</ns2:name>
+							<ns2:archetype_details>
+								<ns2:archetype_id>
+									<ns2:value>openEHR-EHR-CLUSTER.medication_item.v1</ns2:value>
+								</ns2:archetype_id>
+								<ns2:rm_version>1.0.2</ns2:rm_version>
+							</ns2:archetype_details>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0001">
+								<ns2:name>
+									<ns2:value>Medication name</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_CODED_TEXT">
+									<ns2:value>Dihydrocodeine</ns2:value>
+									<ns2:defining_code>
+										<ns2:terminology_id>
+											<ns2:value>SNOMED-CT</ns2:value>
+										</ns2:terminology_id>
+										<ns2:code_string>57811004</ns2:code_string>
+									</ns2:defining_code>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0002">
+								<ns2:name>
+									<ns2:value>Route</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_CODED_TEXT">
+									<ns2:value>oral</ns2:value>
+									<ns2:defining_code>
+										<ns2:terminology_id>
+											<ns2:value>SNOMED-CT</ns2:value>
+										</ns2:terminology_id>
+										<ns2:code_string>26643006</ns2:code_string>
+									</ns2:defining_code>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0020">
+								<ns2:name>
+									<ns2:value>Dose amount description</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_TEXT">
+									<ns2:value>30mg</ns2:value>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0021">
+								<ns2:name>
+									<ns2:value>Dose timing description</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_TEXT">
+									<ns2:value>four to six hourly as required</ns2:value>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0033">
+								<ns2:name>
+									<ns2:value>Parsable dose directions</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_PARSABLE">
+									<ns2:value>30mg 4h\6h prn</ns2:value>
+									<ns2:formalism>text/plain</ns2:formalism>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0005">
+								<ns2:name xsi:type="ns2:DV_CODED_TEXT">
+									<ns2:value>Additional instruction</ns2:value>
+									<ns2:defining_code>
+										<ns2:terminology_id>
+											<ns2:value>local</ns2:value>
+										</ns2:terminology_id>
+										<ns2:code_string>at0005</ns2:code_string>
+									</ns2:defining_code>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_TEXT">
+									<ns2:value>for pain</ns2:value>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:CLUSTER" archetype_node_id="at0046">
+								<ns2:name>
+									<ns2:value>Course details</ns2:value>
+								</ns2:name>
+								<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0049">
+									<ns2:name>
+										<ns2:value>Course status</ns2:value>
+									</ns2:name>
+									<ns2:value xsi:type="ns2:DV_CODED_TEXT">
+										<ns2:value>Discontinued</ns2:value>
+										<ns2:defining_code>
+											<ns2:terminology_id>
+												<ns2:value>local</ns2:value>
+											</ns2:terminology_id>
+											<ns2:code_string>at0051</ns2:code_string>
+										</ns2:defining_code>
+									</ns2:value>
+								</ns2:items>
+								<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0039">
+									<ns2:name>
+										<ns2:value>Start datetime</ns2:value>
+									</ns2:name>
+									<ns2:value xsi:type="ns2:DV_DATE_TIME">
+										<ns2:value>2014-06-10T19:11:44.685+02:00</ns2:value>
+									</ns2:value>
+								</ns2:items>
+								<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0040">
+									<ns2:name>
+										<ns2:value>End datetime</ns2:value>
+									</ns2:name>
+									<ns2:value xsi:type="ns2:DV_DATE_TIME">
+										<ns2:value>2014-09-10T19:11:44.685+02:00</ns2:value>
+									</ns2:value>
+								</ns2:items>
+							</ns2:items>
+						</ns2:items>
+						<ns2:items xsi:type="ns2:CLUSTER" archetype_node_id="openEHR-EHR-CLUSTER.medication_event_summary.v1">
+							<ns2:name>
+								<ns2:value>Medication event summary</ns2:value>
+							</ns2:name>
+							<ns2:archetype_details>
+								<ns2:archetype_id>
+									<ns2:value>openEHR-EHR-CLUSTER.medication_event_summary.v1</ns2:value>
+								</ns2:archetype_id>
+								<ns2:rm_version>1.0.2</ns2:rm_version>
+							</ns2:archetype_details>
+							<ns2:items xsi:type="ns2:CLUSTER" archetype_node_id="at0070">
+								<ns2:name>
+									<ns2:value>Discontinued</ns2:value>
+								</ns2:name>
+								<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0047">
+									<ns2:name xsi:type="ns2:DV_CODED_TEXT">
+										<ns2:value>Date discontinued</ns2:value>
+										<ns2:defining_code>
+											<ns2:terminology_id>
+												<ns2:value>local</ns2:value>
+											</ns2:terminology_id>
+											<ns2:code_string>at0072</ns2:code_string>
+										</ns2:defining_code>
+									</ns2:name>
+									<ns2:value xsi:type="ns2:DV_DATE_TIME">
+										<ns2:value>2014-09-10T19:11:44.685+02:00</ns2:value>
+									</ns2:value>
+								</ns2:items>
+								<ns2:items xsi:type="ns2:CLUSTER" archetype_node_id="openEHR-EHR-CLUSTER.medication_event.v1">
+									<ns2:name>
+										<ns2:value>Medication event</ns2:value>
+									</ns2:name>
+									<ns2:archetype_details>
+										<ns2:archetype_id>
+											<ns2:value>openEHR-EHR-CLUSTER.medication_event.v1</ns2:value>
+										</ns2:archetype_id>
+										<ns2:rm_version>1.0.2</ns2:rm_version>
+									</ns2:archetype_details>
+									<ns2:items xsi:type="ns2:CLUSTER" archetype_node_id="at0122">
+										<ns2:name>
+											<ns2:value>Discontinuation</ns2:value>
+										</ns2:name>
+										<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0125">
+											<ns2:name>
+												<ns2:value>Reason discontinued</ns2:value>
+											</ns2:name>
+											<ns2:value xsi:type="ns2:DV_TEXT">
+												<ns2:value>Constipation</ns2:value>
+											</ns2:value>
+										</ns2:items>
+									</ns2:items>
+								</ns2:items>
+							</ns2:items>
+						</ns2:items>
+						<ns2:items xsi:type="ns2:CLUSTER" archetype_node_id="openEHR-EHR-CLUSTER.medication_reconciliation_admit_uk.v1">
+							<ns2:name>
+								<ns2:value>Medication reconciliation</ns2:value>
+							</ns2:name>
+							<ns2:archetype_details>
+								<ns2:archetype_id>
+									<ns2:value>openEHR-EHR-CLUSTER.medication_reconciliation_admit_uk.v1</ns2:value>
+								</ns2:archetype_id>
+								<ns2:rm_version>1.0.2</ns2:rm_version>
+							</ns2:archetype_details>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0003">
+								<ns2:name>
+									<ns2:value>Reconciliation action</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_CODED_TEXT">
+									<ns2:value>Stop medication</ns2:value>
+									<ns2:defining_code>
+										<ns2:terminology_id>
+											<ns2:value>local</ns2:value>
+										</ns2:terminology_id>
+										<ns2:code_string>at0020</ns2:code_string>
+									</ns2:defining_code>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0004">
+								<ns2:name>
+									<ns2:value>Reason</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_TEXT">
+									<ns2:value>Constipation</ns2:value>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0006">
+								<ns2:name>
+									<ns2:value>Date reconciled</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_DATE_TIME">
+									<ns2:value>2014-09-10T19:11:44.685+02:00</ns2:value>
+								</ns2:value>
+							</ns2:items>
+						</ns2:items>
+					</ns2:data>
+				</ns2:items>
+				<ns2:items xsi:type="ns2:EVALUATION" archetype_node_id="openEHR-EHR-EVALUATION.medication_statement_uk.v1">
+					<ns2:name>
+						<ns2:value>Medication statement #2</ns2:value>
+					</ns2:name>
+					<ns2:archetype_details>
+						<ns2:archetype_id>
+							<ns2:value>openEHR-EHR-EVALUATION.medication_statement_uk.v1</ns2:value>
+						</ns2:archetype_id>
+						<ns2:rm_version>1.0.2</ns2:rm_version>
+					</ns2:archetype_details>
+					<ns2:language>
+						<ns2:terminology_id>
+							<ns2:value>ISO_639-1</ns2:value>
+						</ns2:terminology_id>
+						<ns2:code_string>en</ns2:code_string>
+					</ns2:language>
+					<ns2:encoding>
+						<ns2:terminology_id>
+							<ns2:value>IANA_character-sets</ns2:value>
+						</ns2:terminology_id>
+						<ns2:code_string>UTF-8</ns2:code_string>
+					</ns2:encoding>
+					<ns2:subject xsi:type="ns2:PARTY_SELF"/>
+					<ns2:data xsi:type="ns2:ITEM_TREE" archetype_node_id="at0001">
+						<ns2:name>
+							<ns2:value>Tree</ns2:value>
+						</ns2:name>
+						<ns2:items xsi:type="ns2:CLUSTER" archetype_node_id="openEHR-EHR-CLUSTER.medication_item.v1">
+							<ns2:name>
+								<ns2:value>Medication item</ns2:value>
+							</ns2:name>
+							<ns2:archetype_details>
+								<ns2:archetype_id>
+									<ns2:value>openEHR-EHR-CLUSTER.medication_item.v1</ns2:value>
+								</ns2:archetype_id>
+								<ns2:rm_version>1.0.2</ns2:rm_version>
+							</ns2:archetype_details>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0001">
+								<ns2:name>
+									<ns2:value>Medication name</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_CODED_TEXT">
+									<ns2:value>Movelat gel (Dowelhurst Ltd)</ns2:value>
+									<ns2:defining_code>
+										<ns2:terminology_id>
+											<ns2:value>SNOMED-CT</ns2:value>
+										</ns2:terminology_id>
+										<ns2:code_string>10488411000001108</ns2:code_string>
+									</ns2:defining_code>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0002">
+								<ns2:name>
+									<ns2:value>Route</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_CODED_TEXT">
+									<ns2:value>Topical route</ns2:value>
+									<ns2:defining_code>
+										<ns2:terminology_id>
+											<ns2:value>SNOMED-CT</ns2:value>
+										</ns2:terminology_id>
+										<ns2:code_string>11073019</ns2:code_string>
+									</ns2:defining_code>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0020">
+								<ns2:name>
+									<ns2:value>Dose amount description</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_TEXT">
+									<ns2:value>apply to joint</ns2:value>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0021">
+								<ns2:name>
+									<ns2:value>Dose timing description</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_TEXT">
+									<ns2:value>as required</ns2:value>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0005">
+								<ns2:name xsi:type="ns2:DV_CODED_TEXT">
+									<ns2:value>Additional instruction</ns2:value>
+									<ns2:defining_code>
+										<ns2:terminology_id>
+											<ns2:value>local</ns2:value>
+										</ns2:terminology_id>
+										<ns2:code_string>at0005</ns2:code_string>
+									</ns2:defining_code>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_TEXT">
+									<ns2:value>for pain</ns2:value>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:CLUSTER" archetype_node_id="at0046">
+								<ns2:name>
+									<ns2:value>Course details</ns2:value>
+								</ns2:name>
+								<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0049">
+									<ns2:name>
+										<ns2:value>Course status</ns2:value>
+									</ns2:name>
+									<ns2:value xsi:type="ns2:DV_CODED_TEXT">
+										<ns2:value>Discontinued</ns2:value>
+										<ns2:defining_code>
+											<ns2:terminology_id>
+												<ns2:value>local</ns2:value>
+											</ns2:terminology_id>
+											<ns2:code_string>at0051</ns2:code_string>
+										</ns2:defining_code>
+									</ns2:value>
+								</ns2:items>
+								<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0039">
+									<ns2:name>
+										<ns2:value>Start datetime</ns2:value>
+									</ns2:name>
+									<ns2:value xsi:type="ns2:DV_DATE_TIME">
+										<ns2:value>2014-06-10T19:11:44.685+02:00</ns2:value>
+									</ns2:value>
+								</ns2:items>
+								<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0040">
+									<ns2:name>
+										<ns2:value>End datetime</ns2:value>
+									</ns2:name>
+									<ns2:value xsi:type="ns2:DV_DATE_TIME">
+										<ns2:value>2014-09-10T19:11:44.685+02:00</ns2:value>
+									</ns2:value>
+								</ns2:items>
+							</ns2:items>
+						</ns2:items>
+						<ns2:items xsi:type="ns2:CLUSTER" archetype_node_id="openEHR-EHR-CLUSTER.medication_event_summary.v1">
+							<ns2:name>
+								<ns2:value>Medication event summary</ns2:value>
+							</ns2:name>
+							<ns2:archetype_details>
+								<ns2:archetype_id>
+									<ns2:value>openEHR-EHR-CLUSTER.medication_event_summary.v1</ns2:value>
+								</ns2:archetype_id>
+								<ns2:rm_version>1.0.2</ns2:rm_version>
+							</ns2:archetype_details>
+							<ns2:items xsi:type="ns2:CLUSTER" archetype_node_id="at0070">
+								<ns2:name>
+									<ns2:value>Discontinued</ns2:value>
+								</ns2:name>
+								<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0047">
+									<ns2:name xsi:type="ns2:DV_CODED_TEXT">
+										<ns2:value>Date discontinued</ns2:value>
+										<ns2:defining_code>
+											<ns2:terminology_id>
+												<ns2:value>local</ns2:value>
+											</ns2:terminology_id>
+											<ns2:code_string>at0072</ns2:code_string>
+										</ns2:defining_code>
+									</ns2:name>
+									<ns2:value xsi:type="ns2:DV_DATE_TIME">
+										<ns2:value>2014-09-10T19:11:44.685+02:00</ns2:value>
+									</ns2:value>
+								</ns2:items>
+								<ns2:items xsi:type="ns2:CLUSTER" archetype_node_id="openEHR-EHR-CLUSTER.medication_event.v1">
+									<ns2:name>
+										<ns2:value>Medication event</ns2:value>
+									</ns2:name>
+									<ns2:archetype_details>
+										<ns2:archetype_id>
+											<ns2:value>openEHR-EHR-CLUSTER.medication_event.v1</ns2:value>
+										</ns2:archetype_id>
+										<ns2:rm_version>1.0.2</ns2:rm_version>
+									</ns2:archetype_details>
+									<ns2:items xsi:type="ns2:CLUSTER" archetype_node_id="at0122">
+										<ns2:name>
+											<ns2:value>Discontinuation</ns2:value>
+										</ns2:name>
+										<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0125">
+											<ns2:name>
+												<ns2:value>Reason discontinued</ns2:value>
+											</ns2:name>
+											<ns2:value xsi:type="ns2:DV_TEXT">
+												<ns2:value>Patient never used it</ns2:value>
+											</ns2:value>
+										</ns2:items>
+									</ns2:items>
+								</ns2:items>
+							</ns2:items>
+						</ns2:items>
+						<ns2:items xsi:type="ns2:CLUSTER" archetype_node_id="openEHR-EHR-CLUSTER.medication_reconciliation_admit_uk.v1">
+							<ns2:name>
+								<ns2:value>Medication reconciliation</ns2:value>
+							</ns2:name>
+							<ns2:archetype_details>
+								<ns2:archetype_id>
+									<ns2:value>openEHR-EHR-CLUSTER.medication_reconciliation_admit_uk.v1</ns2:value>
+								</ns2:archetype_id>
+								<ns2:rm_version>1.0.2</ns2:rm_version>
+							</ns2:archetype_details>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0003">
+								<ns2:name>
+									<ns2:value>Reconciliation action</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_CODED_TEXT">
+									<ns2:value>Stop medication</ns2:value>
+									<ns2:defining_code>
+										<ns2:terminology_id>
+											<ns2:value>local</ns2:value>
+										</ns2:terminology_id>
+										<ns2:code_string>at0020</ns2:code_string>
+									</ns2:defining_code>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0004">
+								<ns2:name>
+									<ns2:value>Reason</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_TEXT">
+									<ns2:value>Patient never used it</ns2:value>
+								</ns2:value>
+							</ns2:items>
+							<ns2:items xsi:type="ns2:ELEMENT" archetype_node_id="at0006">
+								<ns2:name>
+									<ns2:value>Date reconciled</ns2:value>
+								</ns2:name>
+								<ns2:value xsi:type="ns2:DV_DATE_TIME">
+									<ns2:value>2014-09-10T19:11:44.685+02:00</ns2:value>
+								</ns2:value>
+							</ns2:items>
+						</ns2:items>
+					</ns2:data>
+				</ns2:items>
+			</ns2:items>
+		</ns2:content>
+	</composition>
+	<deleted>false</deleted>
+	<format>RAW</format>
+	<lastVersion>true</lastVersion>
+	<templateId>Discharge Summary (composition)</templateId>
+</compositionResponseData>

@@ -1,0 +1,1157 @@
+<?xml version="1.0" ?>
+<composition xsi:type="COMPOSITION" archetype_node_id="openEHR-EHR-COMPOSITION.encounter.v1" xmlns="http://schemas.openehr.org/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<name>
+		<value>GP contact event </value>
+	</name>
+	<archetype_details>
+		<archetype_id>
+			<value>openEHR-EHR-COMPOSITION.encounter.v1</value>
+		</archetype_id>
+		<template_id>
+			<value>GP Contact Event - LCR (Composition)</value>
+		</template_id>
+		<rm_version>1.0.1</rm_version>
+	</archetype_details>
+	<feeder_audit>
+		<originating_system_item_ids>
+			<issuer>EMISWEB</issuer>
+			<assigner>EMISWEB</assigner>
+			<id>611e1de7-eb98-491f-81dc-b071234092f5</id>
+			<type>EncounterID</type>
+		</originating_system_item_ids>
+		<originating_system_audit>
+			<system_id>EMISWEB</system_id>
+			<time>
+				<value>2005-10-11T00:00:00</value>
+			</time>
+		</originating_system_audit>
+	</feeder_audit>
+	<language>
+		<terminology_id>
+			<value>ISO_639-1</value>
+		</terminology_id>
+		<code_string>en</code_string>
+	</language>
+	<territory>
+		<terminology_id>
+			<value>ISO_3166-1</value>
+		</terminology_id>
+		<code_string>GB</code_string>
+	</territory>
+	<category>
+		<value>event</value>
+		<defining_code>
+			<terminology_id>
+				<value>openehr</value>
+			</terminology_id>
+			<code_string>433</code_string>
+		</defining_code>
+	</category>
+	<composer xsi:type="PARTY_IDENTIFIED">
+		<name>Dr Robert Burns</name>
+		<identifiers xsi:type="DV_IDENTIFIER">
+			<issuer>EMIS</issuer>
+			<assigner>EMIS</assigner>
+			<id>3312182</id>
+			<type>GP</type>
+		</identifiers>
+		<identifiers xsi:type="DV_IDENTIFIER">
+			<issuer>EMIS</issuer>
+			<assigner>EMIS</assigner>
+			<id>464471</id>
+			<type>PRES</type>
+		</identifiers>
+		<identifiers xsi:type="DV_IDENTIFIER">
+			<issuer>EMIS</issuer>
+			<assigner>EMIS</assigner>
+			<id>G4499052</id>
+			<type>NAT</type>
+		</identifiers>
+	</composer>
+	<context>
+		<start_time>
+			<value>2004-12-18T00:00:00</value>
+		</start_time>
+		<setting>
+			<value>primary medical care</value>
+			<mappings>
+				<match>=</match>
+				<target>
+					<terminology_id>
+						<value>SNOMED-CT</value>
+					</terminology_id>
+					<code_string>150337100006105</code_string>
+				</target>
+			</mappings>
+			<defining_code>
+				<terminology_id>
+					<value>openehr</value>
+				</terminology_id>
+				<code_string>228</code_string>
+			</defining_code>
+		</setting>
+		<other_context xsi:type="ITEM_TREE" archetype_node_id="at0001">
+			<name>
+				<value>other context</value>
+			</name>
+		</other_context>
+		<health_care_facility>
+			<name>EMIS PCS Test Surgery 2</name>
+			<identifiers xsi:type="DV_IDENTIFIER">
+				<issuer>NHS</issuer>
+				<assigner>NHS</assigner>
+				<id>T00003</id>
+				<type>National Practice Code</type>
+			</identifiers>
+		</health_care_facility>
+	</context>
+	<content xsi:type="SECTION" archetype_node_id="openEHR-EHR-SECTION.adverse_list.v1">
+		<name>
+			<value>Allergies</value>
+		</name>
+		<archetype_details>
+			<archetype_id>
+				<value>openEHR-EHR-SECTION.adverse_list.v1</value>
+			</archetype_id>
+			<rm_version>1.0.1</rm_version>
+		</archetype_details>
+		<items xsi:type="EVALUATION" archetype_node_id="openEHR-EHR-EVALUATION.adverse_reaction_uk.v1">
+			<name>
+				<value>
+                Adverse reaction_0</value>
+			</name>
+			<archetype_details>
+				<archetype_id>
+					<value>openEHR-EHR-EVALUATION.adverse_reaction_uk.v1</value>
+				</archetype_id>
+				<rm_version>1.0.1</rm_version>
+			</archetype_details>
+			<feeder_audit>
+				<originating_system_item_ids>
+					<issuer>EMISWEB</issuer>
+					<assigner>EMISWEB</assigner>
+					<id>393eea03-947e-4163-b303-dd2fbd13fc64</id>
+					<type>EventID</type>
+				</originating_system_item_ids>
+				<originating_system_audit>
+					<system_id>EMISWEB</system_id>
+					<location>
+						<name>EMIS PCS Test Surgery 2</name>
+						<identifiers xsi:type="DV_IDENTIFIER">
+							<issuer>NHS</issuer>
+							<assigner>NHS</assigner>
+							<id>T00003</id>
+							<type>National Practice Code</type>
+						</identifiers>
+					</location>
+					<time>
+						<value>2005-10-11T00:00:00</value>
+					</time>
+				</originating_system_audit>
+				<feeder_system_audit>
+					<system_id>EMISWEB</system_id>
+					<time>
+						<value>2004-12-18T00:00:00</value>
+					</time>
+					<version_id>event_effectivetime</version_id>
+				</feeder_system_audit>
+			</feeder_audit>
+			<language>
+				<terminology_id>
+					<value>ISO_639-1</value>
+				</terminology_id>
+				<code_string>en</code_string>
+			</language>
+			<encoding>
+				<terminology_id>
+					<value>IANA_character-sets</value>
+				</terminology_id>
+				<code_string>UTF-8</code_string>
+			</encoding>
+			<subject xsi:type="PARTY_SELF" />
+			<data xsi:type="ITEM_TREE" archetype_node_id="at0001">
+				<name>
+					<value>data</value>
+				</name>
+				<items xsi:type="ELEMENT" archetype_node_id="at0002">
+					<name>
+						<value>Causative agent</value>
+					</name>
+					<value xsi:type="DV_TEXT">
+						<value>H/O: erythromycin allergy</value>
+						<mappings>
+							<match>=</match>
+							<target>
+								<terminology_id>
+									<value>READ2</value>
+								</terminology_id>
+								<code_string>14LA</code_string>
+							</target>
+						</mappings>
+					</value>
+				</items>
+				<items xsi:type="CLUSTER" archetype_node_id="at0025">
+					<name>
+						<value>Reaction details</value>
+					</name>
+					<items xsi:type="ELEMENT" archetype_node_id="at0021">
+						<name>
+							<value>Date recorded</value>
+						</name>
+						<value xsi:type="DV_DATE_TIME">
+							<value>2004-12-18T00:00:00</value>
+						</value>
+					</items>
+				</items>
+			</data>
+		</items>
+		<items xsi:type="EVALUATION" archetype_node_id="openEHR-EHR-EVALUATION.adverse_reaction_uk.v1">
+			<name>
+				<value>
+                Adverse reaction_1</value>
+			</name>
+			<archetype_details>
+				<archetype_id>
+					<value>openEHR-EHR-EVALUATION.adverse_reaction_uk.v1</value>
+				</archetype_id>
+				<rm_version>1.0.1</rm_version>
+			</archetype_details>
+			<feeder_audit>
+				<originating_system_item_ids>
+					<issuer>EMISWEB</issuer>
+					<assigner>EMISWEB</assigner>
+					<id>d75ef91f-e263-4815-8d5f-6f70fa52337d</id>
+					<type>EventID</type>
+				</originating_system_item_ids>
+				<originating_system_audit>
+					<system_id>EMISWEB</system_id>
+					<location>
+						<name>EMIS PCS Test Surgery 2</name>
+						<identifiers xsi:type="DV_IDENTIFIER">
+							<issuer>NHS</issuer>
+							<assigner>NHS</assigner>
+							<id>T00003</id>
+							<type>National Practice Code</type>
+						</identifiers>
+					</location>
+					<time>
+						<value>2005-10-11T00:00:00</value>
+					</time>
+				</originating_system_audit>
+				<feeder_system_audit>
+					<system_id>EMISWEB</system_id>
+					<time>
+						<value>2004-12-18T00:00:00</value>
+					</time>
+					<version_id>event_effectivetime</version_id>
+				</feeder_system_audit>
+			</feeder_audit>
+			<language>
+				<terminology_id>
+					<value>ISO_639-1</value>
+				</terminology_id>
+				<code_string>en</code_string>
+			</language>
+			<encoding>
+				<terminology_id>
+					<value>IANA_character-sets</value>
+				</terminology_id>
+				<code_string>UTF-8</code_string>
+			</encoding>
+			<subject xsi:type="PARTY_SELF" />
+			<data xsi:type="ITEM_TREE" archetype_node_id="at0001">
+				<name>
+					<value>data</value>
+				</name>
+				<items xsi:type="ELEMENT" archetype_node_id="at0002">
+					<name>
+						<value>Causative agent</value>
+					</name>
+					<value xsi:type="DV_TEXT">
+						<value>H/O: erythromycin allergy</value>
+						<mappings>
+							<match>=</match>
+							<target>
+								<terminology_id>
+									<value>READ2</value>
+								</terminology_id>
+								<code_string>14LA</code_string>
+							</target>
+						</mappings>
+					</value>
+				</items>
+				<items xsi:type="CLUSTER" archetype_node_id="at0025">
+					<name>
+						<value>Reaction details</value>
+					</name>
+					<items xsi:type="ELEMENT" archetype_node_id="at0021">
+						<name>
+							<value>Date recorded</value>
+						</name>
+						<value xsi:type="DV_DATE_TIME">
+							<value>2004-12-18T00:00:00</value>
+						</value>
+					</items>
+					<items xsi:type="ELEMENT" archetype_node_id="at0022">
+						<name>
+							<value>Comment</value>
+						</name>
+						<value xsi:type="DV_TEXT">
+							<value> Gradually improving, still some blood (ENT exam next week)</value>
+						</value>
+					</items>
+				</items>
+			</data>
+		</items>
+		<items xsi:type="EVALUATION" archetype_node_id="openEHR-EHR-EVALUATION.contraindication.v1">
+			<name>
+				<value>Contraindication_0</value>
+			</name>
+			<archetype_details>
+				<archetype_id>
+					<value>openEHR-EHR-EVALUATION.contraindication.v1</value>
+				</archetype_id>
+				<rm_version>1.0.1</rm_version>
+			</archetype_details>
+			<feeder_audit>
+				<originating_system_item_ids>
+					<issuer>EMISWEB</issuer>
+					<assigner>EMISWEB</assigner>
+					<id>4a2801cf-ac2e-4501-afa8-fb96b3276e66</id>
+					<type>EventID</type>
+				</originating_system_item_ids>
+				<originating_system_audit>
+					<system_id>EMISWEB</system_id>
+					<location>
+						<name>EMIS PCS Test Surgery 2</name>
+						<identifiers xsi:type="DV_IDENTIFIER">
+							<issuer>NHS</issuer>
+							<assigner>NHS</assigner>
+							<id>T00003</id>
+							<type>National Practice Code</type>
+						</identifiers>
+					</location>
+					<time>
+						<value>2012-10-19T00:00:00</value>
+					</time>
+				</originating_system_audit>
+				<feeder_system_audit>
+					<system_id>EMISWEB</system_id>
+					<time>
+						<value>2012-08-15T00:00:00</value>
+					</time>
+					<version_id>event_effectivetime</version_id>
+				</feeder_system_audit>
+			</feeder_audit>
+			<language>
+				<terminology_id>
+					<value>ISO_639-1</value>
+				</terminology_id>
+				<code_string>en</code_string>
+			</language>
+			<encoding>
+				<terminology_id>
+					<value>IANA_character-sets</value>
+				</terminology_id>
+				<code_string>UTF-8</code_string>
+			</encoding>
+			<subject xsi:type="PARTY_SELF" />
+			<data xsi:type="ITEM_TREE" archetype_node_id="at0001">
+				<name>
+					<value>data</value>
+				</name>
+				<items xsi:type="ELEMENT" archetype_node_id="at0002">
+					<name>
+						<value>Contraindication</value>
+					</name>
+					<value xsi:type="DV_CODED_TEXT">
+						<value>Beta blocker contraindicated</value>
+						<defining_code>
+							<terminology_id>
+								<value>READ2</value>
+							</terminology_id>
+							<code_string>8126.</code_string>
+						</defining_code>
+					</value>
+				</items>
+				<items xsi:type="ELEMENT" archetype_node_id="at0003">
+					<name>
+						<value>Evidence/Rationale</value>
+					</name>
+					<value xsi:type="DV_TEXT">
+						<value>Has asthma</value>
+					</value>
+				</items>
+			</data>
+		</items>
+		<items xsi:type="EVALUATION" archetype_node_id="openEHR-EHR-EVALUATION.contraindication.v1">
+			<name>
+				<value>Contraindication_1</value>
+			</name>
+			<archetype_details>
+				<archetype_id>
+					<value>openEHR-EHR-EVALUATION.contraindication.v1</value>
+				</archetype_id>
+				<rm_version>1.0.1</rm_version>
+			</archetype_details>
+			<feeder_audit>
+				<originating_system_item_ids>
+					<issuer>EMISWEB</issuer>
+					<assigner>EMISWEB</assigner>
+					<id>4a2801cf-ac2e-4501-afa8-fb96b3276e67</id>
+					<type>EventID</type>
+				</originating_system_item_ids>
+				<originating_system_audit>
+					<system_id>EMISWEB</system_id>
+					<location>
+						<name>EMIS PCS Test Surgery 2</name>
+						<identifiers xsi:type="DV_IDENTIFIER">
+							<issuer>NHS</issuer>
+							<assigner>NHS</assigner>
+							<id>T00003</id>
+							<type>National Practice Code</type>
+						</identifiers>
+					</location>
+					<time>
+						<value>2012-10-19T00:00:00</value>
+					</time>
+				</originating_system_audit>
+				<feeder_system_audit>
+					<system_id>EMISWEB</system_id>
+					<time>
+						<value>2012-08-15T00:00:00</value>
+					</time>
+					<version_id>event_effectivetime</version_id>
+				</feeder_system_audit>
+			</feeder_audit>
+			<language>
+				<terminology_id>
+					<value>ISO_639-1</value>
+				</terminology_id>
+				<code_string>en</code_string>
+			</language>
+			<encoding>
+				<terminology_id>
+					<value>IANA_character-sets</value>
+				</terminology_id>
+				<code_string>UTF-8</code_string>
+			</encoding>
+			<subject xsi:type="PARTY_SELF" />
+			<data xsi:type="ITEM_TREE" archetype_node_id="at0001">
+				<name>
+					<value>data</value>
+				</name>
+				<items xsi:type="ELEMENT" archetype_node_id="at0002">
+					<name>
+						<value>Contraindication</value>
+					</name>
+					<value xsi:type="DV_CODED_TEXT">
+						<value>DEMO TEST Beta blocker contraindicated</value>
+						<defining_code>
+							<terminology_id>
+								<value>READ2</value>
+							</terminology_id>
+							<code_string>8126.</code_string>
+						</defining_code>
+					</value>
+				</items>
+				<items xsi:type="ELEMENT" archetype_node_id="at0003">
+					<name>
+						<value>Evidence/Rationale</value>
+					</name>
+					<value xsi:type="DV_TEXT">
+						<value>DEMO TEST Has asthma</value>
+					</value>
+				</items>
+			</data>
+		</items>
+		<items xsi:type="EVALUATION" archetype_node_id="openEHR-EHR-EVALUATION.exclusion-adverse.v1">
+			<name>
+				<value>Exclusion statement - Adverse Reaction</value>
+			</name>
+			<archetype_details>
+				<archetype_id>
+					<value>openEHR-EHR-EVALUATION.exclusion-adverse.v1</value>
+				</archetype_id>
+				<rm_version>1.0.1</rm_version>
+			</archetype_details>
+			<feeder_audit>
+				<originating_system_item_ids>
+					<issuer>EMISWEB</issuer>
+					<assigner>EMISWEB</assigner>
+					<id>4a2801cf-ac2e-4501-afa8-fb96b3276e68</id>
+					<type>EventID</type>
+				</originating_system_item_ids>
+				<originating_system_audit>
+					<system_id>EMISWEB</system_id>
+					<location>
+						<name>EMIS PCS Test Surgery 2</name>
+						<identifiers xsi:type="DV_IDENTIFIER">
+							<issuer>NHS</issuer>
+							<assigner>NHS</assigner>
+							<id>T00003</id>
+							<type>National Practice Code</type>
+						</identifiers>
+					</location>
+					<time>
+						<value>2012-10-19T00:00:00</value>
+					</time>
+				</originating_system_audit>
+				<feeder_system_audit>
+					<system_id>EMISWEB</system_id>
+					<time>
+						<value>2012-08-15T00:00:00</value>
+					</time>
+					<version_id>event_effectivetime</version_id>
+				</feeder_system_audit>
+			</feeder_audit>
+			<language>
+				<terminology_id>
+					<value>ISO_639-1</value>
+				</terminology_id>
+				<code_string>en</code_string>
+			</language>
+			<encoding>
+				<terminology_id>
+					<value>IANA_character-sets</value>
+				</terminology_id>
+				<code_string>UTF-8</code_string>
+			</encoding>
+			<subject xsi:type="PARTY_SELF" />
+			<data xsi:type="ITEM_TREE" archetype_node_id="at0001">
+				<name>
+					<value>data</value>
+				</name>
+				<items xsi:type="ELEMENT" archetype_node_id="at0002">
+					<name>
+						<value>General Statement</value>
+					</name>
+					<value xsi:type="DV_CODED_TEXT">
+						<value>No known allergies</value>
+						<defining_code>
+							<terminology_id>
+								<value>READ2</value>
+							</terminology_id>
+							<code_string>1151.</code_string>
+						</defining_code>
+					</value>
+				</items>
+			</data>
+		</items>
+	</content>
+	<content xsi:type="SECTION" archetype_node_id="openEHR-EHR-SECTION.adhoc.v1">
+		<name>
+			<value>Immunisations</value>
+		</name>
+		<archetype_details>
+			<archetype_id>
+				<value>openEHR-EHR-SECTION.adhoc.v1</value>
+			</archetype_id>
+			<rm_version>1.0.1</rm_version>
+		</archetype_details>
+		<items xsi:type="ACTION" archetype_node_id="openEHR-EHR-ACTION.immunisation_procedure.v1">
+			<name>
+				<value>
+                Immunisation procedure_0</value>
+			</name>
+			<archetype_details>
+				<archetype_id>
+					<value>openEHR-EHR-ACTION.immunisation_procedure.v1</value>
+				</archetype_id>
+				<rm_version>1.0.1</rm_version>
+			</archetype_details>
+			<feeder_audit>
+				<originating_system_item_ids>
+					<issuer>EMISWEB</issuer>
+					<assigner>EMISWEB</assigner>
+					<id>5246c2d4-4a1a-462b-89b4-62c7136f5edf</id>
+					<type>EventID</type>
+				</originating_system_item_ids>
+				<originating_system_audit>
+					<system_id>EMISWEB</system_id>
+					<location>
+						<name>EMIS PCS Test Surgery 2</name>
+						<identifiers xsi:type="DV_IDENTIFIER">
+							<issuer>NHS</issuer>
+							<assigner>NHS</assigner>
+							<id>T00003</id>
+							<type>National Practice Code</type>
+						</identifiers>
+					</location>
+					<time>
+						<value>2007-11-13T00:00:00</value>
+					</time>
+				</originating_system_audit>
+				<feeder_system_audit>
+					<system_id>EMISWEB</system_id>
+					<time>
+						<value>2006-11-09T00:00:00</value>
+					</time>
+					<version_id>event_effectivetime</version_id>
+				</feeder_system_audit>
+			</feeder_audit>
+			<language>
+				<terminology_id>
+					<value>ISO_639-1</value>
+				</terminology_id>
+				<code_string>en</code_string>
+			</language>
+			<encoding>
+				<terminology_id>
+					<value>IANA_character-sets</value>
+				</terminology_id>
+				<code_string>UTF-8</code_string>
+			</encoding>
+			<subject xsi:type="PARTY_SELF" />
+			<time>
+				<value>2006-11-09T00:00:00</value>
+			</time>
+			<description xsi:type="ITEM_TREE" archetype_node_id="at0001">
+				<name>
+					<value>description</value>
+				</name>
+				<items xsi:type="ELEMENT" archetype_node_id="at0002">
+					<name>
+						<value>Immunisation name</value>
+					</name>
+					<value xsi:type="DV_CODED_TEXT">
+						<value>Influenza vaccination</value>
+						<mappings>
+							<match>=</match>
+							<target>
+								<terminology_id>
+									<value>SNOMED-CT</value>
+								</terminology_id>
+								<code_string>86198006</code_string>
+							</target>
+						</mappings>
+						<defining_code>
+							<terminology_id>
+								<value>READ2</value>
+							</terminology_id>
+							<code_string>65E</code_string>
+						</defining_code>
+					</value>
+				</items>
+				<items xsi:type="ELEMENT" archetype_node_id="at0015">
+					<name>
+						<value>Comment</value>
+					</name>
+					<value xsi:type="DV_TEXT">
+						<value> Better but still quite wheezy</value>
+					</value>
+				</items>
+			</description>
+			<ism_transition>
+				<current_state xsi:type="DV_CODED_TEXT">
+					<value>completed</value>
+					<defining_code>
+						<terminology_id>
+							<value>openehr</value>
+						</terminology_id>
+						<code_string>532</code_string>
+					</defining_code>
+				</current_state>
+			</ism_transition>
+		</items>
+		<items xsi:type="ACTION" archetype_node_id="openEHR-EHR-ACTION.immunisation_procedure.v1">
+			<name>
+				<value>
+                Immunisation procedure_1</value>
+			</name>
+			<archetype_details>
+				<archetype_id>
+					<value>openEHR-EHR-ACTION.immunisation_procedure.v1</value>
+				</archetype_id>
+				<rm_version>1.0.1</rm_version>
+			</archetype_details>
+			<feeder_audit>
+				<originating_system_item_ids>
+					<issuer>EMISWEB</issuer>
+					<assigner>EMISWEB</assigner>
+					<id>7b964e23-c7c3-4807-bf54-994242a419ba</id>
+					<type>EventID</type>
+				</originating_system_item_ids>
+				<originating_system_audit>
+					<system_id>EMISWEB</system_id>
+					<location>
+						<name>EMIS PCS Test Surgery 2</name>
+						<identifiers xsi:type="DV_IDENTIFIER">
+							<issuer>NHS</issuer>
+							<assigner>NHS</assigner>
+							<id>T00003</id>
+							<type>National Practice Code</type>
+						</identifiers>
+					</location>
+					<time>
+						<value>2007-10-03T00:00:00</value>
+					</time>
+				</originating_system_audit>
+				<feeder_system_audit>
+					<system_id>EMISWEB</system_id>
+					<time>
+						<value>2006-12-10T00:00:00</value>
+					</time>
+					<version_id>event_effectivetime</version_id>
+				</feeder_system_audit>
+			</feeder_audit>
+			<language>
+				<terminology_id>
+					<value>ISO_639-1</value>
+				</terminology_id>
+				<code_string>en</code_string>
+			</language>
+			<encoding>
+				<terminology_id>
+					<value>IANA_character-sets</value>
+				</terminology_id>
+				<code_string>UTF-8</code_string>
+			</encoding>
+			<subject xsi:type="PARTY_SELF" />
+			<time>
+				<value>2006-12-10T00:00:00</value>
+			</time>
+			<description xsi:type="ITEM_TREE" archetype_node_id="at0001">
+				<name>
+					<value>description</value>
+				</name>
+				<items xsi:type="ELEMENT" archetype_node_id="at0002">
+					<name>
+						<value>Immunisation name</value>
+					</name>
+					<value xsi:type="DV_CODED_TEXT">
+						<value>Measles mumps and rubella booster vaccination</value>
+						<mappings>
+							<match>=</match>
+							<target>
+								<terminology_id>
+									<value>SNOMED-CT</value>
+								</terminology_id>
+								<code_string>170431005</code_string>
+							</target>
+						</mappings>
+						<defining_code>
+							<terminology_id>
+								<value>READ2</value>
+							</terminology_id>
+							<code_string>65MA</code_string>
+						</defining_code>
+					</value>
+				</items>
+				<items xsi:type="ELEMENT" archetype_node_id="at0015">
+					<name>
+						<value>Comment</value>
+					</name>
+					<value xsi:type="DV_TEXT">
+						<value> Frusemide Tablets 40 mg od 28 tablets</value>
+					</value>
+				</items>
+			</description>
+			<ism_transition>
+				<current_state xsi:type="DV_CODED_TEXT">
+					<value>completed</value>
+					<defining_code>
+						<terminology_id>
+							<value>openehr</value>
+						</terminology_id>
+						<code_string>532</code_string>
+					</defining_code>
+				</current_state>
+			</ism_transition>
+		</items>
+	</content>
+	<content xsi:type="SECTION" archetype_node_id="openEHR-EHR-SECTION.adhoc.v1">
+		<name>
+			<value>Diagnoses</value>
+		</name>
+		<archetype_details>
+			<archetype_id>
+				<value>openEHR-EHR-SECTION.adhoc.v1</value>
+			</archetype_id>
+			<rm_version>1.0.1</rm_version>
+		</archetype_details>
+		<items xsi:type="EVALUATION" archetype_node_id="openEHR-EHR-EVALUATION.problem_diagnosis.v1">
+			<name>
+				<value>
+                Problem/Diagnosis_0</value>
+			</name>
+			<archetype_details>
+				<archetype_id>
+					<value>openEHR-EHR-EVALUATION.problem_diagnosis.v1</value>
+				</archetype_id>
+				<rm_version>1.0.1</rm_version>
+			</archetype_details>
+			<feeder_audit>
+				<originating_system_item_ids>
+					<issuer>EMISWEB</issuer>
+					<assigner>EMISWEB</assigner>
+					<id>36abe07d-fe3c-42de-b7f3-11eb2ed4680f</id>
+					<type>EventID</type>
+				</originating_system_item_ids>
+				<originating_system_audit>
+					<system_id>EMISWEB</system_id>
+					<location>
+						<name>EMIS PCS Test Surgery 2</name>
+						<identifiers xsi:type="DV_IDENTIFIER">
+							<issuer>NHS</issuer>
+							<assigner>NHS</assigner>
+							<id>T00003</id>
+							<type>National Practice Code</type>
+						</identifiers>
+					</location>
+					<time>
+						<value>2007-03-16T00:00:00</value>
+					</time>
+				</originating_system_audit>
+				<feeder_system_audit>
+					<system_id>EMISWEB</system_id>
+					<time>
+						<value>2006-08-28T00:00:00</value>
+					</time>
+					<version_id>event_effectivetime</version_id>
+				</feeder_system_audit>
+			</feeder_audit>
+			<language>
+				<terminology_id>
+					<value>ISO_639-1</value>
+				</terminology_id>
+				<code_string>en</code_string>
+			</language>
+			<encoding>
+				<terminology_id>
+					<value>IANA_character-sets</value>
+				</terminology_id>
+				<code_string>UTF-8</code_string>
+			</encoding>
+			<subject xsi:type="PARTY_SELF" />
+			<data xsi:type="ITEM_TREE" archetype_node_id="at0001">
+				<name>
+					<value>data</value>
+				</name>
+				<items xsi:type="ELEMENT" archetype_node_id="at0002">
+					<name>
+						<value>Problem/Diagnosis</value>
+					</name>
+					<value xsi:type="DV_CODED_TEXT">
+						<value>Verruca plantaris</value>
+						<mappings>
+							<match>=</match>
+							<target>
+								<terminology_id>
+									<value>SNOMED-CT</value>
+								</terminology_id>
+								<code_string>63440008</code_string>
+							</target>
+						</mappings>
+						<defining_code>
+							<terminology_id>
+								<value>READ2</value>
+							</terminology_id>
+							<code_string>A7811</code_string>
+						</defining_code>
+					</value>
+				</items>
+				<items xsi:type="ELEMENT" archetype_node_id="at0003">
+					<name>
+						<value>Date of Onset</value>
+					</name>
+					<value xsi:type="DV_DATE">
+						<value>2006-08-28</value>
+					</value>
+				</items>
+			</data>
+		</items>
+		<items xsi:type="EVALUATION" archetype_node_id="openEHR-EHR-EVALUATION.problem_diagnosis.v1">
+			<name>
+				<value>
+                Problem/Diagnosis_1</value>
+			</name>
+			<archetype_details>
+				<archetype_id>
+					<value>openEHR-EHR-EVALUATION.problem_diagnosis.v1</value>
+				</archetype_id>
+				<rm_version>1.0.1</rm_version>
+			</archetype_details>
+			<feeder_audit>
+				<originating_system_item_ids>
+					<issuer>EMISWEB</issuer>
+					<assigner>EMISWEB</assigner>
+					<id>ea804628-78a8-48ad-a71d-e6cbd7d1c03a</id>
+					<type>EventID</type>
+				</originating_system_item_ids>
+				<originating_system_audit>
+					<system_id>EMISWEB</system_id>
+					<location>
+						<name>EMIS PCS Test Surgery 2</name>
+						<identifiers xsi:type="DV_IDENTIFIER">
+							<issuer>NHS</issuer>
+							<assigner>NHS</assigner>
+							<id>T00003</id>
+							<type>National Practice Code</type>
+						</identifiers>
+					</location>
+					<time>
+						<value>2006-09-11T00:00:00</value>
+					</time>
+				</originating_system_audit>
+				<feeder_system_audit>
+					<system_id>EMISWEB</system_id>
+					<time>
+						<value>1977-01-01T00:00:00</value>
+					</time>
+					<version_id>event_effectivetime</version_id>
+				</feeder_system_audit>
+			</feeder_audit>
+			<language>
+				<terminology_id>
+					<value>ISO_639-1</value>
+				</terminology_id>
+				<code_string>en</code_string>
+			</language>
+			<encoding>
+				<terminology_id>
+					<value>IANA_character-sets</value>
+				</terminology_id>
+				<code_string>UTF-8</code_string>
+			</encoding>
+			<subject xsi:type="PARTY_SELF" />
+			<data xsi:type="ITEM_TREE" archetype_node_id="at0001">
+				<name>
+					<value>data</value>
+				</name>
+				<items xsi:type="ELEMENT" archetype_node_id="at0002">
+					<name>
+						<value>Problem/Diagnosis</value>
+					</name>
+					<value xsi:type="DV_CODED_TEXT">
+						<value>Hepatitis C</value>
+						<mappings>
+							<match>=</match>
+							<target>
+								<terminology_id>
+									<value>SNOMED-CT</value>
+								</terminology_id>
+								<code_string>50711007</code_string>
+							</target>
+						</mappings>
+						<defining_code>
+							<terminology_id>
+								<value>READ2</value>
+							</terminology_id>
+							<code_string>A70z0</code_string>
+						</defining_code>
+					</value>
+				</items>
+				<items xsi:type="ELEMENT" archetype_node_id="at0003">
+					<name>
+						<value>Date of Onset</value>
+					</name>
+					<value xsi:type="DV_DATE">
+						<value>1977-01-01</value>
+					</value>
+				</items>
+			</data>
+		</items>
+	</content>
+	<content xsi:type="SECTION" archetype_node_id="openEHR-EHR-SECTION.adhoc.v1">
+		<name>
+			<value>Procedures</value>
+		</name>
+		<archetype_details>
+			<archetype_id>
+				<value>openEHR-EHR-SECTION.adhoc.v1</value>
+			</archetype_id>
+			<rm_version>1.0.1</rm_version>
+		</archetype_details>
+		<items xsi:type="ACTION" archetype_node_id="openEHR-EHR-ACTION.procedure.v1">
+			<name>
+				<value>
+                Procedure undertaken_0</value>
+			</name>
+			<archetype_details>
+				<archetype_id>
+					<value>openEHR-EHR-ACTION.procedure.v1</value>
+				</archetype_id>
+				<rm_version>1.0.1</rm_version>
+			</archetype_details>
+			<feeder_audit>
+				<originating_system_item_ids>
+					<issuer>EMISWEB</issuer>
+					<assigner>EMISWEB</assigner>
+					<id>a5932a7d-7d49-4fd9-8f21-699676a301e6</id>
+					<type>EventID</type>
+				</originating_system_item_ids>
+				<originating_system_audit>
+					<system_id>EMISWEB</system_id>
+					<location>
+						<name>EMIS PCS Test Surgery 2</name>
+						<identifiers xsi:type="DV_IDENTIFIER">
+							<issuer>NHS</issuer>
+							<assigner>NHS</assigner>
+							<id>T00003</id>
+							<type>National Practice Code</type>
+						</identifiers>
+					</location>
+					<time>
+						<value>2007-05-29T00:00:00</value>
+					</time>
+				</originating_system_audit>
+				<feeder_system_audit>
+					<system_id>EMISWEB</system_id>
+					<time>
+						<value>2002-06-01T00:00:00</value>
+					</time>
+					<version_id>event_effectivetime</version_id>
+				</feeder_system_audit>
+			</feeder_audit>
+			<language>
+				<terminology_id>
+					<value>ISO_639-1</value>
+				</terminology_id>
+				<code_string>en</code_string>
+			</language>
+			<encoding>
+				<terminology_id>
+					<value>IANA_character-sets</value>
+				</terminology_id>
+				<code_string>UTF-8</code_string>
+			</encoding>
+			<subject xsi:type="PARTY_SELF" />
+			<time>
+				<value>2002-06-01T00:00:00</value>
+			</time>
+			<description xsi:type="ITEM_TREE" archetype_node_id="at0001">
+				<name>
+					<value>description</value>
+				</name>
+				<items xsi:type="ELEMENT" archetype_node_id="at0002">
+					<name>
+						<value>Procedure</value>
+					</name>
+					<value xsi:type="DV_TEXT">
+						<value>Havrix reminder</value>
+						<mappings>
+							<match>=</match>
+							<target>
+								<terminology_id>
+									<value>READ2</value>
+								</terminology_id>
+								<code_string>72631-1</code_string>
+							</target>
+						</mappings>
+					</value>
+				</items>
+				<items xsi:type="ELEMENT" archetype_node_id="at0005">
+					<name>
+						<value>Comments</value>
+					</name>
+					<value xsi:type="DV_TEXT">
+						<value> Ciprofloxacin Tablets 250 mg 1 bd 10 tablet(s)</value>
+					</value>
+				</items>
+			</description>
+			<ism_transition>
+				<current_state xsi:type="DV_CODED_TEXT">
+					<value>completed</value>
+					<defining_code>
+						<terminology_id>
+							<value>openehr</value>
+						</terminology_id>
+						<code_string>532</code_string>
+					</defining_code>
+				</current_state>
+			</ism_transition>
+		</items>
+		<items xsi:type="ACTION" archetype_node_id="openEHR-EHR-ACTION.procedure.v1">
+			<name>
+				<value>
+                Procedure undertaken_1</value>
+			</name>
+			<archetype_details>
+				<archetype_id>
+					<value>openEHR-EHR-ACTION.procedure.v1</value>
+				</archetype_id>
+				<rm_version>1.0.1</rm_version>
+			</archetype_details>
+			<feeder_audit>
+				<originating_system_item_ids>
+					<issuer>EMISWEB</issuer>
+					<assigner>EMISWEB</assigner>
+					<id>c63dc54d-50d3-4a65-9beb-cef4188eadaa</id>
+					<type>EventID</type>
+				</originating_system_item_ids>
+				<originating_system_audit>
+					<system_id>EMISWEB</system_id>
+					<location>
+						<name>EMIS PCS Test Surgery 2</name>
+						<identifiers xsi:type="DV_IDENTIFIER">
+							<issuer>NHS</issuer>
+							<assigner>NHS</assigner>
+							<id>T00003</id>
+							<type>National Practice Code</type>
+						</identifiers>
+					</location>
+					<time>
+						<value>2005-09-15T00:00:00</value>
+					</time>
+				</originating_system_audit>
+				<feeder_system_audit>
+					<system_id>EMISWEB</system_id>
+					<time>
+						<value>2002-03-30T00:00:00</value>
+					</time>
+					<version_id>event_effectivetime</version_id>
+				</feeder_system_audit>
+			</feeder_audit>
+			<language>
+				<terminology_id>
+					<value>ISO_639-1</value>
+				</terminology_id>
+				<code_string>en</code_string>
+			</language>
+			<encoding>
+				<terminology_id>
+					<value>IANA_character-sets</value>
+				</terminology_id>
+				<code_string>UTF-8</code_string>
+			</encoding>
+			<subject xsi:type="PARTY_SELF" />
+			<time>
+				<value>2002-03-30T00:00:00</value>
+			</time>
+			<description xsi:type="ITEM_TREE" archetype_node_id="at0001">
+				<name>
+					<value>description</value>
+				</name>
+				<items xsi:type="ELEMENT" archetype_node_id="at0002">
+					<name>
+						<value>Procedure</value>
+					</name>
+					<value xsi:type="DV_TEXT">
+						<value>Hypertension recall letter</value>
+						<mappings>
+							<match>=</match>
+							<target>
+								<terminology_id>
+									<value>READ2</value>
+								</terminology_id>
+								<code_string>74007</code_string>
+							</target>
+						</mappings>
+					</value>
+				</items>
+			</description>
+			<ism_transition>
+				<current_state xsi:type="DV_CODED_TEXT">
+					<value>completed</value>
+					<defining_code>
+						<terminology_id>
+							<value>openehr</value>
+						</terminology_id>
+						<code_string>532</code_string>
+					</defining_code>
+				</current_state>
+			</ism_transition>
+		</items>
+	</content>
+</composition>

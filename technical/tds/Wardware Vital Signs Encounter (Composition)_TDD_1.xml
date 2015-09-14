@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<te:Wardware_Nursing_Vital_Signs_Obervation xmlns:oe="http://schemas.openehr.org/v1"
+    xmlns="http://schemas.oceanehr.com/templates" xmlns:te="http://schemas.oceanehr.com/templates"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://schemas.oceanehr.com/templates
+    file:/Users/ian/Documents/Dropbox/Modelling/Leeds%20CRS/local/templates/tds/Wardware%20Vital%20Signs%20Encounter%20(Composition).xsd"
+    template_id="Wardware Vital Signs Encounter (Composition)"
+    archetype_node_id="openEHR-EHR-COMPOSITION.encounter.v1" type="COMPOSITION">
+    <name>
+        <value>Wardware Nursing Vital Signs Obervation</value>
+        <mappings>
+            <oe:match>=</oe:match>
+            <oe:purpose>
+                <oe:value>Document Type</oe:value>
+                <oe:defining_code>
+                    <oe:terminology_id>
+                        <oe:value>SNOMEDCT</oe:value>
+                    </oe:terminology_id>
+                    <oe:code_string>229059009</oe:code_string>
+                </oe:defining_code>
+            </oe:purpose>
+            <oe:target>
+                <oe:terminology_id>
+                    <oe:value>SNOMEDCT</oe:value>
+                </oe:terminology_id>
+                <oe:code_string>371531000</oe:code_string>
+                <!-- encounter report -->
+            </oe:target>
+        </mappings>
+    </name>
+    <language>
+        <terminology_id>
+            <value>ISO_639-1</value>
+        </terminology_id>
+        <code_string>en</code_string>
+    </language>
+    <territory>
+        <terminology_id>
+            <value>ISO_3166-1</value>
+        </terminology_id>
+        <code_string>EN</code_string>
+    </territory>
+    <category>
+        <value>event</value>
+        <defining_code>
+            <terminology_id>
+                <value>openehr</value>
+            </terminology_id>
+            <code_string>433</code_string>
+        </defining_code>
+    </category>
+    <composer xsi:type="oe:PARTY_IDENTIFIED">
+        <oe:name>Nurse Smith</oe:name>
+    </composer>
+    <context>
+        <start_time>
+            <oe:value>2011</oe:value>
+        </start_time>
+        <setting>
+            <oe:value>secondary nursing care</oe:value>
+            <oe:mappings>
+                <oe:match>=</oe:match>
+                <oe:purpose>
+                    <oe:value>clinical speciality</oe:value>
+                    <oe:defining_code>
+                        <oe:terminology_id>
+                            <oe:value>SNOMEDCT</oe:value>
+                        </oe:terminology_id>
+                        <oe:code_string> 394658006</oe:code_string>
+                    </oe:defining_code>
+                </oe:purpose>
+                <oe:target>
+                    <oe:terminology_id>
+                        <oe:value>SNOMEDCT</oe:value>
+                    </oe:terminology_id>
+                    <oe:code_string>408478003</oe:code_string>
+                    <!-- critical care medicine -->
+                </oe:target>
+            </oe:mappings>
+            <oe:defining_code>
+                <oe:terminology_id>
+                    <oe:value>openehr</oe:value>
+                </oe:terminology_id>
+                <oe:code_string>233</oe:code_string>
+            </oe:defining_code>
+        </setting>
+    </context>
+    <Vital_signs archetype_node_id="openEHR-EHR-SECTION.vital_signs.v1" type="SECTION">
+        <name>
+            <value>Vital signs</value>
+        </name>
+        <Respirations archetype_node_id="openEHR-EHR-OBSERVATION.respiration.v1" type="OBSERVATION">
+            <name>
+                <value>Respirations</value>
+            </name>
+            <language>
+                <terminology_id>
+                    <value>ISO_639-1</value>
+                </terminology_id>
+                <code_string>en</code_string>
+            </language>
+            <encoding>
+                <terminology_id>
+                    <value>IANA_character-sets</value>
+                </terminology_id>
+                <code_string>UTF-8</code_string>
+            </encoding>
+            <subject xsi:type="oe:PARTY_SELF"/>
+            <data archetype_node_id="at0001">
+                <origin>
+                    <oe:value>2001</oe:value>
+                </origin>
+                <Any_event_as_Point_Event archetype_node_id="at0002" type="POINT_EVENT">
+                    <name>
+                        <value>Any event</value>
+                    </name>
+                    <time>
+                        <oe:value>0000</oe:value>
+                    </time>
+                    <data archetype_node_id="at0003" type="ITEM_TREE">
+                        <Rate archetype_node_id="at0004" type="ELEMENT" valueType="DV_QUANTITY">
+                            <name>
+                                <value>Rate</value>
+                            </name>
+                            <value>
+                                <magnitude>22</magnitude>
+                                <precision>0</precision>
+                                <units>/min</units>
+                            </value>
+                        </Rate>
+                    </data>
+                    <state archetype_node_id="at0022" type="ITEM_TREE"/>
+                </Any_event_as_Point_Event>
+            </data>
+        </Respirations>
+        <Indirect_Oximetry archetype_node_id="openEHR-EHR-OBSERVATION.indirect_oximetry.v1"
+            type="OBSERVATION">
+            <name>
+                <value/>
+            </name>
+            <language>
+                <terminology_id>
+                    <value>ISO_639-1</value>
+                </terminology_id>
+                <code_string>en</code_string>
+            </language>
+            <encoding>
+                <terminology_id>
+                    <value>IANA_character-sets</value>
+                </terminology_id>
+                <code_string>UTF-8</code_string>
+            </encoding>
+            <subject xsi:type="oe:PARTY_SELF"/>
+            <data archetype_node_id="at0001">
+                <origin>
+                    <oe:value>2001</oe:value>
+                </origin>
+                <Any_event archetype_node_id="at0002" type="POINT_EVENT">
+                    <name>
+                        <value>Any event</value>
+                    </name>
+                    <time>
+                        <oe:value>2001</oe:value>
+                    </time>
+                    <data archetype_node_id="at0003" type="ITEM_TREE">
+                        <spO2 archetype_node_id="at0006" type="ELEMENT" valueType="DV_PROPORTION">
+                            <name>
+                                <value>spO2</value>
+                            </name>
+                            <value>
+                                <numerator>93</numerator>
+                                <type>2</type>
+                            </value>
+                        </spO2>
+                    </data>
+                    <state archetype_node_id="at0014" type="ITEM_TREE"/>
+                </Any_event>
+            </data>
+        </Indirect_Oximetry>
+        <Pulse archetype_node_id="openEHR-EHR-OBSERVATION.pulse.v1" type="OBSERVATION">
+            <name>
+                <value/>
+            </name>
+            <language>
+                <terminology_id>
+                    <value>ISO_639-1</value>
+                </terminology_id>
+                <code_string>en</code_string>
+            </language>
+            <encoding>
+                <terminology_id>
+                    <value>IANA_character-sets</value>
+                </terminology_id>
+                <code_string>UTF-8</code_string>
+            </encoding>
+            <subject xsi:type="oe:PARTY_SELF"/>
+            <data archetype_node_id="at0002">
+                <origin>
+                    <oe:value>2001</oe:value>
+                </origin>
+                <Any_event_as_Point_Event archetype_node_id="at0003" type="POINT_EVENT">
+                    <name>
+                        <value>Any event</value>
+                    </name>
+                    <time>
+                        <oe:value>2001</oe:value>
+                    </time>
+                    <data archetype_node_id="at0001" type="ITEM_TREE">
+                        <Heart_Rate archetype_node_id="at0004" type="ELEMENT"
+                            valueType="DV_QUANTITY">
+                            <name>
+                                <value>Heart Rate</value>
+                                <defining_code>
+                                    <terminology_id>
+                                        <value>local</value>
+                                    </terminology_id>
+                                    <code_string>at1027</code_string>
+                                </defining_code>
+                            </name>
+                            <value>
+                                <magnitude>98</magnitude>
+                                <precision>0</precision>
+                                <units>/min</units>
+                            </value>
+                        </Heart_Rate>
+                    </data>
+                    <state archetype_node_id="at0012" type="ITEM_TREE"/>
+                </Any_event_as_Point_Event>
+            </data>
+        </Pulse>
+        <Body_temperature archetype_node_id="openEHR-EHR-OBSERVATION.body_temperature.v1"
+            type="OBSERVATION">
+            <name>
+                <value>Body temperature</value>
+            </name>
+            <language>
+                <terminology_id>
+                    <value>ISO_639-1</value>
+                </terminology_id>
+                <code_string>en</code_string>
+            </language>
+            <encoding>
+                <terminology_id>
+                    <value>IANA_character-sets</value>
+                </terminology_id>
+                <code_string>UTF-8</code_string>
+            </encoding>
+            <subject xsi:type="oe:PARTY_SELF"/>
+            <data archetype_node_id="at0002">
+                <origin>
+                    <oe:value>2009-10-11</oe:value>
+                </origin>
+                <Any_event_as_Point_Event archetype_node_id="at0003" type="POINT_EVENT">
+                    <name>
+                        <value>Any event</value>
+                    </name>
+                    <time>
+                        <oe:value>2009-10-11</oe:value>
+                    </time>
+                    <data archetype_node_id="at0001" type="ITEM_TREE">
+                        <Temperature archetype_node_id="at0004" type="ELEMENT"
+                            valueType="DV_QUANTITY">
+                            <name>
+                                <value>Temperature</value>
+                            </name>
+                            <value>
+                                <magnitude>37.1</magnitude>
+                                <precision>1</precision>
+                                <units>°C</units>
+                            </value>
+                        </Temperature>
+                    </data>
+                    <state archetype_node_id="at0029" type="ITEM_TREE"> </state>
+                </Any_event_as_Point_Event>
+            </data>
+        </Body_temperature>
+
+        <AVPU archetype_node_id="openEHR-EHR-OBSERVATION.avpu.v1" type="OBSERVATION">
+            <name>
+                <value/>
+            </name>
+            <language>
+                <terminology_id>
+                    <value>ISO_639-1</value>
+                </terminology_id>
+                <code_string>en</code_string>
+            </language>
+            <encoding>
+                <terminology_id>
+                    <value>IANA_character-sets</value>
+                </terminology_id>
+                <code_string>UTF-8</code_string>
+            </encoding>
+            <subject xsi:type="oe:PARTY_SELF"/>
+            <data archetype_node_id="at0001">
+                <origin>
+                    <oe:value>2009-10-11</oe:value>
+                </origin>
+                <Any_event_as_Point_Event archetype_node_id="at0002" type="POINT_EVENT">
+                    <name>
+                        <value>Any event</value>
+                    </name>
+                    <time>
+                        <oe:value>2009-10-11</oe:value>
+                    </time>
+                    <data archetype_node_id="at0003" type="ITEM_TREE">
+                        <AVPU_Observation archetype_node_id="at0004" type="ELEMENT"
+                            valueType="DV_CODED_TEXT">
+                            <name>
+                                <value>AVPU Observation</value>
+                            </name>
+                            <value>
+                                <value>Alert</value>
+                                <defining_code>
+                                    <terminology_id>
+                                        <value>local</value>
+                                    </terminology_id>
+                                    <code_string>at0005</code_string>
+                                </defining_code>
+                            </value>
+                        </AVPU_Observation>
+                    </data>
+                </Any_event_as_Point_Event>
+            </data>
+        </AVPU>
+        <Blood_Pressure archetype_node_id="openEHR-EHR-OBSERVATION.blood_pressure.v1"
+            type="OBSERVATION">
+            <name>
+                <value>Blood Pressure</value>
+            </name>
+            <language>
+                <terminology_id>
+                    <value>ISO_639-1</value>
+                </terminology_id>
+                <code_string>en</code_string>
+            </language>
+            <encoding>
+                <terminology_id>
+                    <value>IANA_character-sets</value>
+                </terminology_id>
+                <code_string>UTF-8</code_string>
+            </encoding>
+            <subject xsi:type="oe:PARTY_SELF"/>
+            <data archetype_node_id="at0001">
+                <origin>
+                    <oe:value>2009-10-11</oe:value>
+                </origin>
+                <any_event_as_Point_Event archetype_node_id="at0006" type="POINT_EVENT">
+                    <name>
+                        <value>any event</value>
+                    </name>
+                    <time>
+                        <oe:value>0000</oe:value>
+                    </time>
+                    <data archetype_node_id="at0003" type="ITEM_TREE">
+                        <Systolic archetype_node_id="at0004" type="ELEMENT" valueType="DV_QUANTITY">
+                            <name>
+                                <value>Systolic</value>
+                            </name>
+                            <value>
+                                <magnitude>130</magnitude>
+                                <precision>0</precision>
+                                <units>mm[Hg]</units>
+                            </value>
+                        </Systolic>
+                        <Diastolic archetype_node_id="at0005" type="ELEMENT" valueType="DV_QUANTITY">
+                            <name>
+                                <value>Diastolic</value>
+                            </name>
+                            <value>
+                                <magnitude>95</magnitude>
+                                <precision>0</precision>
+                                <units>mm[Hg]</units>
+                            </value>
+                        </Diastolic>
+                    </data>
+                    <state archetype_node_id="at0007" type="ITEM_TREE"/>
+                </any_event_as_Point_Event>
+            </data>
+        </Blood_Pressure>
+        <National_Early_Warning_Score__openBrkt_RCP_UK_closeBrkt_
+            archetype_node_id="openEHR-EHR-OBSERVATION.news_rcp_uk.v1" type="OBSERVATION">
+            <name>
+                <value>National Early Warning Score (RCP UK)</value>
+            </name>
+            <language>
+                <terminology_id>
+                    <value>ISO_639-1</value>
+                </terminology_id>
+                <code_string>en</code_string>
+            </language>
+            <encoding>
+                <terminology_id>
+                    <value>IANA_character-sets</value>
+                </terminology_id>
+                <code_string>UTF-8</code_string>
+            </encoding>
+            <subject xsi:type="oe:PARTY_SELF"/>
+            <data archetype_node_id="at0001">
+                <origin>
+                    <oe:value>2009-10-11</oe:value>
+                </origin>
+                <Point_in_time archetype_node_id="at0002" type="POINT_EVENT">
+                    <name>
+                        <value>Point in time</value>
+                    </name>
+                    <time>
+                        <oe:value>2011-01-31</oe:value>
+                    </time>
+                    <data archetype_node_id="at0003" type="ITEM_TREE">
+
+                        <Respiration_Rate archetype_node_id="at0006" type="ELEMENT"
+                            valueType="DV_ORDINAL">
+                            <name>
+                                <value>Respiration Rate</value>
+                            </name>
+                            <value>
+                                <value>1</value>
+                                <symbol>
+                                    <oe:value>9-11</oe:value>
+                                    <oe:defining_code>
+                                        <oe:terminology_id>
+                                            <oe:value>local</oe:value>
+                                        </oe:terminology_id>
+                                        <oe:code_string>at0019</oe:code_string>
+                                    </oe:defining_code>
+                                </symbol>
+                            </value>
+                        </Respiration_Rate>
+                        <Oxygen_Saturation archetype_node_id="at0029" type="ELEMENT"
+                            valueType="DV_ORDINAL">
+                            <name>
+                                <value>Oxygen Saturation</value>
+                            </name>
+                            <value>
+                                <value>2</value>
+                                <symbol>
+                                    <oe:value>92-93</oe:value>
+                                    <oe:defining_code>
+                                        <oe:terminology_id>
+                                            <oe:value>local</oe:value>
+                                        </oe:terminology_id>
+                                        <oe:code_string>at0032</oe:code_string>
+                                    </oe:defining_code>
+                                </symbol>
+                            </value>
+                        </Oxygen_Saturation>
+                        <Supplemental_Oxygen archetype_node_id="at0034" type="ELEMENT"
+                            valueType="DV_ORDINAL">
+                            <name>
+                                <value>Supplemental Oxygen</value>
+                            </name>
+                            <value>
+                                <value>0</value>
+                                <symbol>
+                                    <oe:value>No</oe:value>
+                                    <oe:defining_code>
+                                        <oe:terminology_id>
+                                            <oe:value>local</oe:value>
+                                        </oe:terminology_id>
+                                        <oe:code_string>at0036</oe:code_string>
+                                    </oe:defining_code>
+                                </symbol>
+                            </value>
+                        </Supplemental_Oxygen>
+                        <Temperature archetype_node_id="at0007" type="ELEMENT"
+                            valueType="DV_ORDINAL">
+                            <name>
+                                <value>Temperature</value>
+                            </name>
+                            <value>
+                                <value>3</value>
+                                <symbol>
+                                    <oe:value>&lt;=35.0</oe:value>
+                                    <oe:defining_code>
+                                        <oe:terminology_id>
+                                            <oe:value>local</oe:value>
+                                        </oe:terminology_id>
+                                        <oe:code_string>at0039</oe:code_string>
+                                    </oe:defining_code>
+                                </symbol>
+                            </value>
+                        </Temperature>
+                        <Systolic_Blood_Pressure archetype_node_id="at0004" type="ELEMENT"
+                            valueType="DV_ORDINAL">
+                            <name>
+                                <value>Systolic Blood Pressure</value>
+                            </name>
+                            <value>
+                                <value>2</value>
+                                <symbol>
+                                    <oe:value>91-100</oe:value>
+                                    <oe:defining_code>
+                                        <oe:terminology_id>
+                                            <oe:value>local</oe:value>
+                                        </oe:terminology_id>
+                                        <oe:code_string>at0016</oe:code_string>
+                                    </oe:defining_code>
+                                </symbol>
+                            </value>
+                        </Systolic_Blood_Pressure>
+                        <Heart_Rate archetype_node_id="at0005" type="ELEMENT" valueType="DV_ORDINAL">
+                            <name>
+                                <value>Heart Rate</value>
+                            </name>
+                            <value>
+                                <value>1</value>
+                                <symbol>
+                                    <oe:value>41-50 or 91-110</oe:value>
+                                    <oe:defining_code>
+                                        <oe:terminology_id>
+                                            <oe:value>local</oe:value>
+                                        </oe:terminology_id>
+                                        <oe:code_string>at0012</oe:code_string>
+                                    </oe:defining_code>
+                                </symbol>
+                            </value>
+                        </Heart_Rate>
+                        <Level_of_consciousness archetype_node_id="at0008" type="ELEMENT"
+                            valueType="DV_ORDINAL">
+                            <name>
+                                <value>Level of consciousness</value>
+                            </name>
+                            <value>
+                                <value>3</value>
+                                <symbol>
+                                    <oe:value>V, P or U</oe:value>
+                                    <oe:defining_code>
+                                        <oe:terminology_id>
+                                            <oe:value>local</oe:value>
+                                        </oe:terminology_id>
+                                        <oe:code_string>at0025</oe:code_string>
+                                    </oe:defining_code>
+                                </symbol>
+                            </value>
+                        </Level_of_consciousness>
+                        <Total_Score archetype_node_id="at0028" type="ELEMENT" valueType="DV_COUNT">
+                            <name>
+                                <value>Total Score</value>
+                            </name>
+                            <value>
+                                <magnitude>12</magnitude>
+                            </value>
+                        </Total_Score>
+                    </data>
+                </Point_in_time>
+            </data>
+        </National_Early_Warning_Score__openBrkt_RCP_UK_closeBrkt_>
+    </Vital_signs>
+</te:Wardware_Nursing_Vital_Signs_Obervation>

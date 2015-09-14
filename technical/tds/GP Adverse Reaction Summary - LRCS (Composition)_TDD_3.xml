@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Changes in TDS/TDD Version 2 03 June 2013-->
+
+<!-- EVALUATION.drugallergy.v1 changed to EVALUATION.adverse_reaction_uk.v1 -->
+<!-- Date of Onset changed to Date recorded -->
+<!-- Reaction details cluster added -->
+<!-- Read code and SNOMED Terminology OIDS changed to READ2 and SNOMEDCT -->
+<!-- ../event[1]/availabilityTimeStamp[1] now maps to ../te:feeder_audit[1]/oe:originating_system_audit[1]/oe:time[1]-->
+<!-- ../event[1]/effectiveTime[1] now maps to ../te:feeder_audit[1]/oe:feeder_system_audit[1]/oe:time[1] with 'effectivetime in version_id-->
+<!-- ../event[1]/effectiveTime[1] now maps to  /data/'Reaction_details'/Date_recorded' in EVALUATION.adverse_reaction_uk.v1 --> 
+
+<!-- Changes in TDS/TDD Version 3 03 June 2013-->
+<!-- Added Comments element to Contraindication to receive free text from E-MIS -->
+    
+
+<te:GP_Adverse_Reaction_Summary xmlns:oe="http://schemas.openehr.org/v1" xmlns:te="http://schemas.oceanehr.com/templates" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.oceanehr.com/templates" template_id="GP Adverse Reaction Summary - LRCS (Composition)">
+    <te:name>
+        <te:value>GP Adverse Reaction Summary</te:value>
+    </te:name>
+    <te:language>
+        <te:terminology_id>
+            <te:value>ISO_639-1</te:value>
+        </te:terminology_id>
+        <te:code_string>en</te:code_string>
+    </te:language>
+    <te:territory>
+        <te:terminology_id>
+            <te:value>ISO_3166-1</te:value>
+        </te:terminology_id>
+        <te:code_string>EN</te:code_string>
+    </te:territory>
+    <te:category>
+        <te:value>persistent</te:value>
+        <te:defining_code>
+            <te:terminology_id>
+                <te:value>openehr</te:value>
+            </te:terminology_id>
+            <te:code_string>431</te:code_string>
+        </te:defining_code>
+    </te:category>
+    <te:composer xsi:type="oe:PARTY_IDENTIFIED">
+        <!-- Still to decide how the name gets resolved, if at all -->
+        <oe:name>Netherfield House Surgery</oe:name>
+        <oe:identifiers>
+            <oe:issuer>NHS</oe:issuer>
+            <oe:assigner>NHS</oe:assigner>
+            <!-- /openHealthRecord/adminDomain[1]/organisation[1]/nationalPracticeCode[1] -->
+            <oe:id>V81999</oe:id>
+            <oe:type>NationalPracticeCode</oe:type>
+        </oe:identifiers>
+        <oe:identifiers>
+            <oe:issuer>LEEDSRIE</oe:issuer>
+            <oe:assigner>LEEDSRIE</oe:assigner>
+            <!-- ? Inserted by Leeds RIE -->
+            <oe:id>12345</oe:id>
+            <oe:type>LeedsTrustOrganisdationCode</oe:type>
+        </oe:identifiers>
+    </te:composer>
+    <!-- Drug allergy READV2 coded -->
+    <te:Adverse_reaction archetype_node_id="openEHR-EHR-EVALUATION.adverse_reaction_uk.v1" type="EVALUATION">
+        <te:name>
+            <te:value>Adverse reaction</te:value>
+        </te:name>
+        <te:feeder_audit>
+            <oe:originating_system_audit>
+                <oe:system_id>EMISWEB</oe:system_id>
+                <oe:time>
+                    <!-- openHR path	/openHealthRecord/healthDomain[1]/event[1]/availabilityTimeStamp[1] -->
+                    <oe:value>1965-08-15T00:00:00</oe:value>
+                </oe:time>
+            </oe:originating_system_audit>
+            <oe:feeder_system_audit>
+                <oe:system_id>EMISWEB</oe:system_id>
+                <oe:time>
+                    <!-- /openHealthRecord/healthDomain[1]/event[1]/effectiveTime[1] -->
+                    <oe:value>1965-08-15T00:00:00</oe:value>
+                </oe:time>
+                <oe:version_id>effective_time</oe:version_id>
+            </oe:feeder_system_audit>
+        </te:feeder_audit>
+        <te:language>
+            <te:terminology_id>
+                <te:value>ISO_639-1</te:value>
+            </te:terminology_id>
+            <te:code_string>en</te:code_string>
+        </te:language>
+        <te:encoding>
+            <te:terminology_id>
+                <te:value>IANA_character-sets</te:value>
+            </te:terminology_id>
+            <te:code_string>UTF-8</te:code_string>
+        </te:encoding>
+        <te:subject xsi:type="oe:PARTY_SELF"/>
+        <te:data archetype_node_id="at0001" type="ITEM_TREE">
+            <te:Causative_agent archetype_node_id="at0002" type="ELEMENT" valueType="DV_TEXT">
+                <te:name>
+                    <te:value>Causative agent</te:value>
+                </te:name>
+                <te:value>
+                    <oe:value>Penicillin Allergy</oe:value>
+                    <oe:mappings>
+                        <oe:match>=</oe:match>
+                        <oe:target>
+                            <oe:terminology_id>
+                                <oe:value>READ2</oe:value>
+                            </oe:terminology_id>
+                            <oe:code_string>141L</oe:code_string>
+                        </oe:target>
+                    </oe:mappings>
+                </te:value>
+            </te:Causative_agent>
+            <te:Reaction_details archetype_node_id="at0025" type="CLUSTER">
+                <te:name>
+                    <te:value>Reaction details</te:value>
+                </te:name>
+                <!-- /openHealthRecord/healthDomain[1]/event[1]/effectiveTime[1] -->
+                <te:Date_recorded archetype_node_id="at0021" type="ELEMENT" valueType="DV_DATE_TIME">
+                    <te:name>
+                        <te:value>Date recorded</te:value>
+                    </te:name>
+                    <te:value>
+                        <oe:value>1973-08-15T00:00:00</oe:value>
+                    </te:value>
+                </te:Date_recorded>
+                <te:Comment archetype_node_id="at0022" type="ELEMENT" valueType="DV_TEXT">
+                    <te:name>
+                        <te:value>Comment</te:value>
+                    </te:name>
+                    <!-- concatenated from associatedText and displayTerm -->
+                    <te:value>
+                        <oe:value>After given Penicillin-V 250mg tab at OOH centre, possibly a Penicillin Allergy as he developed an exfoliative rash</oe:value>
+                    </te:value>
+                </te:Comment>
+            </te:Reaction_details>
+        </te:data>
+    </te:Adverse_reaction>
+    <!-- Drug allergy using EMISPREPARATIONALLERGY -->
+    <te:Adverse_reaction archetype_node_id="openEHR-EHR-EVALUATION.adverse_reaction_uk.v1" type="EVALUATION">
+        <te:name>
+            <te:value>Adverse reaction</te:value>
+        </te:name>
+        <te:feeder_audit>
+            <oe:originating_system_audit>
+                <oe:system_id>EMISWEB</oe:system_id>
+                <oe:time>
+                    <!-- openHR path	/openHealthRecord/healthDomain[1]/event[1]/availabilityTimeStamp[1] -->
+                    <oe:value>1965-08-15T00:00:00</oe:value>
+                </oe:time>
+            </oe:originating_system_audit>
+            <oe:feeder_system_audit>
+                <oe:system_id>EMISWEB</oe:system_id>
+                <oe:time>
+                    <!-- /openHealthRecord/healthDomain[1]/event[1]/effectiveTime[1] -->
+                    <oe:value>1965-08-15T00:00:00</oe:value>
+                </oe:time>
+                <oe:version_id>effective_time</oe:version_id>
+            </oe:feeder_system_audit>
+        </te:feeder_audit>
+        <te:language>
+            <te:terminology_id>
+                <te:value>ISO_639-1</te:value>
+            </te:terminology_id>
+            <te:code_string>en</te:code_string>
+        </te:language>
+        <te:encoding>
+            <te:terminology_id>
+                <te:value>IANA_character-sets</te:value>
+            </te:terminology_id>
+            <te:code_string>UTF-8</te:code_string>
+        </te:encoding>
+        <te:subject xsi:type="oe:PARTY_SELF"/>
+        <te:data archetype_node_id="at0001" type="ITEM_TREE">
+            <te:Causative_agent archetype_node_id="at0002" type="ELEMENT" valueType="DV_TEXT">
+                <te:name>
+                    <te:value>Causative agent</te:value>
+                </te:name>
+                <te:value>
+                    <oe:value>Penicillin-V 250mg tab</oe:value>
+                    <oe:mappings>
+                        <oe:match>=</oe:match>
+                        <oe:target>
+                            <oe:terminology_id>
+                                <oe:value>EMISPREPARATIONALLERGY</oe:value>
+                            </oe:terminology_id>
+                            <oe:code_string>XY1234</oe:code_string>
+                        </oe:target>
+                    </oe:mappings>
+                </te:value>
+            </te:Causative_agent>
+            <te:Reaction_details archetype_node_id="at0025" type="CLUSTER">
+                <te:name>
+                    <te:value>Reaction details</te:value>
+                </te:name>
+                <!-- /openHealthRecord/healthDomain[1]/event[1]/effectiveTime[1] -->
+                <te:Date_recorded archetype_node_id="at0021" type="ELEMENT" valueType="DV_DATE_TIME">
+                    <te:name>
+                        <te:value>Date recorded</te:value>
+                    </te:name>
+                    <te:value>
+                        <oe:value>1970-08-15T00:00:00</oe:value>
+                    </te:value>
+                </te:Date_recorded>
+                <te:Comment archetype_node_id="at0022" type="ELEMENT" valueType="DV_TEXT">
+                    <te:name>
+                        <te:value>Comment</te:value>
+                    </te:name>
+                    <!-- concatenated from associatedText and displayTerm -->
+                    <te:value>
+                        <oe:value>After given Penicillin-V 250mg tab at OOH centre, possibly a Penicillin Allergy as he developed an exfoliative rash</oe:value>
+                    </te:value>
+                </te:Comment>
+            </te:Reaction_details>
+        </te:data>
+    </te:Adverse_reaction>
+
+
+    <!-- Contraindication - READ Coded -->
+    <te:Contraindication type="EVALUATION" archetype_node_id="openEHR-EHR-EVALUATION.contraindication.v1">
+        <te:name>
+            <te:value>Contraindication</te:value>
+        </te:name>
+        <te:feeder_audit>
+            <oe:originating_system_audit>
+                <oe:system_id>EMISWEB</oe:system_id>
+                <oe:time>
+                    <!-- openHR path	/openHealthRecord/healthDomain[1]/event[1]/availabilityTimeStamp[1] -->
+                    <oe:value>1965-08-15T00:00:00</oe:value>
+                </oe:time>
+            </oe:originating_system_audit>
+            <oe:feeder_system_audit>
+                <oe:system_id>EMISWEB</oe:system_id>
+                <oe:time>
+                    <!-- /openHealthRecord/healthDomain[1]/event[1]/effectiveTime[1] -->
+                    <oe:value>1965-08-15T00:00:00</oe:value>
+                </oe:time>
+                <oe:version_id>effective_time</oe:version_id>
+            </oe:feeder_system_audit>
+        </te:feeder_audit>
+        <te:language>
+            <te:terminology_id>
+                <te:value>ISO_639-1</te:value>
+            </te:terminology_id>
+            <te:code_string>en</te:code_string>
+        </te:language>
+        <te:encoding>
+            <te:terminology_id>
+                <te:value>IANA_character-sets</te:value>
+            </te:terminology_id>
+            <te:code_string>UTF-8</te:code_string>
+        </te:encoding>
+        <te:subject xsi:type="oe:PARTY_SELF"/>
+        <te:data archetype_node_id="at0001" type="ITEM_TREE">
+            <te:Contraindication type="ELEMENT" archetype_node_id="at0002" valueType="DV_CODED_TEXT">
+                <te:name>
+                    <te:value>Contraindication</te:value>
+                </te:name>
+                <te:value>
+                    <oe:value>Beta blocker contraindicated</oe:value>
+                    <oe:defining_code>
+                        <oe:terminology_id>
+                            <oe:value>8126.</oe:value>
+                        </oe:terminology_id>
+                        <oe:code_string>READ2</oe:code_string>
+                    </oe:defining_code>
+                </te:value>
+            </te:Contraindication>
+            <te:Evidence_fslash_Rationale archetype_node_id="at0003" type="ELEMENT" valueType="DV_TEXT">
+                <te:name>
+                    <te:value>Evidence/Rationale</te:value>
+                </te:name>
+                <te:value>
+                    <oe:value>Has asthma</oe:value>
+                </te:value>
+            </te:Evidence_fslash_Rationale>
+        </te:data>
+    </te:Contraindication>
+    <!-- Allergy Exclusion READV2 coded -->
+    <!-- Note that we do not yet have a target for Additional text -->
+    <te:Exclusion_statement__-__Adverse_Reaction archetype_node_id="openEHR-EHR-EVALUATION.exclusion-adverse.v1" type="EVALUATION">
+        <te:name>
+            <te:value>Exclusion statement - Adverse Reaction</te:value>
+        </te:name>
+        <te:feeder_audit>
+            <oe:originating_system_audit>
+                <oe:system_id>EMISWEB</oe:system_id>
+                <oe:time>
+                    <!-- openHR path	/openHealthRecord/healthDomain[1]/event[1]/availabilityTimeStamp[1] -->
+                    <oe:value>1965-08-15T00:00:00</oe:value>
+                </oe:time>
+            </oe:originating_system_audit>
+            <oe:feeder_system_audit>
+                <oe:system_id>EMISWEB</oe:system_id>
+                <oe:time>
+                    <!-- /openHealthRecord/healthDomain[1]/event[1]/effectiveTime[1] -->
+                    <oe:value>1965-08-15T00:00:00</oe:value>
+                </oe:time>
+                <oe:version_id>effective_time</oe:version_id>
+            </oe:feeder_system_audit>
+        </te:feeder_audit>
+        <te:language>
+            <te:terminology_id>
+                <te:value>ISO_639-1</te:value>
+            </te:terminology_id>
+            <te:code_string>en</te:code_string>
+        </te:language>
+        <te:encoding>
+            <te:terminology_id>
+                <te:value>IANA_character-sets</te:value>
+            </te:terminology_id>
+            <te:code_string>UTF-8</te:code_string>
+        </te:encoding>
+        <te:subject xsi:type="oe:PARTY_SELF"/>
+        <te:data archetype_node_id="at0001" type="ITEM_TREE">
+            <te:Global_Statement archetype_node_id="at0002.1" type="ELEMENT" valueType="DV_CODED_TEXT">
+                <te:name>
+                    <te:value>Global Statement</te:value>
+                </te:name>
+                <te:value>
+                    <te:value>No known adverse reactions</te:value>
+                    <te:mappings>
+                        <oe:match>=</oe:match>
+                        <oe:target>
+                            <oe:terminology_id>
+                                <oe:value>READ2</oe:value>
+                            </oe:terminology_id>
+                            <oe:code_string>1151.</oe:code_string>
+                        </oe:target>
+                    </te:mappings>
+                    <te:defining_code>
+                        <te:terminology_id>
+                            <te:value>local</te:value>
+                        </te:terminology_id>
+                        <te:code_string>at0.3</te:code_string>
+                    </te:defining_code>
+                </te:value>
+            </te:Global_Statement>
+            <te:Comment archetype_node_id="at0.11" type="ELEMENT" valueType="DV_TEXT">
+                <te:name>
+                    <te:value>Comment</te:value>
+                </te:name>
+                <te:value>
+                    <oe:value>A bit confused - may not be reliable</oe:value>
+                </te:value>
+            </te:Comment>
+        </te:data>
+    </te:Exclusion_statement__-__Adverse_Reaction>
+</te:GP_Adverse_Reaction_Summary>

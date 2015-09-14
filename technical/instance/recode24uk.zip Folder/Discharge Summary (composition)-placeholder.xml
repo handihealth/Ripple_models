@@ -1,0 +1,1281 @@
+<COMPOSITION xmlns="http://schemas.openehr.org/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="COMPOSITION" archetype_node_id="openEHR-EHR-COMPOSITION.report.v1">
+  <name>
+    <value>Discharge Medication Summary</value>
+  </name>
+  <archetype_details>
+    <archetype_id>
+      <value>openEHR-EHR-COMPOSITION.report.v1</value>
+    </archetype_id>
+    <template_id>
+      <value>Discharge Summary (composition)::aef30287-dbbc-3cc0-96e1-812e93583f78</value>
+    </template_id>
+    <rm_version>1.0.2</rm_version>
+  </archetype_details>
+  <language>
+    <terminology_id>
+      <value>ISO_639-1</value>
+    </terminology_id>
+    <code_string>en</code_string>
+  </language>
+  <territory>
+    <terminology_id>
+      <value>ISO_3166-1</value>
+    </terminology_id>
+    <code_string>NETHERLANDS</code_string>
+  </territory>
+  <category>
+    <value>event</value>
+    <defining_code>
+      <terminology_id>
+        <value>openehr</value>
+      </terminology_id>
+      <code_string>433</code_string>
+    </defining_code>
+  </category>
+  <composer xsi:type="PARTY_SELF"/>
+  <context>
+    <start_time>
+      <value/>
+    </start_time>
+    <setting>
+      <value/>
+      <defining_code>
+        <terminology_id>
+          <value/>
+        </terminology_id>
+        <code_string/>
+      </defining_code>
+    </setting>
+    <other_context archetype_node_id="at0001" xsi:type="ITEM_TREE">
+      <name>
+        <value>Tree</value>
+      </name>
+    </other_context>
+  </context>
+  <content archetype_node_id="openEHR-EHR-SECTION.medication_medical_devices_rcp.v1" xsi:type="SECTION">
+    <name>
+      <value>Medication and medical devices</value>
+    </name>
+    <archetype_details>
+      <archetype_id>
+        <value>openEHR-EHR-SECTION.medication_medical_devices_rcp.v1</value>
+      </archetype_id>
+      <rm_version>1.0.2</rm_version>
+    </archetype_details>
+    <items archetype_node_id="openEHR-EHR-SECTION.current_medication_rcp.v1" xsi:type="SECTION">
+      <name>
+        <value>Current medication</value>
+      </name>
+      <archetype_details>
+        <archetype_id>
+          <value>openEHR-EHR-SECTION.current_medication_rcp.v1</value>
+        </archetype_id>
+        <rm_version>1.0.2</rm_version>
+      </archetype_details>
+      <items archetype_node_id="openEHR-EHR-EVALUATION.medication_statement_uk.v1" xsi:type="EVALUATION">
+        <name>
+          <value>Medication statement</value>
+        </name>
+        <archetype_details>
+          <archetype_id>
+            <value>openEHR-EHR-EVALUATION.medication_statement_uk.v1</value>
+          </archetype_id>
+          <rm_version>1.0.2</rm_version>
+        </archetype_details>
+        <language>
+          <terminology_id>
+            <value>ISO_639-1</value>
+          </terminology_id>
+          <code_string>Dutch (Standard)</code_string>
+        </language>
+        <encoding>
+          <terminology_id>
+            <value>IANA_character-sets</value>
+          </terminology_id>
+          <code_string>UTF-8</code_string>
+        </encoding>
+        <subject xsi:type="PARTY_SELF"/>
+        <protocol archetype_node_id="at0003" xsi:type="ITEM_TREE">
+          <name>
+            <value>Tree</value>
+          </name>
+        </protocol>
+        <data xsi:type="ITEM_TREE" archetype_node_id="at0001">
+          <name>
+            <value>Tree</value>
+          </name>
+          <items archetype_node_id="openEHR-EHR-CLUSTER.medication_item.v1" xsi:type="CLUSTER">
+            <name>
+              <value>Medication item</value>
+            </name>
+            <archetype_details>
+              <archetype_id>
+                <value>openEHR-EHR-CLUSTER.medication_item.v1</value>
+              </archetype_id>
+              <rm_version>1.0.2</rm_version>
+            </archetype_details>
+            <items archetype_node_id="at0001" xsi:type="ELEMENT">
+              <name>
+                <value>Medication name</value>
+              </name>
+              <value xsi:type="DV_TEXT">
+                <value/>
+              </value>
+            </items>
+            <items archetype_node_id="at0022" xsi:type="ELEMENT">
+              <name>
+                <value>Form</value>
+              </name>
+              <value xsi:type="DV_CODED_TEXT">
+                <value/>
+                <defining_code>
+                  <terminology_id>
+                    <value/>
+                  </terminology_id>
+                  <code_string/>
+                </defining_code>
+              </value>
+            </items>
+            <items archetype_node_id="at0002" xsi:type="ELEMENT">
+              <name>
+                <value>Route</value>
+              </name>
+              <value xsi:type="DV_CODED_TEXT">
+                <value/>
+                <defining_code>
+                  <terminology_id>
+                    <value/>
+                  </terminology_id>
+                  <code_string/>
+                </defining_code>
+              </value>
+            </items>
+            <items archetype_node_id="at0020" xsi:type="ELEMENT">
+              <name>
+                <value>Dose amount description</value>
+              </name>
+              <value xsi:type="DV_TEXT">
+                <value/>
+              </value>
+            </items>
+            <items archetype_node_id="at0021" xsi:type="ELEMENT">
+              <name>
+                <value>Dose timing description</value>
+              </name>
+              <value xsi:type="DV_TEXT">
+                <value/>
+              </value>
+            </items>
+            <items archetype_node_id="at0033" xsi:type="ELEMENT">
+              <name>
+                <value>Parsable dose directions</value>
+              </name>
+              <value xsi:type="DV_PARSABLE">
+                <size/>
+                <value/>
+                <formalism>text/plain</formalism>
+              </value>
+            </items>
+            <items archetype_node_id="at0005" xsi:type="ELEMENT">
+              <name xsi:type="DV_CODED_TEXT">
+                <value>Additional instruction</value>
+                <defining_code>
+                  <terminology_id>
+                    <value>local</value>
+                  </terminology_id>
+                  <code_string>at0005</code_string>
+                </defining_code>
+              </name>
+              <value xsi:type="DV_TEXT">
+                <value/>
+              </value>
+            </items>
+            <items archetype_node_id="at0005" xsi:type="ELEMENT">
+              <name xsi:type="DV_CODED_TEXT">
+                <value>Additional instruction</value>
+                <defining_code>
+                  <terminology_id>
+                    <value>local</value>
+                  </terminology_id>
+                  <code_string>at0005</code_string>
+                </defining_code>
+              </name>
+              <value xsi:type="DV_TEXT">
+                <value/>
+              </value>
+            </items>
+            <items archetype_node_id="at0046" xsi:type="CLUSTER">
+              <name>
+                <value>Course details</value>
+              </name>
+              <items archetype_node_id="at0049" xsi:type="ELEMENT">
+                <name>
+                  <value>Course status</value>
+                </name>
+                <value xsi:type="DV_CODED_TEXT">
+                  <value/>
+                  <defining_code>
+                    <terminology_id>
+                      <value>local</value>
+                    </terminology_id>
+                    <code_string/>
+                  </defining_code>
+                </value>
+              </items>
+              <items archetype_node_id="at0039" xsi:type="ELEMENT">
+                <name>
+                  <value>Start datetime</value>
+                </name>
+                <value xsi:type="DV_DATE_TIME">
+                  <value/>
+                </value>
+              </items>
+              <items archetype_node_id="at0040" xsi:type="ELEMENT">
+                <name>
+                  <value>End datetime</value>
+                </name>
+                <value xsi:type="DV_DATE_TIME">
+                  <value/>
+                </value>
+              </items>
+              <items archetype_node_id="at0047" xsi:type="ELEMENT">
+                <name>
+                  <value>Indication</value>
+                </name>
+                <value xsi:type="DV_TEXT">
+                  <value/>
+                </value>
+              </items>
+              <items archetype_node_id="at0028" xsi:type="ELEMENT">
+                <name>
+                  <value>Comment / recommendation</value>
+                </name>
+                <value xsi:type="DV_TEXT">
+                  <value/>
+                </value>
+              </items>
+            </items>
+          </items>
+          <items archetype_node_id="openEHR-EHR-CLUSTER.medication_event_summary.v1" xsi:type="CLUSTER">
+            <name>
+              <value>Medication event summary</value>
+            </name>
+            <archetype_details>
+              <archetype_id>
+                <value>openEHR-EHR-CLUSTER.medication_event_summary.v1</value>
+              </archetype_id>
+              <rm_version>1.0.2</rm_version>
+            </archetype_details>
+            <items archetype_node_id="at0070" xsi:type="CLUSTER">
+              <name>
+                <value>First authorised</value>
+              </name>
+              <items archetype_node_id="at0047" xsi:type="ELEMENT">
+                <name xsi:type="DV_CODED_TEXT">
+                  <value>Date first authorised</value>
+                  <defining_code>
+                    <terminology_id>
+                      <value>local</value>
+                    </terminology_id>
+                    <code_string>at0061</code_string>
+                  </defining_code>
+                </name>
+                <value xsi:type="DV_DATE_TIME">
+                  <value/>
+                </value>
+              </items>
+            </items>
+            <items archetype_node_id="at0070" xsi:type="CLUSTER">
+              <name>
+                <value>Last administered</value>
+              </name>
+              <items archetype_node_id="at0047" xsi:type="ELEMENT">
+                <name xsi:type="DV_CODED_TEXT">
+                  <value>Date last administered</value>
+                  <defining_code>
+                    <terminology_id>
+                      <value>local</value>
+                    </terminology_id>
+                    <code_string>at0066</code_string>
+                  </defining_code>
+                </name>
+                <value xsi:type="DV_DATE_TIME">
+                  <value/>
+                </value>
+              </items>
+              <items archetype_node_id="openEHR-EHR-CLUSTER.medication_event.v1" xsi:type="CLUSTER">
+                <name>
+                  <value>Medication event</value>
+                </name>
+                <archetype_details>
+                  <archetype_id>
+                    <value>openEHR-EHR-CLUSTER.medication_event.v1</value>
+                  </archetype_id>
+                  <rm_version>1.0.2</rm_version>
+                </archetype_details>
+                <items archetype_node_id="at0135" xsi:type="CLUSTER">
+                  <name>
+                    <value>Product</value>
+                  </name>
+                  <items archetype_node_id="at0052" xsi:type="ELEMENT">
+                    <name>
+                      <value>Expiry date</value>
+                    </name>
+                    <value xsi:type="DV_DATE">
+                      <value/>
+                    </value>
+                  </items>
+                  <items archetype_node_id="at0051" xsi:type="ELEMENT">
+                    <name>
+                      <value>Batch number</value>
+                    </name>
+                    <value xsi:type="DV_TEXT">
+                      <value/>
+                    </value>
+                  </items>
+                </items>
+                <items archetype_node_id="at0136" xsi:type="ELEMENT">
+                  <name>
+                    <value>Comment</value>
+                  </name>
+                  <value xsi:type="DV_TEXT">
+                    <value/>
+                  </value>
+                </items>
+              </items>
+            </items>
+            <items archetype_node_id="at0070" xsi:type="CLUSTER">
+              <name>
+                <value>Last dispensed</value>
+              </name>
+              <items archetype_node_id="at0047" xsi:type="ELEMENT">
+                <name xsi:type="DV_CODED_TEXT">
+                  <value>Date last dispensed</value>
+                  <defining_code>
+                    <terminology_id>
+                      <value>local</value>
+                    </terminology_id>
+                    <code_string>at0064</code_string>
+                  </defining_code>
+                </name>
+                <value xsi:type="DV_DATE_TIME">
+                  <value/>
+                </value>
+              </items>
+              <items archetype_node_id="openEHR-EHR-CLUSTER.medication_event.v1" xsi:type="CLUSTER">
+                <name>
+                  <value>Last dispensed details</value>
+                </name>
+                <archetype_details>
+                  <archetype_id>
+                    <value>openEHR-EHR-CLUSTER.medication_event.v1</value>
+                  </archetype_id>
+                  <rm_version>1.0.2</rm_version>
+                </archetype_details>
+                <items archetype_node_id="at0135" xsi:type="CLUSTER">
+                  <name>
+                    <value>Product</value>
+                  </name>
+                  <items archetype_node_id="openEHR-EHR-CLUSTER.medication_quantity_sct.v1" xsi:type="CLUSTER">
+                    <name>
+                      <value>Quantity dispensed</value>
+                    </name>
+                    <archetype_details>
+                      <archetype_id>
+                        <value>openEHR-EHR-CLUSTER.medication_quantity_sct.v1</value>
+                      </archetype_id>
+                      <rm_version>1.0.2</rm_version>
+                    </archetype_details>
+                    <items archetype_node_id="at0003" xsi:type="ELEMENT">
+                      <name>
+                        <value>Quantity description</value>
+                      </name>
+                      <value xsi:type="DV_TEXT">
+                        <value/>
+                      </value>
+                    </items>
+                    <items archetype_node_id="at0001" xsi:type="ELEMENT">
+                      <name>
+                        <value>Quantity value</value>
+                      </name>
+                      <value xsi:type="DV_QUANTITY">
+                        <magnitude/>
+                        <units/>
+                      </value>
+                    </items>
+                    <items archetype_node_id="at0002" xsi:type="ELEMENT">
+                      <name>
+                        <value>Quantity unit</value>
+                      </name>
+                      <value xsi:type="DV_CODED_TEXT">
+                        <value/>
+                        <defining_code>
+                          <terminology_id>
+                            <value/>
+                          </terminology_id>
+                          <code_string/>
+                        </defining_code>
+                      </value>
+                    </items>
+                  </items>
+                </items>
+              </items>
+            </items>
+            <items archetype_node_id="at0070" xsi:type="CLUSTER">
+              <name>
+                <value>Prescription last issued</value>
+              </name>
+              <items archetype_node_id="at0047" xsi:type="ELEMENT">
+                <name xsi:type="DV_CODED_TEXT">
+                  <value>Date last prescription issued</value>
+                  <defining_code>
+                    <terminology_id>
+                      <value>local</value>
+                    </terminology_id>
+                    <code_string>at0060</code_string>
+                  </defining_code>
+                </name>
+                <value xsi:type="DV_DATE_TIME">
+                  <value/>
+                </value>
+              </items>
+              <items archetype_node_id="openEHR-EHR-CLUSTER.medication_event.v1" xsi:type="CLUSTER">
+                <name>
+                  <value>Last issue details</value>
+                </name>
+                <archetype_details>
+                  <archetype_id>
+                    <value>openEHR-EHR-CLUSTER.medication_event.v1</value>
+                  </archetype_id>
+                  <rm_version>1.0.2</rm_version>
+                </archetype_details>
+                <items archetype_node_id="at0121" xsi:type="CLUSTER">
+                  <name>
+                    <value>Prescription supply</value>
+                  </name>
+                  <items archetype_node_id="at0129" xsi:type="ELEMENT">
+                    <name>
+                      <value>Prescription type</value>
+                    </name>
+                    <value xsi:type="DV_CODED_TEXT">
+                      <value/>
+                      <defining_code>
+                        <terminology_id>
+                          <value>local</value>
+                        </terminology_id>
+                        <code_string/>
+                      </defining_code>
+                    </value>
+                  </items>
+                  <items archetype_node_id="at0004" xsi:type="ELEMENT">
+                    <name>
+                      <value>Prescription endorsement</value>
+                    </name>
+                    <value xsi:type="DV_CODED_TEXT">
+                      <value/>
+                      <defining_code>
+                        <terminology_id>
+                          <value>local</value>
+                        </terminology_id>
+                        <code_string/>
+                      </defining_code>
+                    </value>
+                  </items>
+                  <items archetype_node_id="at0036" xsi:type="ELEMENT">
+                    <name>
+                      <value>Prescribing method</value>
+                    </name>
+                    <value xsi:type="DV_CODED_TEXT">
+                      <value/>
+                      <defining_code>
+                        <terminology_id>
+                          <value>local</value>
+                        </terminology_id>
+                        <code_string/>
+                      </defining_code>
+                    </value>
+                  </items>
+                  <items archetype_node_id="at0113" xsi:type="ELEMENT">
+                    <name>
+                      <value>Prescribing agency</value>
+                    </name>
+                    <value xsi:type="DV_CODED_TEXT">
+                      <value/>
+                      <defining_code>
+                        <terminology_id>
+                          <value>local</value>
+                        </terminology_id>
+                        <code_string/>
+                      </defining_code>
+                    </value>
+                  </items>
+                </items>
+                <items archetype_node_id="at0135" xsi:type="CLUSTER">
+                  <name>
+                    <value>Product</value>
+                  </name>
+                  <items archetype_node_id="openEHR-EHR-CLUSTER.medication_quantity_sct.v1" xsi:type="CLUSTER">
+                    <name>
+                      <value>Quantity issued (prescribed)</value>
+                    </name>
+                    <archetype_details>
+                      <archetype_id>
+                        <value>openEHR-EHR-CLUSTER.medication_quantity_sct.v1</value>
+                      </archetype_id>
+                      <rm_version>1.0.2</rm_version>
+                    </archetype_details>
+                    <items archetype_node_id="at0003" xsi:type="ELEMENT">
+                      <name>
+                        <value>Quantity description</value>
+                      </name>
+                      <value xsi:type="DV_TEXT">
+                        <value/>
+                      </value>
+                    </items>
+                    <items archetype_node_id="at0001" xsi:type="ELEMENT">
+                      <name>
+                        <value>Quantity value</value>
+                      </name>
+                      <value xsi:type="DV_QUANTITY">
+                        <magnitude/>
+                        <units/>
+                      </value>
+                    </items>
+                    <items archetype_node_id="at0002" xsi:type="ELEMENT">
+                      <name>
+                        <value>Quantity unit</value>
+                      </name>
+                      <value xsi:type="DV_CODED_TEXT">
+                        <value/>
+                        <defining_code>
+                          <terminology_id>
+                            <value/>
+                          </terminology_id>
+                          <code_string/>
+                        </defining_code>
+                      </value>
+                    </items>
+                  </items>
+                </items>
+              </items>
+            </items>
+          </items>
+          <items archetype_node_id="openEHR-EHR-CLUSTER.medication_reconciliation_admit_uk.v1" xsi:type="CLUSTER">
+            <name>
+              <value>Medication reconciliation</value>
+            </name>
+            <archetype_details>
+              <archetype_id>
+                <value>openEHR-EHR-CLUSTER.medication_reconciliation_admit_uk.v1</value>
+              </archetype_id>
+              <rm_version>1.0.2</rm_version>
+            </archetype_details>
+            <items archetype_node_id="at0003" xsi:type="ELEMENT">
+              <name>
+                <value>Reconciliation action</value>
+              </name>
+              <value xsi:type="DV_CODED_TEXT">
+                <value/>
+                <defining_code>
+                  <terminology_id>
+                    <value>local</value>
+                  </terminology_id>
+                  <code_string/>
+                </defining_code>
+              </value>
+            </items>
+            <items archetype_node_id="at0012" xsi:type="ELEMENT">
+              <name>
+                <value>Change details</value>
+              </name>
+              <value xsi:type="DV_TEXT">
+                <value/>
+              </value>
+            </items>
+            <items archetype_node_id="at0004" xsi:type="ELEMENT">
+              <name>
+                <value>Reason</value>
+              </name>
+              <value xsi:type="DV_TEXT">
+                <value/>
+              </value>
+            </items>
+            <items archetype_node_id="at0013" xsi:type="ELEMENT">
+              <name>
+                <value>Withhold until</value>
+              </name>
+              <value xsi:type="DV_TEXT">
+                <value/>
+              </value>
+            </items>
+            <items archetype_node_id="at0006" xsi:type="ELEMENT">
+              <name>
+                <value>Date reconciled</value>
+              </name>
+              <value xsi:type="DV_DATE_TIME">
+                <value/>
+              </value>
+            </items>
+            <items archetype_node_id="at0026" xsi:type="ELEMENT">
+              <name>
+                <value>Source of information</value>
+              </name>
+              <value xsi:type="DV_TEXT">
+                <value/>
+              </value>
+            </items>
+            <items archetype_node_id="at0027" xsi:type="ELEMENT">
+              <name>
+                <value>Source contact details</value>
+              </name>
+              <value xsi:type="DV_TEXT">
+                <value/>
+              </value>
+            </items>
+            <items archetype_node_id="at0007" xsi:type="ELEMENT">
+              <name>
+                <value>Link to source medication entry</value>
+              </name>
+              <value xsi:type="DV_URI"/>
+            </items>
+            <items archetype_node_id="at0029" xsi:type="ELEMENT">
+              <name>
+                <value>Link to target medication entry</value>
+              </name>
+              <value xsi:type="DV_URI"/>
+            </items>
+          </items>
+        </data>
+      </items>
+    </items>
+    <items archetype_node_id="openEHR-EHR-SECTION.current_medication_rcp.v1" xsi:type="SECTION">
+      <name>
+        <value>Discontinued GP medication</value>
+      </name>
+      <archetype_details>
+        <archetype_id>
+          <value>openEHR-EHR-SECTION.current_medication_rcp.v1</value>
+        </archetype_id>
+        <rm_version>1.0.2</rm_version>
+      </archetype_details>
+      <items archetype_node_id="openEHR-EHR-EVALUATION.medication_statement_uk.v1" xsi:type="EVALUATION">
+        <name>
+          <value>Medication statement</value>
+        </name>
+        <archetype_details>
+          <archetype_id>
+            <value>openEHR-EHR-EVALUATION.medication_statement_uk.v1</value>
+          </archetype_id>
+          <rm_version>1.0.2</rm_version>
+        </archetype_details>
+        <language>
+          <terminology_id>
+            <value>ISO_639-1</value>
+          </terminology_id>
+          <code_string>Dutch (Standard)</code_string>
+        </language>
+        <encoding>
+          <terminology_id>
+            <value>IANA_character-sets</value>
+          </terminology_id>
+          <code_string>UTF-8</code_string>
+        </encoding>
+        <subject xsi:type="PARTY_SELF"/>
+        <protocol archetype_node_id="at0003" xsi:type="ITEM_TREE">
+          <name>
+            <value>Tree</value>
+          </name>
+        </protocol>
+        <data xsi:type="ITEM_TREE" archetype_node_id="at0001">
+          <name>
+            <value>Tree</value>
+          </name>
+          <items archetype_node_id="openEHR-EHR-CLUSTER.medication_item.v1" xsi:type="CLUSTER">
+            <name>
+              <value>Medication item</value>
+            </name>
+            <archetype_details>
+              <archetype_id>
+                <value>openEHR-EHR-CLUSTER.medication_item.v1</value>
+              </archetype_id>
+              <rm_version>1.0.2</rm_version>
+            </archetype_details>
+            <items archetype_node_id="at0001" xsi:type="ELEMENT">
+              <name>
+                <value>Medication name</value>
+              </name>
+              <value xsi:type="DV_TEXT">
+                <value/>
+              </value>
+            </items>
+            <items archetype_node_id="at0022" xsi:type="ELEMENT">
+              <name>
+                <value>Form</value>
+              </name>
+              <value xsi:type="DV_CODED_TEXT">
+                <value/>
+                <defining_code>
+                  <terminology_id>
+                    <value/>
+                  </terminology_id>
+                  <code_string/>
+                </defining_code>
+              </value>
+            </items>
+            <items archetype_node_id="at0002" xsi:type="ELEMENT">
+              <name>
+                <value>Route</value>
+              </name>
+              <value xsi:type="DV_CODED_TEXT">
+                <value/>
+                <defining_code>
+                  <terminology_id>
+                    <value/>
+                  </terminology_id>
+                  <code_string/>
+                </defining_code>
+              </value>
+            </items>
+            <items archetype_node_id="at0020" xsi:type="ELEMENT">
+              <name>
+                <value>Dose amount description</value>
+              </name>
+              <value xsi:type="DV_TEXT">
+                <value/>
+              </value>
+            </items>
+            <items archetype_node_id="at0021" xsi:type="ELEMENT">
+              <name>
+                <value>Dose timing description</value>
+              </name>
+              <value xsi:type="DV_TEXT">
+                <value/>
+              </value>
+            </items>
+            <items archetype_node_id="at0033" xsi:type="ELEMENT">
+              <name>
+                <value>Parsable dose directions</value>
+              </name>
+              <value xsi:type="DV_PARSABLE">
+                <size/>
+                <value/>
+                <formalism>text/plain</formalism>
+              </value>
+            </items>
+            <items archetype_node_id="at0005" xsi:type="ELEMENT">
+              <name xsi:type="DV_CODED_TEXT">
+                <value>Additional instruction</value>
+                <defining_code>
+                  <terminology_id>
+                    <value>local</value>
+                  </terminology_id>
+                  <code_string>at0005</code_string>
+                </defining_code>
+              </name>
+              <value xsi:type="DV_TEXT">
+                <value/>
+              </value>
+            </items>
+            <items archetype_node_id="at0005" xsi:type="ELEMENT">
+              <name xsi:type="DV_CODED_TEXT">
+                <value>Additional instruction</value>
+                <defining_code>
+                  <terminology_id>
+                    <value>local</value>
+                  </terminology_id>
+                  <code_string>at0005</code_string>
+                </defining_code>
+              </name>
+              <value xsi:type="DV_TEXT">
+                <value/>
+              </value>
+            </items>
+            <items archetype_node_id="at0046" xsi:type="CLUSTER">
+              <name>
+                <value>Course details</value>
+              </name>
+              <items archetype_node_id="at0049" xsi:type="ELEMENT">
+                <name>
+                  <value>Course status</value>
+                </name>
+                <value xsi:type="DV_CODED_TEXT">
+                  <value/>
+                  <defining_code>
+                    <terminology_id>
+                      <value>local</value>
+                    </terminology_id>
+                    <code_string/>
+                  </defining_code>
+                </value>
+              </items>
+              <items archetype_node_id="at0039" xsi:type="ELEMENT">
+                <name>
+                  <value>Start datetime</value>
+                </name>
+                <value xsi:type="DV_DATE_TIME">
+                  <value/>
+                </value>
+              </items>
+              <items archetype_node_id="at0040" xsi:type="ELEMENT">
+                <name>
+                  <value>End datetime</value>
+                </name>
+                <value xsi:type="DV_DATE_TIME">
+                  <value/>
+                </value>
+              </items>
+              <items archetype_node_id="at0047" xsi:type="ELEMENT">
+                <name>
+                  <value>Indication</value>
+                </name>
+                <value xsi:type="DV_TEXT">
+                  <value/>
+                </value>
+              </items>
+              <items archetype_node_id="at0028" xsi:type="ELEMENT">
+                <name>
+                  <value>Comment / recommendation</value>
+                </name>
+                <value xsi:type="DV_TEXT">
+                  <value/>
+                </value>
+              </items>
+            </items>
+          </items>
+          <items archetype_node_id="openEHR-EHR-CLUSTER.medication_event_summary.v1" xsi:type="CLUSTER">
+            <name>
+              <value>Medication event summary</value>
+            </name>
+            <archetype_details>
+              <archetype_id>
+                <value>openEHR-EHR-CLUSTER.medication_event_summary.v1</value>
+              </archetype_id>
+              <rm_version>1.0.2</rm_version>
+            </archetype_details>
+            <items archetype_node_id="at0070" xsi:type="CLUSTER">
+              <name>
+                <value>First authorised</value>
+              </name>
+              <items archetype_node_id="at0047" xsi:type="ELEMENT">
+                <name xsi:type="DV_CODED_TEXT">
+                  <value>Date first authorised</value>
+                  <defining_code>
+                    <terminology_id>
+                      <value>local</value>
+                    </terminology_id>
+                    <code_string>at0061</code_string>
+                  </defining_code>
+                </name>
+                <value xsi:type="DV_DATE_TIME">
+                  <value/>
+                </value>
+              </items>
+            </items>
+            <items archetype_node_id="at0070" xsi:type="CLUSTER">
+              <name>
+                <value>Last dispensed</value>
+              </name>
+              <items archetype_node_id="at0047" xsi:type="ELEMENT">
+                <name xsi:type="DV_CODED_TEXT">
+                  <value>Date last dispensed</value>
+                  <defining_code>
+                    <terminology_id>
+                      <value>local</value>
+                    </terminology_id>
+                    <code_string>at0064</code_string>
+                  </defining_code>
+                </name>
+                <value xsi:type="DV_DATE_TIME">
+                  <value/>
+                </value>
+              </items>
+              <items archetype_node_id="openEHR-EHR-CLUSTER.medication_event.v1" xsi:type="CLUSTER">
+                <name>
+                  <value>Last dispensed details</value>
+                </name>
+                <archetype_details>
+                  <archetype_id>
+                    <value>openEHR-EHR-CLUSTER.medication_event.v1</value>
+                  </archetype_id>
+                  <rm_version>1.0.2</rm_version>
+                </archetype_details>
+                <items archetype_node_id="at0135" xsi:type="CLUSTER">
+                  <name>
+                    <value>Product</value>
+                  </name>
+                  <items archetype_node_id="openEHR-EHR-CLUSTER.medication_quantity_sct.v1" xsi:type="CLUSTER">
+                    <name>
+                      <value>Quantity dispensed</value>
+                    </name>
+                    <archetype_details>
+                      <archetype_id>
+                        <value>openEHR-EHR-CLUSTER.medication_quantity_sct.v1</value>
+                      </archetype_id>
+                      <rm_version>1.0.2</rm_version>
+                    </archetype_details>
+                    <items archetype_node_id="at0003" xsi:type="ELEMENT">
+                      <name>
+                        <value>Quantity description</value>
+                      </name>
+                      <value xsi:type="DV_TEXT">
+                        <value/>
+                      </value>
+                    </items>
+                    <items archetype_node_id="at0001" xsi:type="ELEMENT">
+                      <name>
+                        <value>Quantity value</value>
+                      </name>
+                      <value xsi:type="DV_QUANTITY">
+                        <magnitude/>
+                        <units/>
+                      </value>
+                    </items>
+                    <items archetype_node_id="at0002" xsi:type="ELEMENT">
+                      <name>
+                        <value>Quantity unit</value>
+                      </name>
+                      <value xsi:type="DV_CODED_TEXT">
+                        <value/>
+                        <defining_code>
+                          <terminology_id>
+                            <value/>
+                          </terminology_id>
+                          <code_string/>
+                        </defining_code>
+                      </value>
+                    </items>
+                  </items>
+                </items>
+              </items>
+            </items>
+            <items archetype_node_id="at0070" xsi:type="CLUSTER">
+              <name>
+                <value>Discontinued</value>
+              </name>
+              <items archetype_node_id="at0047" xsi:type="ELEMENT">
+                <name xsi:type="DV_CODED_TEXT">
+                  <value>Date discontinued</value>
+                  <defining_code>
+                    <terminology_id>
+                      <value>local</value>
+                    </terminology_id>
+                    <code_string>at0072</code_string>
+                  </defining_code>
+                </name>
+                <value xsi:type="DV_DATE_TIME">
+                  <value/>
+                </value>
+              </items>
+              <items archetype_node_id="openEHR-EHR-CLUSTER.medication_event.v1" xsi:type="CLUSTER">
+                <name>
+                  <value>Medication event</value>
+                </name>
+                <archetype_details>
+                  <archetype_id>
+                    <value>openEHR-EHR-CLUSTER.medication_event.v1</value>
+                  </archetype_id>
+                  <rm_version>1.0.2</rm_version>
+                </archetype_details>
+                <items archetype_node_id="at0122" xsi:type="CLUSTER">
+                  <name>
+                    <value>Discontinuation</value>
+                  </name>
+                  <items archetype_node_id="at0125" xsi:type="ELEMENT">
+                    <name>
+                      <value>Reason discontinued</value>
+                    </name>
+                    <value xsi:type="DV_TEXT">
+                      <value/>
+                    </value>
+                  </items>
+                </items>
+              </items>
+            </items>
+            <items archetype_node_id="at0070" xsi:type="CLUSTER">
+              <name>
+                <value>Prescription last issued</value>
+              </name>
+              <items archetype_node_id="at0047" xsi:type="ELEMENT">
+                <name xsi:type="DV_CODED_TEXT">
+                  <value>Date last prescription issued</value>
+                  <defining_code>
+                    <terminology_id>
+                      <value>local</value>
+                    </terminology_id>
+                    <code_string>at0060</code_string>
+                  </defining_code>
+                </name>
+                <value xsi:type="DV_DATE_TIME">
+                  <value/>
+                </value>
+              </items>
+              <items archetype_node_id="openEHR-EHR-CLUSTER.medication_event.v1" xsi:type="CLUSTER">
+                <name>
+                  <value>Last issue details</value>
+                </name>
+                <archetype_details>
+                  <archetype_id>
+                    <value>openEHR-EHR-CLUSTER.medication_event.v1</value>
+                  </archetype_id>
+                  <rm_version>1.0.2</rm_version>
+                </archetype_details>
+                <items archetype_node_id="at0121" xsi:type="CLUSTER">
+                  <name>
+                    <value>Prescription supply</value>
+                  </name>
+                  <items archetype_node_id="at0129" xsi:type="ELEMENT">
+                    <name>
+                      <value>Prescription type</value>
+                    </name>
+                    <value xsi:type="DV_CODED_TEXT">
+                      <value/>
+                      <defining_code>
+                        <terminology_id>
+                          <value>local</value>
+                        </terminology_id>
+                        <code_string/>
+                      </defining_code>
+                    </value>
+                  </items>
+                  <items archetype_node_id="at0004" xsi:type="ELEMENT">
+                    <name>
+                      <value>Prescription endorsement</value>
+                    </name>
+                    <value xsi:type="DV_CODED_TEXT">
+                      <value/>
+                      <defining_code>
+                        <terminology_id>
+                          <value>local</value>
+                        </terminology_id>
+                        <code_string/>
+                      </defining_code>
+                    </value>
+                  </items>
+                  <items archetype_node_id="at0036" xsi:type="ELEMENT">
+                    <name>
+                      <value>Prescribing method</value>
+                    </name>
+                    <value xsi:type="DV_CODED_TEXT">
+                      <value/>
+                      <defining_code>
+                        <terminology_id>
+                          <value>local</value>
+                        </terminology_id>
+                        <code_string/>
+                      </defining_code>
+                    </value>
+                  </items>
+                  <items archetype_node_id="at0113" xsi:type="ELEMENT">
+                    <name>
+                      <value>Prescribing agency</value>
+                    </name>
+                    <value xsi:type="DV_CODED_TEXT">
+                      <value/>
+                      <defining_code>
+                        <terminology_id>
+                          <value>local</value>
+                        </terminology_id>
+                        <code_string/>
+                      </defining_code>
+                    </value>
+                  </items>
+                </items>
+                <items archetype_node_id="at0135" xsi:type="CLUSTER">
+                  <name>
+                    <value>Product</value>
+                  </name>
+                  <items archetype_node_id="openEHR-EHR-CLUSTER.medication_quantity_sct.v1" xsi:type="CLUSTER">
+                    <name>
+                      <value>Quantity issued (prescribed)</value>
+                    </name>
+                    <archetype_details>
+                      <archetype_id>
+                        <value>openEHR-EHR-CLUSTER.medication_quantity_sct.v1</value>
+                      </archetype_id>
+                      <rm_version>1.0.2</rm_version>
+                    </archetype_details>
+                    <items archetype_node_id="at0003" xsi:type="ELEMENT">
+                      <name>
+                        <value>Quantity description</value>
+                      </name>
+                      <value xsi:type="DV_TEXT">
+                        <value/>
+                      </value>
+                    </items>
+                    <items archetype_node_id="at0001" xsi:type="ELEMENT">
+                      <name>
+                        <value>Quantity value</value>
+                      </name>
+                      <value xsi:type="DV_QUANTITY">
+                        <magnitude/>
+                        <units/>
+                      </value>
+                    </items>
+                    <items archetype_node_id="at0002" xsi:type="ELEMENT">
+                      <name>
+                        <value>Quantity unit</value>
+                      </name>
+                      <value xsi:type="DV_CODED_TEXT">
+                        <value/>
+                        <defining_code>
+                          <terminology_id>
+                            <value/>
+                          </terminology_id>
+                          <code_string/>
+                        </defining_code>
+                      </value>
+                    </items>
+                  </items>
+                </items>
+              </items>
+            </items>
+            <items archetype_node_id="at0070" xsi:type="CLUSTER">
+              <name>
+                <value>Last administered</value>
+              </name>
+              <items archetype_node_id="at0047" xsi:type="ELEMENT">
+                <name xsi:type="DV_CODED_TEXT">
+                  <value>Date last administered</value>
+                  <defining_code>
+                    <terminology_id>
+                      <value>local</value>
+                    </terminology_id>
+                    <code_string>at0066</code_string>
+                  </defining_code>
+                </name>
+                <value xsi:type="DV_DATE_TIME">
+                  <value/>
+                </value>
+              </items>
+              <items archetype_node_id="openEHR-EHR-CLUSTER.medication_event.v1" xsi:type="CLUSTER">
+                <name>
+                  <value>Medication event</value>
+                </name>
+                <archetype_details>
+                  <archetype_id>
+                    <value>openEHR-EHR-CLUSTER.medication_event.v1</value>
+                  </archetype_id>
+                  <rm_version>1.0.2</rm_version>
+                </archetype_details>
+                <items archetype_node_id="at0135" xsi:type="CLUSTER">
+                  <name>
+                    <value>Product</value>
+                  </name>
+                  <items archetype_node_id="at0052" xsi:type="ELEMENT">
+                    <name>
+                      <value>Expiry date</value>
+                    </name>
+                    <value xsi:type="DV_DATE">
+                      <value/>
+                    </value>
+                  </items>
+                  <items archetype_node_id="at0051" xsi:type="ELEMENT">
+                    <name>
+                      <value>Batch number</value>
+                    </name>
+                    <value xsi:type="DV_TEXT">
+                      <value/>
+                    </value>
+                  </items>
+                </items>
+                <items archetype_node_id="at0136" xsi:type="ELEMENT">
+                  <name>
+                    <value>Comment</value>
+                  </name>
+                  <value xsi:type="DV_TEXT">
+                    <value/>
+                  </value>
+                </items>
+              </items>
+            </items>
+          </items>
+          <items archetype_node_id="openEHR-EHR-CLUSTER.medication_reconciliation_admit_uk.v1" xsi:type="CLUSTER">
+            <name>
+              <value>Medication reconciliation</value>
+            </name>
+            <archetype_details>
+              <archetype_id>
+                <value>openEHR-EHR-CLUSTER.medication_reconciliation_admit_uk.v1</value>
+              </archetype_id>
+              <rm_version>1.0.2</rm_version>
+            </archetype_details>
+            <items archetype_node_id="at0003" xsi:type="ELEMENT">
+              <name>
+                <value>Reconciliation action</value>
+              </name>
+              <value xsi:type="DV_CODED_TEXT">
+                <value/>
+                <defining_code>
+                  <terminology_id>
+                    <value>local</value>
+                  </terminology_id>
+                  <code_string/>
+                </defining_code>
+              </value>
+            </items>
+            <items archetype_node_id="at0012" xsi:type="ELEMENT">
+              <name>
+                <value>Change details</value>
+              </name>
+              <value xsi:type="DV_TEXT">
+                <value/>
+              </value>
+            </items>
+            <items archetype_node_id="at0004" xsi:type="ELEMENT">
+              <name>
+                <value>Reason</value>
+              </name>
+              <value xsi:type="DV_TEXT">
+                <value/>
+              </value>
+            </items>
+            <items archetype_node_id="at0013" xsi:type="ELEMENT">
+              <name>
+                <value>Withhold until</value>
+              </name>
+              <value xsi:type="DV_TEXT">
+                <value/>
+              </value>
+            </items>
+            <items archetype_node_id="at0006" xsi:type="ELEMENT">
+              <name>
+                <value>Date reconciled</value>
+              </name>
+              <value xsi:type="DV_DATE_TIME">
+                <value/>
+              </value>
+            </items>
+            <items archetype_node_id="at0026" xsi:type="ELEMENT">
+              <name>
+                <value>Source of information</value>
+              </name>
+              <value xsi:type="DV_TEXT">
+                <value/>
+              </value>
+            </items>
+            <items archetype_node_id="at0027" xsi:type="ELEMENT">
+              <name>
+                <value>Source contact details</value>
+              </name>
+              <value xsi:type="DV_TEXT">
+                <value/>
+              </value>
+            </items>
+            <items archetype_node_id="at0007" xsi:type="ELEMENT">
+              <name>
+                <value>Link to source medication entry</value>
+              </name>
+              <value xsi:type="DV_URI"/>
+            </items>
+            <items archetype_node_id="at0029" xsi:type="ELEMENT">
+              <name>
+                <value>Link to target medication entry</value>
+              </name>
+              <value xsi:type="DV_URI"/>
+            </items>
+          </items>
+        </data>
+      </items>
+    </items>
+  </content>
+</COMPOSITION>

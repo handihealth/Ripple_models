@@ -1,0 +1,14 @@
+"ctx\/language":"en", 
+"ctx\/territory":"US", 
+"openhr_heading":[{
+"diagnoses":[{
+"problem_diagnosis":[{
+"problem_diagnosis":[{
+"|code":"F51y0","|value":"Eustachian tube dysfunction","|terminology":"READ2"
+}],
+"date_of_onset":["2005-10-18T00:00:00.000+02:00"],
+"problem_context_qualifiers":[{"episodicity":[{"|code":"at0035","|value":"Ongoing","|terminology":"local"}]}]
+}]
+}]
+}]
+}

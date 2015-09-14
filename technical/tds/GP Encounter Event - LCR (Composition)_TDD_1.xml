@@ -1,0 +1,2554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- EMIS Codesystems 
+   
+    <xs:simpleType name="voc.CodeSystem">
+    <xs:restriction base="xs:token">
+        <xs:enumeration value="2.16.840.1.113883.2.1.6.2">  openEHR => "READ2"
+            <xs:annotation>
+                <xs:documentation>READ2 - Read Codes Version 2</xs:documentation>
+            </xs:annotation>
+        </xs:enumeration>
+        <xs:enumeration value="2.16.840.1.113883.2.1.6.1"> openEHR => "READ1"
+            <xs:annotation>
+                <xs:documentation>READ4 - Read Codes Four Byte Set</xs:documentation>
+            </xs:annotation>
+        </xs:enumeration>
+        <xs:enumeration value="2.16.840.1.113883.2.1.3.2.4.15"> openEHR => "SNOMED-CT"
+            <xs:annotation>
+                <xs:documentation>SnomedCT - UK Edition of SNOMED Clinical Terms</xs:documentation>
+            </xs:annotation>
+        </xs:enumeration>
+        <xs:enumeration value="2.16.840.1.113883.2.1.6.3"> openEHR => "SNOMED-CT"
+            <xs:annotation>
+                <xs:documentation>EMIS SnomedCT namespace - Clinical terminology owned by EMIS</xs:documentation>
+            </xs:annotation>
+        </xs:enumeration>
+        <xs:enumeration value="EMISDRUGGROUP">
+            <xs:annotation>
+                <xs:documentation>Drug Group Codes internal to EMIS</xs:documentation>
+            </xs:annotation>
+        </xs:enumeration>
+        <xs:enumeration value="EMISAPPROVEDNAME">
+            <xs:annotation>
+                <xs:documentation>Drug Approved Name Codes internal to EMIS</xs:documentation>
+            </xs:annotation>
+        </xs:enumeration>
+        <xs:enumeration value="EMISPREPARATION">
+            <xs:annotation>
+                <xs:documentation>Drug Preparation Codes internal to EMIS</xs:documentation>
+            </xs:annotation>
+        </xs:enumeration>
+        <xs:enumeration value="EMISCONSTITUENT">
+            <xs:annotation>
+                <xs:documentation>Drug Constituent Codes internal to EMIS</xs:documentation>
+            </xs:annotation>
+        </xs:enumeration>
+        <xs:enumeration value="EMISAPPROVEDNAMEANDCONSTITUENT">
+            <xs:annotation>
+                <xs:documentation>Approved Name and Constituent Codes internal to EMIS</xs:documentation>
+            </xs:annotation>
+        </xs:enumeration>
+        <xs:enumeration value="EMISDRUGFORM">
+            <xs:annotation>
+                <xs:documentation>Drug Form Codes internal to EMIS</xs:documentation>
+            </xs:annotation>
+        </xs:enumeration>
+        <xs:enumeration value="EMISDRUGGROUPALLERGY">
+            <xs:annotation>
+                <xs:documentation>Allergy Drug Group Codes internal to EMIS</xs:documentation>
+            </xs:annotation>
+        </xs:enumeration>
+        <xs:enumeration value="EMISAPPROVEDNAMEALLERGY">
+            <xs:annotation>
+                <xs:documentation>Allergy Drug Approved Name Codes internal to EMIS</xs:documentation>
+            </xs:annotation>
+        </xs:enumeration>
+        <xs:enumeration value="EMISPREPARATIONALLERGY">
+            <xs:annotation>
+                <xs:documentation>Allergy Drug Preparation Codes internal to EMIS</xs:documentation>
+            </xs:annotation>
+        </xs:enumeration>
+        <xs:enumeration value="EMISCONSTITUENTALLERGY">
+            <xs:annotation>
+                <xs:documentation>Allergy Drug Constituent Codes internal to EMIS</xs:documentation>
+            </xs:annotation>
+        </xs:enumeration>
+        <xs:enumeration value="EMISAPPROVEDNAMEANDCONSTITUENTALLERGY">
+            <xs:annotation>
+                <xs:documentation>Allergy Approved Name and Constituent Codes internal to EMIS</xs:documentation>
+            </xs:annotation>
+        </xs:enumeration>
+        <xs:enumeration value="EMISDRUGFORMALLERGY">
+            <xs:annotation>
+                <xs:documentation>Allergy Drug Form Codes internal to EMIS</xs:documentation>
+            </xs:annotation>
+        </xs:enumeration>
+        <xs:enumeration value="EMISINTERNAL">
+            <xs:annotation>
+                <xs:documentation>EMIS internal Code system</xs:documentation>
+            </xs:annotation>
+        </xs:enumeration>
+        <xs:enumeration value="MULTILEX">
+            <xs:annotation>
+                <xs:documentation>Multilex Drug Codes</xs:documentation>
+            </xs:annotation>
+        </xs:enumeration>
+        <xs:enumeration value="UNKNOWN">
+            <xs:annotation>
+                <xs:documentation>Unknown coding scheme or uncoded data</xs:documentation>
+            </xs:annotation>
+        </xs:enumeration>
+        <xs:enumeration value="EMISLOCAL">
+            <xs:annotation>
+                <xs:documentation>EMIS Local Code</xs:documentation>
+            </xs:annotation>
+        </xs:enumeration>
+        <xs:enumeration value="OLTR">
+            <xs:annotation>
+                <xs:documentation>Lab-Defined Test Request Code</xs:documentation>
+            </xs:annotation>
+        </xs:enumeration>
+        <xs:enumeration value="EMISCODEID">
+            <xs:annotation>
+                <xs:documentation>EMIS CodeIds</xs:documentation>
+            </xs:annotation>
+        </xs:enumeration>
+    </xs:restriction>
+</xs:simpleType> -->
+
+
+<GP_encounter_event xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://schemas.oceanehr.com/templates GP%20Encounter%20Event%20-%20LCR%20(Composition).xsd"
+ xmlns:oe="http://schemas.openehr.org/v1" xmlns="http://schemas.oceanehr.com/templates"
+ archetype_node_id="openEHR-EHR-COMPOSITION.encounter.v1" type="COMPOSITION"
+ template_id="GP Encounter Event - LCR (Composition)">
+    <name>
+        <value>GP encounter event</value>
+    </name>
+    <feeder_audit>
+        <oe:originating_system_item_ids>
+            <oe:issuer>EMISWEB</oe:issuer>
+            <oe:assigner>EMISWEB</oe:assigner>
+            <!-- openHR path	/openHealthRecord/healthDomain/encounter[]/id -->
+            <oe:id>e1916e78-d2b3-4302-8cad-0377754ef490</oe:id>
+            <oe:type>EncounterID</oe:type>
+        </oe:originating_system_item_ids>
+        <oe:originating_system_audit>
+            <oe:system_id>EMISWEB</oe:system_id>
+            <oe:time>
+                <!-- openHR path	/openHealthRecord/healthDomain/encounter[]/availabilityTimeStamp -->
+                <oe:value>1965-08-15T00:00:00</oe:value>
+            </oe:time>
+        </oe:originating_system_audit>
+    </feeder_audit>
+    <language>
+        <terminology_id>
+            <value>ISO_639-1</value>
+        </terminology_id>
+        <code_string>en</code_string>
+    </language>
+    <territory>
+        <terminology_id>
+            <value>ISO_3166-1</value>
+        </terminology_id>
+        <code_string>EN</code_string>
+    </territory>
+    <category>
+        <value>event</value>
+        <defining_code>
+            <terminology_id>
+                <value>openehr</value>
+            </terminology_id>
+            <code_string>433</code_string>
+        </defining_code>
+    </category>
+    <!-- encounter/authorisingUserInRole -->
+    <!-- Need to dereference  UserInRole/user -->
+    <!-- then dereference user/userPerson -->
+    <composer xsi:type="oe:PARTY_IDENTIFIED">
+        <!-- person/title + person/forenames + person/surname -->
+        <oe:name>Dr McNicoll</oe:name>
+        <!-- /openHealthRecord/healthDomain/encounter/authorisingUserInRole (dereferenced) then UserInRole/userIdentifier  [0..*] -->
+        <!-- Pull in all identifiers -->
+        <oe:identifiers>
+            <!-- Fixed value -->
+            <oe:issuer>EMIS</oe:issuer>
+            <!-- Fixed value -->
+            <oe:assigner>EMIS</oe:assigner>
+            <!-- ./UserInRole/userIdentifier/value -->
+            <oe:id>3312182</oe:id>
+            <!-- ./UserInRole/userIdentifier/identifierType -->
+            <oe:type>GP</oe:type>
+        </oe:identifiers>
+    </composer>
+    <context other_context_node_id="at0001" other_context_type="ITEM_TREE">
+        <!-- /openHealthRecord/healthDomain/encounter/effectiveTime -->
+        <start_time>
+            <oe:value>2003-12-28T00:00:00</oe:value>
+        </start_time>
+        <!-- /openHealthRecord/healthDomain/encounter/effectiveTime, then add duration in minutes from /encounter/duration -->
+        <end_time>
+            <oe:value>2003-12-28T00:00:00</oe:value>
+        </end_time>
+        <!-- /openHealthRecord/healthDomain/encounter/location (dereference) -->
+        <!-- then /openHealthRecord/adminDomain/location[]/locationtype/@displayname -->
+        <location>Main surgery</location>
+        <setting>
+            <!-- Fixed value  -->
+            <oe:value>primary medical care</oe:value>
+            <oe:mappings>
+                <oe:match>=</oe:match>
+                <oe:target>
+                    <!-- Fixed Value -->
+                    <oe:terminology_id>
+                        <oe:value>SNOMED-CT</oe:value>
+                    </oe:terminology_id>
+                    <!-- /openHealthRecord/adminDomain/location[]/locationtype/@code -->
+                    <oe:code_string>150337100006105</oe:code_string>
+                </oe:target>
+            </oe:mappings>
+            <oe:defining_code>
+                <!-- Fixed value  -->
+                <oe:terminology_id>
+                    <oe:value>openehr</oe:value>
+                </oe:terminology_id>
+                <!-- Fixed value  -->
+                <oe:code_string>228</oe:code_string>
+            </oe:defining_code>
+        </setting>
+        <GP_contact_event_context
+            archetype_node_id="openEHR-EHR-CLUSTER.gp_contact_event_context.v1" type="CLUSTER">
+            <name>
+                <value>GP contact event context</value>
+            </name>
+            <Encounter_identifier archetype_node_id="at0001" type="ELEMENT" valueType="DV_TEXT">
+                <name>
+                    <value>Encounter identifier</value>
+                </name>
+                <value>
+                    <!--  05/08 openHR path	/openHealthRecord/healthDomain/encounter[]/id -->
+                    <oe:value>e1916e78-d2b3-4302-8cad-0377754ef490</oe:value>
+                </value>
+            </Encounter_identifier>
+        </GP_contact_event_context>
+        <health_care_facility>
+            <!-- /openHealthRecord/clinicalDomain/encounter/organisation (dereference) -->
+            <!-- then /openHealthRecord/adminDomain/organisation/name/     -->
+            <oe:name>Old Kilpatrick Medical Practice</oe:name>
+            <oe:identifiers>
+                <!-- Fixed value -->
+                <oe:issuer>NHS</oe:issuer>
+                <!-- Fixed value -->
+                <oe:assigner>NHS</oe:assigner>
+                <!-- /openHealthRecord/lDomain[]/organisation[]/nationalPracticeCode[] -->
+                <oe:id>V1234</oe:id>
+                <oe:type>National Practice Code</oe:type>
+            </oe:identifiers>
+        </health_care_facility>
+    </context>
+    <openHR_heading archetype_node_id="openEHR-EHR-SECTION.openhr_heading.v1" type="SECTION">
+        <!-- /openHealthRecord/healthDomain/encounter/component/heading/@displayName -->
+        <name>
+            <value>Problem</value>
+        </name>
+
+        <Allergies archetype_node_id="openEHR-EHR-SECTION.adverse_list.v1" type="SECTION">
+            <name>
+                <value>Allergies</value>
+            </name>
+            <!-- Drug allergy READV2 coded -->
+            <Adverse_reaction archetype_node_id="openEHR-EHR-EVALUATION.adverse_reaction_uk.v1"
+                type="EVALUATION">
+                <name>
+                    <value>Adverse reaction</value>
+                </name>
+                <!-- Standard ENTRY pattern for feeder_audit can be used in any ENTRY under an event Composition -->
+                <feeder_audit>
+                    <oe:originating_system_item_ids>
+                        <!-- Fixed value -->
+                        <oe:issuer>EMISWEB</oe:issuer>
+                        <!-- Fixed value -->
+                        <oe:assigner>EMISWEB</oe:assigner>
+                        <!-- /openHealthRecord/healthDomain[]/event[]/id -->
+                        <oe:id>f0d81601-75d6-4a79-a17c-c6f885b0c3ba</oe:id>
+                        <!-- Fixed value -->
+                        <oe:type>EventID</oe:type>
+                    </oe:originating_system_item_ids>
+                    <oe:originating_system_audit>
+                        <oe:system_id>EMISWEB</oe:system_id>
+                        <oe:location>
+                            <!-- Identical to Composition/content/healthcare_organisation and probably not needed -->
+                            <!-- /openHealthRecord/clinicalDomain/encounter/organisation (dereference) -->
+                            <!-- then /openHealthRecord/adminDomain/organisation/name/     -->
+                            <oe:name>Old Kilpatrick Medical Practice</oe:name>
+                            <oe:identifiers>
+                                <!-- Fixed value -->
+                                <oe:issuer>NHS</oe:issuer>
+                                <!-- Fixed value -->
+                                <oe:assigner>NHS</oe:assigner>
+                                <!-- /openHealthRecord/lDomain[]/organisation[]/nationalPracticeCode[] -->
+                                <oe:id>V1234</oe:id>
+                                <oe:type>National Practice Code</oe:type>
+                            </oe:identifiers>
+                        </oe:location>
+                        <oe:time>
+                            <!-- /openHealthRecord/healthDomain[]/event[]/availabilitytime -->
+                            <oe:value>2002-12-15T00:00:00</oe:value>
+                        </oe:time>
+                    </oe:originating_system_audit>
+                    <oe:feeder_system_audit>
+                        <oe:system_id>EMISWEB</oe:system_id>
+                        <!-- /openHealthRecord/healthDomain[]/event[]/effectivetime -->
+                        <oe:time>
+                            <oe:value>1973-08-15T00:00:00</oe:value>
+                        </oe:time>
+                        <!-- FIXED value -->
+                        <oe:version_id>event_effectivetime</oe:version_id>
+                    </oe:feeder_system_audit>
+                </feeder_audit>
+                <language>
+                    <terminology_id>
+                        <value>ISO_639-1</value>
+                    </terminology_id>
+                    <code_string>en</code_string>
+                </language>
+                <encoding>
+                    <terminology_id>
+                        <value>IANA_character-sets</value>
+                    </terminology_id>
+                    <code_string>UTF-8</code_string>
+                </encoding>
+                <subject xsi:type="oe:PARTY_SELF"/>
+                <data archetype_node_id="at0001" type="ITEM_TREE">
+                    <Causative_agent archetype_node_id="at0002" type="ELEMENT" valueType="DV_TEXT">
+                        <name>
+                            <value>Causative agent</value>
+                        </name>
+                        <value>
+                            <oe:value>Penicillin Allergy</oe:value>
+                            <oe:mappings>
+                                <oe:match>=</oe:match>
+                                <oe:target>
+                                    <oe:terminology_id>
+                                        <oe:value>READ2</oe:value>
+                                    </oe:terminology_id>
+                                    <oe:code_string>141L</oe:code_string>
+                                </oe:target>
+                            </oe:mappings>
+                            <oe:mappings>
+                                <oe:match>=</oe:match>
+                                <oe:target>
+                                    <oe:terminology_id>
+                                        <oe:value>SNOMED-CT</oe:value>
+                                    </oe:terminology_id>
+                                    <oe:code_string>code_string139</oe:code_string>
+                                </oe:target>
+                            </oe:mappings>
+                        </value>
+                    </Causative_agent>
+                    <Reaction_details archetype_node_id="at0025" type="CLUSTER">
+                        <name>
+                            <value>Reaction details</value>
+                        </name>
+                        <!-- /openHealthRecord/healthDomain[]/event[]/effectiveTime -->
+                        <Date_recorded archetype_node_id="at0021" type="ELEMENT"
+                            valueType="DV_DATE_TIME">
+                            <name>
+                                <value>Date recorded</value>
+                            </name>
+                            <value>
+                                <oe:value>1973-08-15T00:00:00</oe:value>
+                            </value>
+                        </Date_recorded>
+                        <Comment archetype_node_id="at0022" type="ELEMENT" valueType="DV_TEXT">
+                            <name>
+                                <value>Comment</value>
+                            </name>
+                            <!-- concatenated from associatedText and displayTerm -->
+                            <value>
+                                <oe:value>After given Penicillin-V 250mg tab at OOH centre, possibly
+                                    a Penicillin Allergy as he developed an exfoliative
+                                    rash</oe:value>
+                            </value>
+                        </Comment>
+                    </Reaction_details>
+                </data>
+            </Adverse_reaction>
+            <!-- Drug allergy using EMISPREPARATIONALLERGY -->
+            <Adverse_reaction archetype_node_id="openEHR-EHR-EVALUATION.adverse_reaction_uk.v1"
+                type="EVALUATION">
+                <name>
+                    <value>Adverse reaction</value>
+                </name>
+                <feeder_audit>
+                    <oe:originating_system_item_ids>
+                        <!-- Fixed value -->
+                        <oe:issuer>EMISWEB</oe:issuer>
+                        <!-- Fixed value -->
+                        <oe:assigner>EMISWEB</oe:assigner>
+                        <!-- /openHealthRecord/healthDomain[]/event[]/id -->
+                        <oe:id>f0d81601-75d6-4a79-a17c-c6f885b0c3ba</oe:id>
+                        <!-- Fixed value -->
+                        <oe:type>EventID</oe:type>
+                    </oe:originating_system_item_ids>
+                    <oe:originating_system_audit>
+                        <oe:system_id>EMISWEB</oe:system_id>
+                        <oe:location>
+                            <!-- Identical to Composition/content/healthcare_organisation and probably not needed -->
+                            <!-- /openHealthRecord/clinicalDomain/encounter/organisation (dereference) -->
+                            <!-- then /openHealthRecord/adminDomain/organisation/name/     -->
+                            <oe:name>Old Kilpatrick Medical Practice</oe:name>
+                            <oe:identifiers>
+                                <!-- Fixed value -->
+                                <oe:issuer>NHS</oe:issuer>
+                                <!-- Fixed value -->
+                                <oe:assigner>NHS</oe:assigner>
+                                <!-- /openHealthRecord/lDomain[]/organisation[]/nationalPracticeCode[] -->
+                                <oe:id>V1234</oe:id>
+                                <oe:type>National Practice Code</oe:type>
+                            </oe:identifiers>
+                        </oe:location>
+                        <oe:time>
+                            <!-- /openHealthRecord/healthDomain[]/event[]/availabilitytime -->
+                            <oe:value>2002-12-15T00:00:00</oe:value>
+                        </oe:time>
+                    </oe:originating_system_audit>
+                    <oe:feeder_system_audit>
+                        <oe:system_id>EMISWEB</oe:system_id>
+                        <!-- /openHealthRecord/healthDomain[]/event[]/effectivetime -->
+                        <oe:time>
+                            <oe:value>2002-12-15T00:00:00</oe:value>
+                        </oe:time>
+                        <oe:version_id>event_effectivetime</oe:version_id>
+                    </oe:feeder_system_audit>
+                </feeder_audit>
+                <language>
+                    <terminology_id>
+                        <value>ISO_639-1</value>
+                    </terminology_id>
+                    <code_string>en</code_string>
+                </language>
+                <encoding>
+                    <terminology_id>
+                        <value>IANA_character-sets</value>
+                    </terminology_id>
+                    <code_string>UTF-8</code_string>
+                </encoding>
+                <subject xsi:type="oe:PARTY_SELF"/>
+                <data archetype_node_id="at0001" type="ITEM_TREE">
+                    <Causative_agent archetype_node_id="at0002" type="ELEMENT" valueType="DV_TEXT">
+                        <name>
+                            <value>Causative agent</value>
+                        </name>
+                        <value>
+                            <oe:value>Penicillin-V 250mg tab</oe:value>
+                            <oe:mappings>
+                                <oe:match>=</oe:match>
+                                <oe:target>
+                                    <oe:terminology_id>
+                                        <oe:value>EMISPREPARATIONALLERGY</oe:value>
+                                    </oe:terminology_id>
+                                    <oe:code_string>XY1234</oe:code_string>
+                                </oe:target>
+                            </oe:mappings>
+                        </value>
+                    </Causative_agent>
+                    <Reaction_details archetype_node_id="at0025" type="CLUSTER">
+                        <name>
+                            <value>Reaction details</value>
+                        </name>
+                        <!-- /openHealthRecord/healthDomain[]/event[]/effectiveTime -->
+                        <Date_recorded archetype_node_id="at0021" type="ELEMENT"
+                            valueType="DV_DATE_TIME">
+                            <name>
+                                <value>Date recorded</value>
+                            </name>
+                            <value>
+                                <oe:value>1970-08-15T00:00:00</oe:value>
+                            </value>
+                        </Date_recorded>
+                        <Comment archetype_node_id="at0022" type="ELEMENT" valueType="DV_TEXT">
+                            <name>
+                                <value>Comment</value>
+                            </name>
+                            <!-- concatenated from associatedText and displayTerm -->
+                            <value>
+                                <oe:value>After given Penicillin-V 250mg tab at OOH centre, possibly
+                                    a Penicillin Allergy as he developed an exfoliative
+                                    rash</oe:value>
+                            </value>
+                        </Comment>
+                    </Reaction_details>
+                </data>
+            </Adverse_reaction>
+            <!-- Contraindication - READ Coded -->
+            <Contraindication type="EVALUATION"
+                archetype_node_id="openEHR-EHR-EVALUATION.contraindication.v1">
+                <name>
+                    <value>Contraindication</value>
+                </name>
+                <feeder_audit>
+                    <oe:originating_system_item_ids>
+                        <!-- Fixed value -->
+                        <oe:issuer>EMISWEB</oe:issuer>
+                        <!-- Fixed value -->
+                        <oe:assigner>EMISWEB</oe:assigner>
+                        <!-- /openHealthRecord/healthDomain[]/event[]/id -->
+                        <oe:id>f0d81601-75d6-4a79-a17c-c6f885b0c3ba</oe:id>
+                        <!-- Fixed value -->
+                        <oe:type>EventID</oe:type>
+                    </oe:originating_system_item_ids>
+                    <oe:originating_system_audit>
+                        <oe:system_id>EMISWEB</oe:system_id>
+                        <oe:location>
+                            <!-- Identical to Composition/content/healthcare_organisation and probably not needed -->
+                            <!-- /openHealthRecord/clinicalDomain/encounter/organisation (dereference) -->
+                            <!-- then /openHealthRecord/adminDomain/organisation/name/     -->
+                            <oe:name>Old Kilpatrick Medical Practice</oe:name>
+                            <oe:identifiers>
+                                <!-- Fixed value -->
+                                <oe:issuer>NHS</oe:issuer>
+                                <!-- Fixed value -->
+                                <oe:assigner>NHS</oe:assigner>
+                                <!-- /openHealthRecord/lDomain[]/organisation[]/nationalPracticeCode[] -->
+                                <oe:id>V1234</oe:id>
+                                <oe:type>National Practice Code</oe:type>
+                            </oe:identifiers>
+                        </oe:location>
+                        <oe:time>
+                            <!-- /openHealthRecord/healthDomain[]/event[]/availabilitytime -->
+                            <oe:value>2002-12-15T00:00:00</oe:value>
+                        </oe:time>
+                    </oe:originating_system_audit>
+                    <oe:feeder_system_audit>
+                        <oe:system_id>EMISWEB</oe:system_id>
+                        <!-- /openHealthRecord/healthDomain[]/event[]/effectivetime -->
+                        <oe:time>
+                            <oe:value>2002-12-15T00:00:00</oe:value>
+                        </oe:time>
+                        <oe:version_id>event_effectivetime</oe:version_id>
+                    </oe:feeder_system_audit>
+                </feeder_audit>
+                <language>
+                    <terminology_id>
+                        <value>ISO_639-1</value>
+                    </terminology_id>
+                    <code_string>en</code_string>
+                </language>
+                <encoding>
+                    <terminology_id>
+                        <value>IANA_character-sets</value>
+                    </terminology_id>
+                    <code_string>UTF-8</code_string>
+                </encoding>
+                <subject xsi:type="oe:PARTY_SELF"/>
+                <protocol archetype_node_id="at0006" type="ITEM_TREE">
+                    <!-- IMCN 08 11 2013 Changed element name !-->
+                    <Date_Last_Updated archetype_node_id="at0004" type="ELEMENT" valueType="DV_DATE_TIME">
+                        <name>
+                            <value>Date Last Updated</value>
+                        </name>
+                        <value>
+                            <!-- 05/08 /openHealthRecord/healthDomain[]/event[]/effectivetime -->
+                            <oe:value>2002-12-15T00:00:00</oe:value>
+                        </value>
+                    </Date_Last_Updated>
+              </protocol>
+                <data archetype_node_id="at0001" type="ITEM_TREE">
+                    <Contraindication type="ELEMENT" archetype_node_id="at0002" valueType="DV_TEXT">
+                        <name>
+                            <value>Contraindication</value>
+                        </name>
+                        <value>
+                            <oe:value>Beta blocker contraindicated</oe:value>
+                            <oe:mappings>
+                                <oe:match>=</oe:match>
+                                <oe:target>
+                                    <oe:terminology_id>
+                                        <oe:value>SNOMED-CT</oe:value>
+                                    </oe:terminology_id>
+                                    <oe:code_string>123456789</oe:code_string>
+                                </oe:target>
+                            </oe:mappings>
+                            <oe:defining_code>
+                                <oe:terminology_id>
+                                    <oe:value>8126.</oe:value>
+                                </oe:terminology_id>
+                                <oe:code_string>READ2</oe:code_string>
+                            </oe:defining_code>
+                        </value>
+                    </Contraindication>
+                    <Evidence_fslash_Rationale archetype_node_id="at0003" type="ELEMENT"
+                        valueType="DV_TEXT">
+                        <name>
+                            <value>Evidence/Rationale</value>
+                        </name>
+                        <value>
+                            <!-- /openHealthRecord/healthDomain[]/event[]/availabilitytime -->
+                            <!-- Same rules for handling PRE/POST concatenation as for allergies -->
+                            <oe:value>Has asthma</oe:value>
+                        </value>
+                    </Evidence_fslash_Rationale>
+                </data>
+
+            </Contraindication>
+            <!-- Allergy Exclusion READV2 coded -->
+            <!-- 05/08 - Archetype has changed to exclusion-adverse_reaction.v1 -->
+            <Exclusion_of_an_Adverse_Reaction
+                archetype_node_id="openEHR-EHR-EVALUATION.exclusion-adverse_reaction.v1"
+                type="EVALUATION">
+                <name>
+                    <value>Exclusion of an Adverse Reaction</value>
+                </name>
+                <feeder_audit>
+                    <oe:originating_system_item_ids>
+                        <!-- Fixed value -->
+                        <oe:issuer>EMISWEB</oe:issuer>
+                        <!-- Fixed value -->
+                        <oe:assigner>EMISWEB</oe:assigner>
+                        <!-- /openHealthRecord/healthDomain[]/event[]/id -->
+                        <oe:id>f0d81601-75d6-4a79-a17c-c6f885b0c3ba</oe:id>
+                        <!-- Fixed value -->
+                        <oe:type>EventID</oe:type>
+                    </oe:originating_system_item_ids>
+                    <oe:originating_system_audit>
+                        <oe:system_id>EMISWEB</oe:system_id>
+                        <oe:location>
+                            <!-- Identical to Composition/content/healthcare_organisation and probably not needed -->
+                            <!-- /openHealthRecord/clinicalDomain/encounter/organisation (dereference) -->
+                            <!-- then /openHealthRecord/adminDomain/organisation/name/     -->
+                            <oe:name>Old Kilpatrick Medical Practice</oe:name>
+                            <oe:identifiers>
+                                <!-- Fixed value -->
+                                <oe:issuer>NHS</oe:issuer>
+                                <!-- Fixed value -->
+                                <oe:assigner>NHS</oe:assigner>
+                                <!-- /openHealthRecord/lDomain[]/organisation[]/nationalPracticeCode[] -->
+                                <oe:id>V1234</oe:id>
+                                <oe:type>National Practice Code</oe:type>
+                            </oe:identifiers>
+                        </oe:location>
+                        <oe:time>
+                            <!-- /openHealthRecord/healthDomain[]/event[]/availabilitytime -->
+                            <oe:value>2002-12-15T00:00:00</oe:value>
+                        </oe:time>
+                    </oe:originating_system_audit>
+                    <oe:feeder_system_audit>
+                        <oe:system_id>EMISWEB</oe:system_id>
+                        <!-- /openHealthRecord/healthDomain[]/event[]/effectivetime -->
+                        <oe:time>
+                            <oe:value>2002-12-15T00:00:00</oe:value>
+                        </oe:time>
+                        <oe:version_id>event_effectivetime</oe:version_id>
+                    </oe:feeder_system_audit>
+                </feeder_audit>
+                <language>
+                    <terminology_id>
+                        <value>ISO_639-1</value>
+                    </terminology_id>
+                    <code_string>en</code_string>
+                </language>
+                <encoding>
+                    <terminology_id>
+                        <value>IANA_character-sets</value>
+                    </terminology_id>
+                    <code_string>UTF-8</code_string>
+                </encoding>
+                <subject xsi:type="oe:PARTY_SELF"/>
+                <protocol archetype_node_id="at0006" type="ITEM_TREE">
+                    <!-- IMCN 08 11 2013 Changed element name !-->
+                    <Date_Last_Updated archetype_node_id="at0004" type="ELEMENT"
+                        valueType="DV_DATE_TIME">
+                        <name>
+                            <value>Date Last Updated</value>
+                        </name>
+                        <value>
+                            <!-- 05/08 /openHealthRecord/healthDomain[]/event[]/effectivetime -->
+                            <oe:value>2002-12-15T00:00:00</oe:value>
+                        </value>
+                    </Date_Last_Updated>
+                </protocol>
+                <data archetype_node_id="at0001" type="ITEM_TREE">
+                    <Exclusion_Statement archetype_node_id="at0002.1" type="ELEMENT"
+                        valueType="DV_TEXT">
+                        <name>
+                            <value>Exclusion Statement</value>
+                        </name>
+                        <value>
+                            <oe:value>No known adverse reactions</oe:value>
+                            <oe:mappings>
+                                <oe:match>=</oe:match>
+                                <oe:target>
+                                    <oe:terminology_id>
+                                        <oe:value>READ2</oe:value>
+                                    </oe:terminology_id>
+                                    <oe:code_string>1151.</oe:code_string>
+                                </oe:target>
+                            </oe:mappings>
+                            <oe:mappings>
+                                <oe:match>=</oe:match>
+                                <oe:target>
+                                    <oe:terminology_id>
+                                        <oe:value>SNOMED-CT</oe:value>
+                                    </oe:terminology_id>
+                                    <oe:code_string>code_string139</oe:code_string>
+                                </oe:target>
+                            </oe:mappings>
+                            <oe:defining_code>
+                                <terminology_id>
+                                    <value>local</value>
+                                </terminology_id>
+                                <code_string>at0.3</code_string>
+                            </oe:defining_code>
+                        </value>
+                    </Exclusion_Statement>
+            
+
+                    <!-- IMCN 08 11 2013 Added Comment back in for Adverese Reaction exclusions !-->                  
+                    <Comment archetype_node_id="at0007" type="ELEMENT" valueType="DV_TEXT">
+                        <name>
+                            <value>Comment</value>
+                        </name>
+                        <value>
+                        
+                            <!-- /openHealthRecord/healthDomain[]/event[]/availabilitytime -->
+                            <!-- Same rules for handling PRE/POST concatenation as for allergies -->
+                            <oe:value>Has asthma</oe:value>
+                        </value>
+                    </Comment>
+                </data>
+            </Exclusion_of_an_Adverse_Reaction>
+        </Allergies>
+
+        <!-- Immunisations section -->
+        <Immunisations archetype_node_id="openEHR-EHR-SECTION.adhoc.v1" type="SECTION">
+            <name>
+                <value>Immunisations</value>
+            </name>
+            <!-- Read2 coded Immunisation event -->
+            <Immunisation_procedure archetype_node_id="openEHR-EHR-ACTION.immunisation_procedure.v1"
+                type="ACTION">
+                <name>
+                    <value>Immunisation procedure</value>
+                </name>
+                <feeder_audit>
+                    <oe:originating_system_item_ids>
+                        <!-- Fixed value -->
+                        <oe:issuer>EMISWEB</oe:issuer>
+                        <!-- Fixed value -->
+                        <oe:assigner>EMISWEB</oe:assigner>
+                        <!-- /openHealthRecord/healthDomain[]/event[]/id -->
+                        <oe:id>f0d81601-75d6-4a79-a17c-c6f885b0c3ba</oe:id>
+                        <!-- Fixed value -->
+                        <oe:type>EventID</oe:type>
+                    </oe:originating_system_item_ids>
+                    <oe:originating_system_audit>
+                        <oe:system_id>EMISWEB</oe:system_id>
+                        <oe:location>
+                            <!-- Identical to Composition/content/healthcare_organisation and probably not needed -->
+                            <!-- /openHealthRecord/clinicalDomain/encounter/organisation (dereference) -->
+                            <!-- then /openHealthRecord/adminDomain/organisation/name/     -->
+                            <oe:name>Old Kilpatrick Medical Practice</oe:name>
+                            <oe:identifiers>
+                                <!-- Fixed value -->
+                                <oe:issuer>NHS</oe:issuer>
+                                <!-- Fixed value -->
+                                <oe:assigner>NHS</oe:assigner>
+                                <!-- /openHealthRecord/lDomain[]/organisation[]/nationalPracticeCode[] -->
+                                <oe:id>V1234</oe:id>
+                                <oe:type>National Practice Code</oe:type>
+                            </oe:identifiers>
+                        </oe:location>
+                        <oe:time>
+                            <!-- /openHealthRecord/healthDomain[]/event[]/availabilitytime -->
+                            <oe:value>2002-12-15T00:00:00</oe:value>
+                        </oe:time>
+                    </oe:originating_system_audit>
+                    <oe:feeder_system_audit>
+                        <oe:system_id>EMISWEB</oe:system_id>
+                        <!-- /openHealthRecord/healthDomain[]/event[]/effectivetime -->
+                        <oe:time>
+                            <oe:value>2002-12-15T00:00:00</oe:value>
+                        </oe:time>
+                        <oe:version_id>event_effectivetime</oe:version_id>
+                    </oe:feeder_system_audit>
+                </feeder_audit>
+                <language>
+                    <terminology_id>
+                        <value>ISO_639-1</value>
+                    </terminology_id>
+                    <code_string>en</code_string>
+                </language>
+                <encoding>
+                    <terminology_id>
+                        <value>IANA_character-sets</value>
+                    </terminology_id>
+                    <code_string>UTF-8</code_string>
+                </encoding>
+                <subject xsi:type="oe:PARTY_SELF"/>
+                <protocol/>
+                <time>
+                    <!-- /openHealthRecord/healthDomain[]/event[]/effectiveTime -->
+                    <oe:value>2002-12-15T00:00:00</oe:value>
+                </time>
+                <description archetype_node_id="at0001" type="ITEM_TREE">
+                    <Immunisation_name archetype_node_id="at0002" type="ELEMENT" valueType="DV_TEXT">
+                        <name>
+                            <value>Immunisation name</value>
+                        </name>
+                        <value>
+                            <!-- /openHealthRecord/healthDomain/event/displayterm -->
+                            <oe:value>"Booster (single) haemophilus B vaccination"</oe:value>
+                            <oe:mappings>
+                                <!-- Import SNOMED translation/>mapping -->
+                                <!-- FIXED value -->
+                                <oe:match>=</oe:match>
+                                <oe:target>
+                                    <!--  /event/code[]/translation[]/@codeSystem="2.16.840.1.113883.2.1.3.2.4.15" (SNOMED-CT) -->
+                                    <oe:terminology_id>
+                                        <oe:value>SNOMED-CT</oe:value>
+                                    </oe:terminology_id>
+                                    <!--  /event/code[1]/translation[]/@code -->
+                                    <oe:code_string>170346004</oe:code_string>
+                                </oe:target>
+                            </oe:mappings>
+                            <oe:defining_code>
+                                <terminology_id>
+                                    <!-- /openHealthRecord/healthDomain/event/@codeSystem="2.16.840.1.113883.2.1.6.2" (READ2)   -->
+                                    <value>READ2</value>
+                                </terminology_id>
+                                <!-- /openHealthRecord/healthDomain/event/@code -->
+                                <code_string>657D</code_string>
+                            </oe:defining_code>
+                        </value>
+                    </Immunisation_name>
+                    <Comment archetype_node_id="at0015" type="ELEMENT" valueType="DV_TEXT">
+                        <name>
+                            <value>Comment</value>
+                        </name>
+                        <value>
+                            <!-- /openHealthRecord/healthDomain[]/event[]/associatedText[] -->
+                            <oe:value> Slight bleed at injection site</oe:value>
+                        </value>
+                    </Comment>
+                </description>
+                <ism_transition>
+                    <!-- All FIXED values -->
+                    <current_state>
+                        <oe:value>completed</oe:value>
+                        <oe:defining_code>
+                            <oe:terminology_id>
+                                <oe:value>openehr</oe:value>
+                            </oe:terminology_id>
+                            <oe:code_string>532</oe:code_string>
+                        </oe:defining_code>
+                    </current_state>
+                </ism_transition>
+            </Immunisation_procedure>
+
+            <!-- Read coded Immunisation event -->
+            <Immunisation_procedure archetype_node_id="openEHR-EHR-ACTION.immunisation_procedure.v1"
+                type="ACTION">
+                <name>
+                    <value>Immunisation procedure</value>
+                </name>
+                <feeder_audit>
+                    <oe:originating_system_item_ids>
+                        <!-- Fixed value -->
+                        <oe:issuer>EMISWEB</oe:issuer>
+                        <!-- Fixed value -->
+                        <oe:assigner>EMISWEB</oe:assigner>
+                        <!-- /openHealthRecord/healthDomain[]/event[]/id -->
+                        <oe:id>f0d81601-75d6-4a79-a17c-c6f885b0c3ba</oe:id>
+                        <!-- Fixed value -->
+                        <oe:type>EventID</oe:type>
+                    </oe:originating_system_item_ids>
+                    <oe:originating_system_audit>
+                        <oe:system_id>EMISWEB</oe:system_id>
+                        <oe:location>
+                            <!-- Identical to Composition/content/healthcare_organisation and probably not needed -->
+                            <!-- /openHealthRecord/clinicalDomain/encounter/organisation (dereference) -->
+                            <!-- then /openHealthRecord/adminDomain/organisation/name/     -->
+                            <oe:name>Old Kilpatrick Medical Practice</oe:name>
+                            <oe:identifiers>
+                                <!-- Fixed value -->
+                                <oe:issuer>NHS</oe:issuer>
+                                <!-- Fixed value -->
+                                <oe:assigner>NHS</oe:assigner>
+                                <!-- /openHealthRecord/lDomain[]/organisation[]/nationalPracticeCode[] -->
+                                <oe:id>V1234</oe:id>
+                                <oe:type>National Practice Code</oe:type>
+                            </oe:identifiers>
+                        </oe:location>
+                        <oe:time>
+                            <!-- /openHealthRecord/healthDomain[]/event[]/availabilitytime -->
+                            <oe:value>2002-12-15T00:00:00</oe:value>
+                        </oe:time>
+                    </oe:originating_system_audit>
+                    <oe:feeder_system_audit>
+                        <oe:system_id>EMISWEB</oe:system_id>
+                        <!-- /openHealthRecord/healthDomain[]/event[]/effectivetime -->
+                        <oe:time>
+                            <oe:value>2002-12-15T00:00:00</oe:value>
+                        </oe:time>
+                        <oe:version_id>event_effectivetime</oe:version_id>
+                    </oe:feeder_system_audit>
+                </feeder_audit>
+                <language>
+                    <terminology_id>
+                        <value>ISO_639-1</value>
+                    </terminology_id>
+                    <code_string>en</code_string>
+                </language>
+                <encoding>
+                    <terminology_id>
+                        <value>IANA_character-sets</value>
+                    </terminology_id>
+                    <code_string>UTF-8</code_string>
+                </encoding>
+                <subject xsi:type="oe:PARTY_SELF"/>
+                <protocol/>
+
+                <time>
+                    <!-- /openHealthRecord/healthDomain[]/event[]/effectiveTime -->
+                    <oe:value>2003-12-28</oe:value>
+                </time>
+                <description archetype_node_id="at0001" type="ITEM_TREE">
+                    <Immunisation_name archetype_node_id="at0002" type="ELEMENT" valueType="DV_TEXT">
+                        <name>
+                            <value>Immunisation name</value>
+                        </name>
+                        <value>
+                            <!-- /openHealthRecord/healthDomain/event/displayterm -->
+                            <oe:value>Booster DT(double)+polio vacc.</oe:value>
+                            <oe:mappings>
+                                <!-- Import SNOMED translation/>mapping -->
+                                <oe:match>=</oe:match>
+                                <oe:target>
+                                    <!--  /event/code[1]/translation[]/@codeSystem="2.16.840.1.113883.2.1.3.2.4.15" (SNOMED-CT) -->
+                                    <oe:terminology_id>
+                                        <oe:value>SNOMED-CT</oe:value>
+                                    </oe:terminology_id>
+                                    <!--  /event/code[1]/translation[]/@code -->
+                                    <oe:code_string>170415002</oe:code_string>
+                                </oe:target>
+                            </oe:mappings>
+                            <oe:defining_code>
+                                <terminology_id>
+                                    <!-- /openHealthRecord/healthDomain/event/@codeSystem="2.16.840.1.113883.2.1.6.2" (READ2)   -->
+                                    <value>READ2</value>
+                                </terminology_id>
+                                <!-- /openHealthRecord/healthDomain/event/@code -->
+                                <code_string>65K4</code_string>
+                            </oe:defining_code>
+                        </value>
+                    </Immunisation_name>
+                    <Comment archetype_node_id="at0015" type="ELEMENT" valueType="DV_TEXT">
+                        <name>
+                            <value>Comment</value>
+                        </name>
+                        <value>
+                            <!-- /openHealthRecord/healthDomain[]/event[]/associatedText[] -->
+                            <oe:value> DT Injection 25 mcg 0.5 ml 1 vial(s)</oe:value>
+                        </value>
+                    </Comment>
+                </description>
+                <!-- Note change of data type from DV_TEXT in schema to DV_CODED_TEXT -->
+                <ism_transition>
+                    <!-- All FIXED values -->
+                    <current_state>
+                        <oe:value>completed</oe:value>
+                        <oe:defining_code>
+                            <oe:terminology_id>
+                                <oe:value>openehr</oe:value>
+                            </oe:terminology_id>
+                            <oe:code_string>532</oe:code_string>
+                        </oe:defining_code>
+                    </current_state>
+                </ism_transition>
+            </Immunisation_procedure>
+
+        </Immunisations>
+
+        <Diagnoses archetype_node_id="openEHR-EHR-SECTION.adhoc.v1" type="SECTION">
+            <name>
+                <value>Diagnoses</value>
+            </name>
+            <Problem_fslash_Diagnosis
+                archetype_node_id="openEHR-EHR-EVALUATION.problem_diagnosis.v1" type="EVALUATION">
+                <name>
+                    <value>Problem/Diagnosis</value>
+                </name>
+                <feeder_audit>
+                    <oe:originating_system_item_ids>
+                        <!-- Fixed value -->
+                        <oe:issuer>EMISWEB</oe:issuer>
+                        <!-- Fixed value -->
+                        <oe:assigner>EMISWEB</oe:assigner>
+                        <!-- /openHealthRecord/healthDomain[]/event[]/id -->
+                        <oe:id>f0d81601-75d6-4a79-a17c-c6f885b0c3ba</oe:id>
+                        <!-- Fixed value -->
+                        <oe:type>EventID</oe:type>
+                    </oe:originating_system_item_ids>
+                    <oe:originating_system_audit>
+                        <oe:system_id>EMISWEB</oe:system_id>
+                        <oe:location>
+                            <!-- Identical to Composition/content/healthcare_organisation and probably not needed -->
+                            <!-- /openHealthRecord/clinicalDomain/encounter/organisation (dereference) -->
+                            <!-- then /openHealthRecord/adminDomain/organisation/name/     -->
+                            <oe:name>Old Kilpatrick Medical Practice</oe:name>
+                            <oe:identifiers>
+                                <!-- Fixed value -->
+                                <oe:issuer>NHS</oe:issuer>
+                                <!-- Fixed value -->
+                                <oe:assigner>NHS</oe:assigner>
+                                <!-- /openHealthRecord/lDomain[]/organisation[]/nationalPracticeCode[] -->
+                                <oe:id>V1234</oe:id>
+                                <oe:type>National Practice Code</oe:type>
+                            </oe:identifiers>
+                        </oe:location>
+                        <oe:time>
+                            <!-- /openHealthRecord/healthDomain[]/event[]/availabilitytime -->
+                            <oe:value>2002-12-15T00:00:00</oe:value>
+                        </oe:time>
+                    </oe:originating_system_audit>
+                    <oe:feeder_system_audit>
+                        <oe:system_id>EMISWEB</oe:system_id>
+                        <!-- /openHealthRecord/healthDomain[]/event[]/effectivetime -->
+                        <oe:time>
+                            <oe:value>2002-12-15T00:00:00</oe:value>
+                        </oe:time>
+                        <oe:version_id>event_effectivetime</oe:version_id>
+                    </oe:feeder_system_audit>
+                </feeder_audit>
+                <language>
+                    <terminology_id>
+                        <value>ISO_639-1</value>
+                    </terminology_id>
+                    <code_string>en</code_string>
+                </language>
+                <encoding>
+                    <terminology_id>
+                        <value>IANA_character-sets</value>
+                    </terminology_id>
+                    <code_string>UTF-8</code_string>
+                </encoding>
+                <subject xsi:type="oe:PARTY_SELF"/>
+                <!-- If no Episodicity or == 'NONE' then leave protocol empty i.e <protocol/> -->
+                <protocol archetype_node_id="at0032" type="ITEM_TREE">
+                    <Problem_context_qualifiers
+                        archetype_node_id="openEHR-EHR-CLUSTER.problem_status.v1" type="CLUSTER">
+                        <name>
+                            <value>Problem context qualifiers</value>
+                        </name>
+                        <Episodicity archetype_node_id="at0001" type="ELEMENT"
+                            valueType="DV_CODED_TEXT">
+                            <name>
+                                <value>Episodicity</value>
+                            </name>
+                            <!-- openHR Episodicity mappings -->
+                            <!-- /openHealthRecord/healthDomain[]/event/observation/episodicity -->
+                            <!-- NONE => do not create Episodicity element -->
+                            <!-- FIRST => local::at0033::First ever -->
+                            <!-- NEW => local::at0033::New -->
+                            <!-- REV => local::at0033::Ongoing -->
+                            <!-- All others - Degrade to text and capture in the Comments element -->
+                            <!-- FIRST => SNOMED-CT::255217005::first episode -->
+                            <!-- NEW => SNOMED-CT::288527008::new episode-->
+                            <!-- REV => SNOMED-CT::303350001::ongoing episode-->
+                            <value>
+                                <value>First episode</value>
+                                <mappings>
+                                    <oe:match>=</oe:match>
+                                    <oe:target>
+                                        <oe:terminology_id>
+                                            <oe:value>SNOMED-CT</oe:value>
+                                        </oe:terminology_id>
+                                        <oe:code_string>255217005</oe:code_string>
+                                    </oe:target>
+                                </mappings>
+                                <defining_code>
+                                    <terminology_id>
+                                        <value>local</value>
+                                    </terminology_id>
+                                    <code_string>at0033</code_string>
+                                </defining_code>
+                            </value>
+                        </Episodicity>
+                    </Problem_context_qualifiers>
+                </protocol>
+                <data archetype_node_id="at0001" type="ITEM_TREE">
+                    <Problem_fslash_Diagnosis archetype_node_id="at0002" type="ELEMENT"
+                        valueType="DV_TEXT">
+                        <name>
+                            <value>Problem/Diagnosis</value>
+                        </name>
+                        <value>
+                            <!-- /openHealthRecord/healthDomain/event/displayterm -->
+                            <oe:value>H/O: angina pectoris</oe:value>
+                            <oe:mappings>
+                                <!-- Import SNOMED translation/>mapping -->
+                                <oe:match>=</oe:match>
+                                <oe:target>
+                                    <!--  /event/code[1]/translation[]/@codeSystem="2.16.840.1.113883.2.1.3.2.4.15" (SNOMED-CT) -->
+                                    <oe:terminology_id>
+                                        <oe:value>SNOMED-CT</oe:value>
+                                    </oe:terminology_id>
+                                    <!--  /event/code[1]/translation[]/@code -->
+                                    <oe:code_string>161504004</oe:code_string>
+                                </oe:target>
+                            </oe:mappings>
+                            <oe:defining_code>
+                                <terminology_id>
+                                    <!-- /openHealthRecord/healthDomain/event/@codeSystem="2.16.840.1.113883.2.1.6.2" (READ2)   -->
+                                    <value>READ2</value>
+                                </terminology_id>
+                                <!-- /openHealthRecord/healthDomain/event/@code -->
+                                <code_string>14A5</code_string>
+                            </oe:defining_code>
+                        </value>
+                    </Problem_fslash_Diagnosis>
+                    <Description archetype_node_id="at0009" type="ELEMENT" valueType="DV_TEXT">
+                        <name>
+                            <value>Description</value>
+                        </name>
+                        <value>
+                            <oe:value></oe:value>
+                        </value>
+                    </Description>
+                    <Date_of_Onset archetype_node_id="at0003" type="ELEMENT" valueType="DV_DATE_TIME">
+                        <name>
+                            <value>Date of Onset</value>
+                        </name>
+                        <value>
+                            <value>2002-12-15</value>
+                            <!-- /openHealthRecord/healthDomain[]/event[]/effectivetime -->
+                        </value>
+                    </Date_of_Onset>
+                </data>
+            </Problem_fslash_Diagnosis>
+        </Diagnoses>
+
+        <Procedures archetype_node_id="openEHR-EHR-SECTION.adhoc.v1" type="SECTION">
+            <name>
+                <value>Procedures</value>
+            </name>
+
+            <Procedure_undertaken archetype_node_id="openEHR-EHR-ACTION.procedure.v1" type="ACTION">
+                <name>
+                    <value>Procedure undertaken</value>
+                </name>
+                <feeder_audit>
+                    <oe:originating_system_item_ids>
+                        <!-- Fixed value -->
+                        <oe:issuer>EMISWEB</oe:issuer>
+                        <!-- Fixed value -->
+                        <oe:assigner>EMISWEB</oe:assigner>
+                        <!-- /openHealthRecord/healthDomain[]/event[]/id -->
+                        <oe:id>f0d81601-75d6-4a79-a17c-c6f885b0c3ba</oe:id>
+                        <!-- Fixed value -->
+                        <oe:type>EventID</oe:type>
+                    </oe:originating_system_item_ids>
+                    <oe:originating_system_audit>
+                        <oe:system_id>EMISWEB</oe:system_id>
+                        <oe:location>
+                            <!-- Identical to Composition/content/healthcare_organisation and probably not needed -->
+                            <!-- /openHealthRecord/clinicalDomain/encounter/organisation (dereference) -->
+                            <!-- then /openHealthRecord/adminDomain/organisation/name/     -->
+                            <oe:name>Old Kilpatrick Medical Practice</oe:name>
+                            <oe:identifiers>
+                                <!-- Fixed value -->
+                                <oe:issuer>NHS</oe:issuer>
+                                <!-- Fixed value -->
+                                <oe:assigner>NHS</oe:assigner>
+                                <!-- /openHealthRecord/lDomain[]/organisation[]/nationalPracticeCode[] -->
+                                <oe:id>V1234</oe:id>
+                                <oe:type>National Practice Code</oe:type>
+                            </oe:identifiers>
+                        </oe:location>
+                        <oe:time>
+                            <!-- /openHealthRecord/healthDomain[]/event[]/availabilitytime -->
+                            <oe:value>2002-12-15T00:00:00</oe:value>
+                        </oe:time>
+                    </oe:originating_system_audit>
+                    <oe:feeder_system_audit>
+                        <oe:system_id>EMISWEB</oe:system_id>
+                        <!-- /openHealthRecord/healthDomain[]/event[]/effectivetime -->
+                        <oe:time>
+                            <oe:value>2002-12-15T00:00:00</oe:value>
+                        </oe:time>
+                        <oe:version_id>event_effectivetime</oe:version_id>
+                    </oe:feeder_system_audit>
+                </feeder_audit>
+                <language>
+                    <terminology_id>
+                        <value>ISO_639-1</value>
+                    </terminology_id>
+                    <code_string>en</code_string>
+                </language>
+                <encoding>
+                    <terminology_id>
+                        <value>IANA_character-sets</value>
+                    </terminology_id>
+                    <code_string>UTF-8</code_string>
+                </encoding>
+                <subject xsi:type="oe:PARTY_SELF"/>
+                <protocol/>
+                <!-- /openHealthRecord/healthDomain[]/event[]/effectivetime -->
+                <time>
+                    <oe:value>2002-12-15T00:00:00</oe:value>
+                </time>
+                <description archetype_node_id="at0001" type="ITEM_TREE">
+                    <Procedure archetype_node_id="at0002" type="ELEMENT" valueType="DV_TEXT">
+                        <name>
+                            <value>Procedure</value>
+                        </name>
+                        <value>
+                            <!-- /openHealthRecord/healthDomain/event/displayterm -->
+                            <oe:value>Other therapeutic cystoscopy</oe:value>
+                            <oe:mappings>
+                                <!-- Import SNOMED translation/>mapping -->
+                                <oe:match>=</oe:match>
+                                <oe:target>
+                                    <!--  /event/code[1]/translation[]/@codeSystem="2.16.840.1.113883.2.1.3.2.4.15" (SNOMED-CT) -->
+                                    <oe:terminology_id>
+                                        <oe:value>SNOMED-CT</oe:value>
+                                    </oe:terminology_id>
+                                    <!--  /event/code[1]/translation[]/@code -->
+                                    <oe:code_string>580751000000101</oe:code_string>
+                                </oe:target>
+                            </oe:mappings>
+                            <oe:defining_code>
+                                <terminology_id>
+                                    <!-- /openHealthRecord/healthDomain/event/@codeSystem="2.16.840.1.113883.2.1.6.2" (READ2)   -->
+                                    <value>READ2</value>
+                                </terminology_id>
+                                <!-- /openHealthRecord/healthDomain/event/@code -->
+                                <code_string>7B29</code_string>
+                            </oe:defining_code>
+                        </value>
+                    </Procedure>
+                    <Comments archetype_node_id="at0005" type="ELEMENT" valueType="DV_TEXT">
+                        <name>
+                            <value>Comments</value>
+                        </name>
+                        <value>
+                            <!-- /openHealthRecord/healthDomain[]/event[]/associatedText[] -->
+                            <oe:value>Quite a bit of post-operative bleeding</oe:value>
+                        </value>
+                    </Comments>
+
+                </description>
+                <ism_transition>
+                    <!-- All FIXED values -->
+                    <current_state>
+                        <oe:value>completed</oe:value>
+                        <oe:defining_code>
+                            <oe:terminology_id>
+                                <oe:value>openehr</oe:value>
+                            </oe:terminology_id>
+                            <oe:code_string>532</oe:code_string>
+                        </oe:defining_code>
+                    </current_state>
+                </ism_transition>
+            </Procedure_undertaken>
+        </Procedures>
+        <Medications archetype_node_id="openEHR-EHR-SECTION.adhoc.v1" type="SECTION">
+            <name>
+                <value>Medications</value>
+            </name>
+
+            <!-- Maps to a single openHR 'Medication' event which includes openEHR equivalents of an initial INSTRUCTION(Medicaiton Order), and several ACTIONS -->
+            <!-- A single current Authorisation, previous Authorisations, and a single Cancellation if appropriate -->
+            <openHR_Medication_Events
+                archetype_node_id="openEHR-EHR-SECTION.openhr_medication_events.v1" type="SECTION">
+                <name>
+                    <value>openHR Medication Events</value>
+                </name>
+                <openHR_Medication archetype_node_id="at0006" type="SECTION">
+                    <name>
+                        <value>openHR Medication</value>
+                    </name>
+                    <Medication_order
+                        archetype_node_id="openEHR-EHR-INSTRUCTION.medication_order_uk.v1"
+                        type="INSTRUCTION">
+                        <name>
+                            <value>Medication order</value>
+                        </name>
+                        <!-- Standard openHR event feeder_audit -->
+                        <feeder_audit>
+                            <oe:originating_system_item_ids>
+                                <!-- Fixed value -->
+                                <oe:issuer>EMISWEB</oe:issuer>
+                                <!-- Fixed value -->
+                                <oe:assigner>EMISWEB</oe:assigner>
+                                <!-- /openHealthRecord/healthDomain[]/event[]/id -->
+                                <oe:id>f0d81601-75d6-4a79-a17c-c6f885b0c3ba</oe:id>
+                                <!-- Fixed value -->
+                                <oe:type>EventID</oe:type>
+                            </oe:originating_system_item_ids>
+                            <oe:originating_system_audit>
+                                <oe:system_id>EMISWEB</oe:system_id>
+                                <oe:location>
+                                    <!-- Identical to Composition/content/healthcare_organisation and probably not needed -->
+                                    <!-- /openHealthRecord/clinicalDomain/encounter/organisation (dereference) -->
+                                    <!-- then /openHealthRecord/adminDomain/organisation/name/     -->
+                                    <oe:name>Old Kilpatrick Medical Practice</oe:name>
+                                    <oe:identifiers>
+                                        <!-- Fixed value -->
+                                        <oe:issuer>NHS</oe:issuer>
+                                        <!-- Fixed value -->
+                                        <oe:assigner>NHS</oe:assigner>
+                                        <!-- /openHealthRecord/lDomain[]/organisation[]/nationalPracticeCode[] -->
+                                        <oe:id>V1234</oe:id>
+                                        <oe:type>National Practice Code</oe:type>
+                                    </oe:identifiers>
+                                </oe:location>
+                                <oe:time>
+                                    <!-- /openHealthRecord/healthDomain[]/event[]/availabilitytime -->
+                                    <oe:value>2002-12-15T00:00:00</oe:value>
+                                </oe:time>
+                            </oe:originating_system_audit>
+                            <oe:feeder_system_audit>
+                                <oe:system_id>EMISWEB</oe:system_id>
+                                <!-- /openHealthRecord/healthDomain[]/event[]/effectivetime -->
+                                <oe:time>
+                                    <oe:value>2002-12-15T00:00:00</oe:value>
+                                </oe:time>
+                                <oe:version_id>event_effectivetime</oe:version_id>
+                            </oe:feeder_system_audit>
+                        </feeder_audit>
+                        <language>
+                            <terminology_id>
+                                <value>ISO_639-1</value>
+                            </terminology_id>
+                            <code_string>en</code_string>
+                        </language>
+                        <encoding>
+                            <terminology_id>
+                                <value>IANA_character-sets</value>
+                            </terminology_id>
+                            <code_string>UTF-8</code_string>
+                        </encoding>
+                        <subject xsi:type="oe:PARTY_SELF"/>
+                        <protocol archetype_node_id="at0036" type="ITEM_TREE">
+                            <Medication_status
+                                archetype_node_id="openEHR-EHR-CLUSTER.medication_status.v1"
+                                type="CLUSTER">
+                                <name>
+                                    <value>Medication status</value>
+                                </name>
+
+                                <!-- openHR MAP /openHealthRecord/healthDomain[1]/event[152]/medication[1]/drugStatus[1] -->
+                                <!-- A (Active) => local::at0033::Active  -->
+                                <!-- C (Cancelled) => local::at0019::Discontinued -->
+                                <!-- N (Never active) => local::at0069::Never active -->
+                                <Medication_course_status archetype_node_id="at0030" type="ELEMENT"
+                                    valueType="DV_CODED_TEXT">
+                                    <name>
+                                        <value>Medication course status</value>
+                                    </name>
+                                    <value>
+                                        <value>Active</value>
+                                        <defining_code>
+                                            <terminology_id>
+                                                <value>local</value>
+                                            </terminology_id>
+                                            <code_string>at0033</code_string>
+                                        </defining_code>
+                                    </value>
+                                </Medication_course_status>
+                               
+                                
+                                
+                                <First_issued archetype_node_id="at0070" type="CLUSTER">
+                                    <name>
+                                        <value>First issued</value>
+                                    </name>
+                                    <!-- openHR MAP /openHealthRecord/healthDomain[1]/event[152]/medication[1]/firstIssueDate[1] -->
+                                    <Date_first_issued archetype_node_id="at0047" type="ELEMENT"
+                                        valueType="DV_DATE_TIME">
+                                        <name>
+                                            <value>Date first issued</value>
+                                            <defining_code>
+                                                <terminology_id>
+                                                    <value>local</value>
+                                                </terminology_id>
+                                                <code_string>at0059</code_string>
+                                            </defining_code>
+                                        </name>
+                                        <value>
+                                            <oe:value>2002-12-15T00:00:00</oe:value>
+                                        </value>
+                                    </Date_first_issued>
+                                </First_issued>
+                                
+                                <Last_reviewed archetype_node_id="at0070" type="CLUSTER">
+                                    <name>
+                                        <value>Last reviewed</value>
+                                    </name>
+                                    <!-- openHR MAP  /openHealthRecord/healthDomain[1]/event[152]/medication[1]/reviewDate[1] -->
+                                    <Date_last_reviewed archetype_node_id="at0047" type="ELEMENT"
+                                        valueType="DV_DATE_TIME">
+                                        <name>
+                                            <value>Date last reviewed</value>
+                                            <defining_code>
+                                                <terminology_id>
+                                                  <value>local</value>
+                                                </terminology_id>
+                                                <code_string>at0079</code_string>
+                                            </defining_code>
+                                        </name>
+                                        <value>
+                                            <oe:value>2002-12-15T00:00:00</oe:value>
+                                        </value>
+                                    </Date_last_reviewed>
+                                </Last_reviewed>
+                               
+                                <!-- IMCN 08 11 2013 Added Support for discontinuation !-->
+                                <Discontinued archetype_node_id="at0070" type="CLUSTER">
+                                   <name>
+                                       <value>Discontinued</value>
+                                   </name>
+                                   <Date_discontinued archetype_node_id="at0047" type="ELEMENT" valueType="DV_DATE_TIME">
+                                       <name>
+                                           <value>Date discontinued</value>
+                                           <defining_code>
+                                               <terminology_id>
+                                                   <value>local</value>
+                                               </terminology_id>
+                                               <code_string>at0072</code_string>
+                                           </defining_code>
+                                       </name>
+                                       <value>
+                                           <oe:value>2002-12-15T00:00:00</oe:value>
+                                       </value>
+                                   </Date_discontinued>
+                               <Medication_event archetype_node_id="openEHR-EHR-CLUSTER.medication_event.v1" type="CLUSTER">
+                                   <name>
+                                       <value>Medication event</value>
+                                   </name>
+                                   <Discontinutation archetype_node_id="at0122" type="CLUSTER">
+                                       <name>
+                                           <value>Discontinutation</value>
+                                       </name>
+                                       <Reason_discontinued archetype_node_id="at0125" type="ELEMENT" valueType="DV_TEXT">
+                                           <name>
+                                               <value>Reason discontinued</value>
+                                           </name>
+                                           <value>
+                                               <oe:value>Some sort of text</oe:value>
+                                           </value>
+                                       </Reason_discontinued>
+
+                                   </Discontinutation>
+                               </Medication_event>
+                               </Discontinued>
+                                
+                                <Last_issued archetype_node_id="at0070" type="CLUSTER">
+                                    <name>
+                                        <value>Last issued</value>
+                                    </name>
+                                    
+                                    <!-- openHR MAP /openHealthRecord/healthDomain[1]/event[152]/medication[1]/mostRecentIssueDate[1]-->
+                                    <Date_last_issued archetype_node_id="at0047" type="ELEMENT"
+                                        valueType="DV_DATE_TIME">
+                                        <name>
+                                            <value>Date last issued</value>
+                                            <defining_code>
+                                                <terminology_id>
+                                                    <value>local</value>
+                                                </terminology_id>
+                                                <code_string>at0060</code_string>
+                                            </defining_code>
+                                        </name>
+                                        <value>
+                                            <oe:value>2002-12-15T00:00:00</oe:value>
+                                        </value>
+                                    </Date_last_issued>
+                                </Last_issued>
+                                
+                            </Medication_status>
+                        </protocol>
+                        
+                        <narrative>
+                          <!-- Concatenate MedicationItem Name / Dose Description, Additional instructions and Quantity -->  <oe:value/>
+                        </narrative>
+                        <!-- openHR MAP /openHealthRecord/healthDomain[1]/event[152]/medication[1]/expiryDate[1] -->
+                        <expiry_time>
+                            <oe:value>2013-01-01</oe:value>
+                        </expiry_time>
+                        
+                        <Medication_order_activity archetype_node_id="at0001" type="ACTIVITY">
+                            <name>
+                                <value>Medication order activity</value>
+                            </name>
+                            <timing>
+                               
+                                <oe:value/>
+                                <oe:formalism>null</oe:formalism>
+                            </timing>
+                            <description archetype_node_id="at0002" type= "ITEM_TREE">
+                            <Medication_item
+                                archetype_node_id="openEHR-EHR-CLUSTER.medication_item.v1"
+                                type="CLUSTER">
+                                <name>
+                                    <value>Medication item</value>
+                                </name>
+                                <Medication_name archetype_node_id="at0001" type="ELEMENT"
+                                    valueType="DV_TEXT">
+                                    <name>
+                                        <value>Medication name</value>
+                                    </name>
+                                    <text_value>
+                                        <!-- /openHealthRecord/healthDomain[]/event/displayTerm -->
+                                        <oe:value>Salbutamol 100micrograms/dose inhaler CFC
+                                            free</oe:value>
+                                        <oe:mappings>
+                                            <oe:match>=</oe:match>
+                                            <oe:target>
+                                                <oe:terminology_id>
+                                                  <oe:value>SNOMED-CT</oe:value>
+                                                </oe:terminology_id>
+                                                <oe:code_string>320139002</oe:code_string>
+                                            </oe:target>
+                                        </oe:mappings>
+                                        <oe:defining_code>
+                                            <oe:terminology_id>
+                                                <!-- /openHealthRecord/healthDomain[1]/event[]/code[]/@codeSystem -->
+                                                <oe:value>EMISPREPARATION</oe:value>
+                                            </oe:terminology_id>
+                                            <!-- /openHealthRecord/healthDomain[1]/event[]/code[]/@code -->
+                                            <oe:code_string>SACF26553EMIS</oe:code_string>
+                                        </oe:defining_code>
+                                    </text_value>
+                                </Medication_name>
+                                <Dose_directions archetype_node_id="at0019" type="CLUSTER">
+                                    <name>
+                                        <value>Dose directions</value>
+                                    </name>
+                                    <Dose_directions_description archetype_node_id="at0003"
+                                        type="ELEMENT" valueType="DV_TEXT">
+                                        <name>
+                                            <value>Dose directions description</value>
+                                        </name>
+                                        <value>
+                                            <!-- /openHealthRecord/healthDomain[]/event[]/medication[]/dosage[] -->
+                                            <oe:value>2PUFFS PRN</oe:value>
+                                        </value>
+                                    </Dose_directions_description>
+                                </Dose_directions>
+                                <Patient_instruction archetype_node_id="at0027" type="ELEMENT"
+                                    valueType="DV_TEXT">
+                                    <name>
+                                        <value>Patient instruction</value>
+                                    </name>
+                                    <value>
+                                        <!-- /openHealthRecord/healthDomain[]/event[]/medication[]/patientText -->
+                                        <oe:value>Get asthma chelced regularly</oe:value>
+                                    </value>
+                                </Patient_instruction>
+                                <Dispensing_instruction archetype_node_id="at0004" type="ELEMENT"
+                                    valueType="DV_TEXT">
+                                    <name>
+                                        <value>Dispensing instruction</value>
+                                    </name>
+                                    <value>
+                                        <!-- /openHealthRecord/healthDomain[]/event[]/medication[]/pharmacyText -->
+                                        <oe:value>Does not like Wellcome Generics</oe:value>
+                                    </value>
+                                </Dispensing_instruction>
+
+                            </Medication_item>
+
+                            <Course_directions archetype_node_id="at0039" type="CLUSTER">
+                                <name>
+                                    <value>Course directions</value>
+                                </name>
+                                <!-- openHR MAP /openHealthRecord/healthDomain[1]/event[152]/medication[1]/expiryDate[1] -->
+                                <!-- Needs to be checked with E-MIS -->
+                                <End_date archetype_node_id="at0044" type="ELEMENT"
+                                    valueType="DV_DATE_TIME">
+                                    <name>
+                                        <value>End date</value>
+                                    </name>
+                                    <value>
+                                        <oe:value>2002-12-15T00:00:00</oe:value>
+                                    </value>
+                                </End_date>
+                            </Course_directions>
+                            </description>
+                            <action_archetype_id>openEHR-EHR-ACTION.medication_action.v1</action_archetype_id>
+
+                        </Medication_order_activity>
+
+                    </Medication_order>
+                    <Current_authorisation
+                        archetype_node_id="openEHR-EHR-ACTION.medication_action.v1" type="ACTION">
+                        <name>
+                            <value>Current authorisation</value>
+                        </name>
+                        <!-- Taken from parent Medication event -->
+                        <feeder_audit>
+                            <oe:originating_system_item_ids>
+                                <!-- Fixed value -->
+                                <oe:issuer>EMISWEB</oe:issuer>
+                                <!-- Fixed value -->
+                                <oe:assigner>EMISWEB</oe:assigner>
+                                <!-- /openHealthRecord/healthDomain[]/event[]/id -->
+                                <oe:id>f0d81601-75d6-4a79-a17c-c6f885b0c3ba</oe:id>
+                                <!-- Fixed value -->
+                                <oe:type>EventID</oe:type>
+                            </oe:originating_system_item_ids>
+                            <oe:originating_system_audit>
+                                <oe:system_id>EMISWEB</oe:system_id>
+                                <oe:location>
+                                    <!-- Identical to Composition/content/healthcare_organisation and probably not needed -->
+                                    <!-- /openHealthRecord/clinicalDomain/encounter/organisation (dereference) -->
+                                    <!-- then /openHealthRecord/adminDomain/organisation/name/     -->
+                                    <oe:name>Old Kilpatrick Medical Practice</oe:name>
+                                    <oe:identifiers>
+                                        <!-- Fixed value -->
+                                        <oe:issuer>NHS</oe:issuer>
+                                        <!-- Fixed value -->
+                                        <oe:assigner>NHS</oe:assigner>
+                                        <!-- /openHealthRecord/lDomain[]/organisation[]/nationalPracticeCode[] -->
+                                        <oe:id>V1234</oe:id>
+                                        <oe:type>National Practice Code</oe:type>
+                                    </oe:identifiers>
+                                </oe:location>
+                                <oe:time>
+                                    <!-- /openHealthRecord/healthDomain[]/event[]/availabilitytime -->
+                                    <oe:value>2002-12-15T00:00:00</oe:value>
+                                </oe:time>
+                            </oe:originating_system_audit>
+                        </feeder_audit>
+                        <language>
+                            <terminology_id>
+                                <value>ISO_639-1</value>
+                            </terminology_id>
+                            <code_string>en</code_string>
+                        </language>
+                        <encoding>
+                            <terminology_id>
+                                <value>IANA_character-sets</value>
+                            </terminology_id>
+                            <code_string>UTF-8</code_string>
+                        </encoding>
+
+                        <subject xsi:type="oe:PARTY_SELF"/>
+                        <!-- /openHealthRecord/healthDomain[1]/event[152]/medication[1]/authorisedIssues[1]/authorisingUserInRole[1] -->
+                        <!-- Need to dereference  UserInRole/user -->
+                        <!-- then dereference user/userPerson -->
+                        
+                        <provider xsi:type="oe:PARTY_IDENTIFIED">
+                            <!-- person/title + person/forenames + person/surname -->
+                            <oe:name>Dr McNicoll</oe:name>
+                            <!-- /openHealthRecord/healthDomain[1]/event[152]/medication[1]/authorisedIssues[1]/authorisingUserInRole[1] (dereferenced) then UserInRole/userIdentifier  [0..*] -->
+                            <!-- Pull in all identifiers -->
+                            <oe:identifiers>
+                                <!-- Fixed value -->
+                                <oe:issuer>EMIS</oe:issuer>
+                                <!-- Fixed value -->
+                                <oe:assigner>EMIS</oe:assigner>
+                                <!-- ./UserInRole/userIdentifier/value -->
+                                <oe:id>3312182</oe:id>
+                                <!-- ./UserInRole/userIdentifier/identifierType -->
+                                <oe:type>GP</oe:type>
+                            </oe:identifiers>
+                        </provider>
+                      
+                        <!-- openHR Map /openHealthRecord/healthDomain[1]/event[152]/medication[1]/authorisedIssues[1]/authorisedIssues[1] -->
+                        <!-- Needs to be the most recently dated authorised isses in  -->
+                        <!-- /openHealthRecord/healthDomain[1]/event[152]/medication[1]/authorisedIssues[1]/authorisedDate[1] -->                     
+                        <time>
+                            <oe:value>2002-12-15T00:00:00</oe:value>
+                        </time>
+                        <description archetype_node_id="at0001" type="ITEM_TREE">
+                       <Medication_item>
+                           <name>
+                               <value>Medication item</value>
+                           </name>
+                           <Medication_name>
+                               <name>
+                                   <value>Medication name</value>
+                               </name>
+                               <value>
+                                           <!-- /openHealthRecord/healthDomain[]/event/displayTerm -->
+                                           <oe:value>Salbutamol 100micrograms/dose inhaler CFC
+                                               free</oe:value>
+                                       </value>
+                                   
+                           </Medication_name>
+                       </Medication_item>
+                            <Current_authorisation
+                                archetype_node_id="openEHR-EHR-CLUSTER.medication_event.v1"
+                                type="CLUSTER">
+                                <name>
+                                    <value>Current authorisation</value>
+                                </name>
+                                
+                                <Prescription_supply archetype_node_id="at0121" type="CLUSTER">
+                                    <name>
+                                        <value>Prescription supply</value>
+                                    </name>
+                                   
+                                    <Prescription_type archetype_node_id="at0129" type="ELEMENT"
+                                        valueType="DV_CODED_TEXT">
+                                        <name>
+                                            <value>Prescription type</value>
+                                        </name>
+                                        <!-- openHR MAP /openHealthRecord/healthDomain[1]/event[152]/medication[1]/prescriptionType[1] -->
+                                        <!-- A (Acute) => local::at0130::Acute prescription -->
+                                        <!-- R (Repeat prescribed => local::at0087::Repeat prescription -->
+                                        <!-- D (Repaet dispensed => local::at0088::Repeat dispensing -->
+                                        <!-- U (Automatic) => Need to check -->
+                                        <value>
+                                            <value>Repeat prescription</value>
+                                            <defining_code>
+                                                <terminology_id>
+                                                  <value>local</value>
+                                                </terminology_id>
+                                                <code_string>at0087</code_string>
+                                            </defining_code>
+                                        </value>
+                                    </Prescription_type>
+                                    
+                                    <!-- Prescription Endorsement does not cleanly map from a single openHR node -->
+                                    
+                                    <!-- if /openHealthRecord/healthDomain[1]/event[152]/medication[1]/private[1] = 'true' then -->
+                                    <!-- add  local::at0065::Private as a Prescription Endorsement-->
+                                   
+                                    <!-- if /openHealthRecord/healthDomain[1]/event[152]/medication[1]/prescribedAsContraceptive[1] = 'true' then -->
+                                    <!-- add local::at0061::Contraceptive as a Prescription Endorsement-->
+                                    
+                                    
+                                    <Prescription_endorsement archetype_node_id="at0004"
+                                        type="ELEMENT" valueType="DV_CODED_TEXT">
+                                        <name>
+                                            <value>Prescription endorsement</value>
+                                        </name>
+                                        <value>
+                                            <value>Private</value>
+                                            <defining_code>
+                                                <terminology_id>
+                                                  <value>local</value>
+                                                </terminology_id>
+                                                <code_string>at0065</code_string>
+                                            </defining_code>
+                                        </value>
+                                    </Prescription_endorsement>
+                                    <Prescription_endorsement archetype_node_id="at0004"
+                                        type="ELEMENT" valueType="DV_CODED_TEXT">
+                                        <name>
+                                            <value>Prescription endorsement</value>
+                                        </name>
+                                        <value>
+                                            <value>Contraceptive</value>
+                                            <defining_code>
+                                                <terminology_id>
+                                                  <value>local</value>
+                                                </terminology_id>
+                                                <code_string>at0061</code_string>
+                                            </defining_code>
+                                        </value>
+                                    </Prescription_endorsement>
+                                    
+                                    <!-- openHR MAP /openHealthRecord/healthDomain[1]/event[152]/medication[1]/mostRecentIssueMethod[1] -->
+                                    <!-- Maps to Presscribing method OR Prescribing_agency depending on code -->
+                                    <!-- Prescribing_method maps -->
+                                    <!-- P (Printed) => local::at0132::Printed-->
+                                    <!-- Q (Issue without script) => local::at0137::Issued without script-->
+                                    <!-- H (Handwritten) => local::at0133::Handwritten-->
+                                    <!-- D (Dispensing) => local::at0140::Dispensing -->
+                                    <!-- B (Repeat Dispensing) => local::at0139::Repeat dispensing-->
+                                    <!-- S (Store) => Need to check -->
+                                    <!-- A (Automatic) => Need to check -->
+                                    <!-- E (Electronic) => local::at0138::Electronic-->
+                                    <!-- OTC (over the counter) => local::at0116::Over the counter (OTC) -->
+                                    
+                                    <Prescribing_method archetype_node_id="at0036" type="ELEMENT"
+                                        valueType="DV_CODED_TEXT">
+                                        <name>
+                                            <value>Prescribing method</value>
+                                        </name>
+                                        <value>
+                                            <value>Printed</value>
+                                            <defining_code>
+                                                <terminology_id>
+                                                  <value>local</value>
+                                                </terminology_id>
+                                                <code_string>at0132</code_string>
+                                            </defining_code>
+                                        </value>
+                                    </Prescribing_method>
+                                    
+                                    <!-- openHR MAP /openHealthRecord/healthDomain[1]/event[152]/medication[1]/mostRecentIssueMethod[1] -->
+                                    <!-- Prescribing agency maps -->
+                                    <!-- O (Outside) =>  local::at0115::Outside-->
+                                    <!-- OH (Outside hosp[ital) => local::at0117::Outside - Hospital -->
+                                    <!-- OOOH Outside out-of-hours local::at0131::Outside - Out of Hours service -->
+                                  
+                                    <Prescribing_agency archetype_node_id="at0113" type="ELEMENT"
+                                        valueType="DV_CODED_TEXT">
+                                        <name>
+                                            <value>Prescribing agency</value>
+                                        </name>
+                                        <value>
+                                            <value>GP practice</value>
+                                            <defining_code>
+                                                <terminology_id>
+                                                  <value>local</value>
+                                                </terminology_id>
+                                                <code_string>at0114</code_string>
+                                            </defining_code>
+                                        </value>
+                                    </Prescribing_agency>
+                                </Prescription_supply>
+                                <Product archetype_node_id="at0135" type="CLUSTER">
+                                    <name>
+                                        <value>Product</value>
+                                    </name>
+                                    <Medication_quantity
+                                        archetype_node_id="openEHR-EHR-CLUSTER.medication_quantity_sct.v1"
+                                        type="CLUSTER">
+                                        <name>
+                                            <value>Medication quantity</value>
+                                        </name>
+                                        <Quantity_description archetype_node_id="at0003"
+                                            type="ELEMENT" valueType="DV_TEXT">
+                                            <name>
+                                                <value>Quantity description</value>
+                                            </name>
+                                            <value>
+                                                <!-- openHR MAP /openHealthRecord/healthDomain[1]/event[152]/medication[1]/quantityRepresentation -->
+                                                <oe:value>20 mls</oe:value>
+                                            </value>
+                                        </Quantity_description>
+                                       
+                                    </Medication_quantity>
+                                </Product>
+                                <Authorisation archetype_node_id="at0033" type="CLUSTER">
+                                    <name>
+                                        <value>Authorisation</value>
+                                    </name>
+                                    <Repeat_issues_authorised archetype_node_id="at0034"
+                                        type="ELEMENT" valueType="DV_COUNT">
+                                        <name>
+                                            <value>Repeat issues authorised</value>
+                                        </name>
+                                        <!-- openHR Map /openHealthRecord/healthDomain[1]/event[152]/medication[1]/authorisedIssues[1]/authorisedIssues[1] -->
+                                        <!-- Needs to be the most recently dated authorised isses in  -->
+                                        <!-- /openHealthRecord/healthDomain[1]/event[152]/medication[1]/authorisedIssues[1]/authorisedDate[1] -->
+                                        <value>
+                                            <magnitude>12</magnitude>
+                                        </value>
+                                    </Repeat_issues_authorised>
+                                    <Minimum_period_between_issues archetype_node_id="at0085"
+                                        type="ELEMENT" valueType="DV_DURATION">
+                                        <name>
+                                            <value>Minimum period between issues</value>
+                                        </name>
+                                        <!-- openHR MAP /openHealthRecord/healthDomain[1]/event[152]/medication[1]/minNextIssueDays[1] -->
+                                        <value>
+                                            <value>P20D</value>
+                                        </value>
+                                    </Minimum_period_between_issues>
+                                    <Maximum_period_between_issues archetype_node_id="at0086"
+                                        type="ELEMENT" valueType="DV_DURATION">
+                                        <name>
+                                            <value>Maximum period between issues</value>
+                                        </name>
+                                        <!-- openHR MAP /openHealthRecord/healthDomain[1]/event[152]/medication[1]/maxNextIssueDays[1] -->
+                                        <value>
+                                            <value>P56D</value>
+                                        </value>
+                                    </Maximum_period_between_issues>
+
+                                </Authorisation>
+
+                                <Issue archetype_node_id="at0037" type="CLUSTER">
+                                    <name>
+                                        <value>Issue</value>
+                                    </name>
+                                    <Number_of_repeats_issued archetype_node_id="at0038"
+                                        type="ELEMENT" valueType="DV_COUNT">
+                                        <name>
+                                            <value>Number of repeats issued</value>
+                                        </name>
+                                        <value>
+                                            <!-- openHR MAP /openHealthRecord/healthDomain[1]/event[152]/medication[1]/numberOfIssues[1] -->
+                                            <oe:magnitude>5</oe:magnitude>
+                                        </value>
+                                    </Number_of_repeats_issued>
+                                    <Duration_of_issue archetype_node_id="at0083" type="ELEMENT"
+                                        valueType="DV_DURATION">
+                                        <name>
+                                            <value>Duration of issue</value>
+                                        </name>
+                                        <value>
+                                            <!-- openHR MAP /openHealthRecord/healthDomain[1]/event[152]/medication[1]/durationOfIssue[1] -->
+                                            <value>P28D</value>
+                                        </value>
+                                    </Duration_of_issue>
+                                </Issue>
+                                <Comment archetype_node_id="at0136" type="ELEMENT"
+                                    valueType="DV_TEXT">
+                                    <name>
+                                        <value>Comment</value>
+                                    </name>
+                                    <!-- openHR MAP /openHealthRecord/healthDomain[]/event[]/availabilitytime -->
+                                    <!-- Same rules for handling PRE/POST concatenation as for allergies -->
+                                    <value>
+                                        <oe:value>An additional text</oe:value>
+                                    </value>
+                                </Comment>
+                            </Current_authorisation>
+                        </description>
+                        <!-- ism_transitions is 'fixed' boilerplate for all authorisations -->
+                        <ism_transition>
+                            <current_state>
+                                <oe:value>active</oe:value>
+                                <oe:defining_code>
+                                    <oe:terminology_id>
+                                        <oe:value>openehr</oe:value>
+                                    </oe:terminology_id>
+                                    <oe:code_string>245</oe:code_string>
+                                </oe:defining_code>
+                            </current_state>
+                            <careflow_step>
+                                <oe:value>Authorised</oe:value>
+                                <oe:defining_code>
+                                    <oe:terminology_id>
+                                        <oe:value>local</oe:value>
+                                    </oe:terminology_id>
+                                    <oe:code_string>at0010</oe:code_string>
+                                </oe:defining_code>
+                            </careflow_step>
+                        </ism_transition>
+                    </Current_authorisation>
+                    <!-- This is where to record all of the authorisation in  -->
+                    <!-- /openHealthRecord/healthDomain[1]/event[152]/medication[1]/authorisedIssues[1] -->
+                    <!-- other than the most recent authorisation i.e current authorisation -->
+                    <Medication_action archetype_node_id="openEHR-EHR-ACTION.medication_action.v1"
+                        type="ACTION">
+                        <name>
+                            <value>Medication action</value>
+                        </name>
+                       
+                        <feeder_audit>
+                            <oe:originating_system_item_ids>
+                                <!-- Fixed value -->
+                                <oe:issuer>EMISWEB</oe:issuer>
+                                <!-- Fixed value -->
+                                <oe:assigner>EMISWEB</oe:assigner>
+                                <!-- /openHealthRecord/healthDomain[]/event[]/id -->
+                                <oe:id>f0d81601-75d6-4a79-a17c-c6f885b0c3ba</oe:id>
+                                <!-- Fixed value -->
+                                <oe:type>EventID</oe:type>
+                            </oe:originating_system_item_ids>
+                            <oe:originating_system_audit>
+                                <oe:system_id>EMISWEB</oe:system_id>
+                                <oe:location>
+                                    <!-- Identical to Composition/content/healthcare_organisation and probably not needed -->
+                                    <!-- /openHealthRecord/clinicalDomain/encounter/organisation (dereference) -->
+                                    <!-- then /openHealthRecord/adminDomain/organisation/name/     -->
+                                    <oe:name>Old Kilpatrick Medical Practice</oe:name>
+                                    <oe:identifiers>
+                                        <!-- Fixed value -->
+                                        <oe:issuer>NHS</oe:issuer>
+                                        <!-- Fixed value -->
+                                        <oe:assigner>NHS</oe:assigner>
+                                        <!-- /openHealthRecord/lDomain[]/organisation[]/nationalPracticeCode[] -->
+                                        <oe:id>V1234</oe:id>
+                                        <oe:type>National Practice Code</oe:type>
+                                    </oe:identifiers>
+                                </oe:location>
+                                <oe:time>
+                                    <!-- /openHealthRecord/healthDomain[]/event[]/availabilitytime -->
+                                    <oe:value>2002-12-15T00:00:00</oe:value>
+                                </oe:time>
+                            </oe:originating_system_audit>
+                            <oe:feeder_system_audit>
+                                <oe:system_id>EMISWEB</oe:system_id>
+                                <!-- /openHealthRecord/healthDomain[]/event[]/effectivetime -->
+                                <oe:time>
+                                    <oe:value>2002-12-15T00:00:00</oe:value>
+                                </oe:time>
+                                <oe:version_id>event_effectivetime</oe:version_id>
+                            </oe:feeder_system_audit>
+                        </feeder_audit>
+
+                        <language>
+                            <terminology_id>
+                                <value>ISO_639-1</value>
+                            </terminology_id>
+                            <code_string>en</code_string>
+                        </language>
+                        <encoding>
+                            <terminology_id>
+                                <value>IANA_character-sets</value>
+                            </terminology_id>
+                            <code_string>UTF-8</code_string>
+                        </encoding>
+                        <subject xsi:type="oe:PARTY_SELF"/>
+                       
+                        <!-- /openHealthRecord/healthDomain[1]/event[152]/medication[1]/authorisedIssues[1]/authorisingUserInRole[1] -->
+                        <!-- Need to dereference  UserInRole/user -->
+                        <!-- then dereference user/userPerson -->
+                        <provider xsi:type="oe:PARTY_IDENTIFIED">
+                            <!-- person/title + person/forenames + person/surname -->
+                            <oe:name>Dr McNicoll</oe:name>
+                            <!-- /openHealthRecord/healthDomain[1]/event[152]/medication[1]/authorisedIssues[1]/authorisingUserInRole[1] (dereferenced) then UserInRole/userIdentifier  [0..*] -->
+                            <!-- Pull in all identifiers -->
+                            <oe:identifiers>
+                                <!-- Fixed value -->
+                                <oe:issuer>EMIS</oe:issuer>
+                                <!-- Fixed value -->
+                                <oe:assigner>EMIS</oe:assigner>
+                                <!-- ./UserInRole/userIdentifier/value -->
+                                <oe:id>3312182</oe:id>
+                                <!-- ./UserInRole/userIdentifier/identifierType -->
+                                <oe:type>GP</oe:type>
+                            </oe:identifiers>
+                        </provider>
+                        
+                        <!-- /openHealthRecord/healthDomain[1]/event[152]/medication[1]/authorisedIssues[1]/authorisedDate[1] -->                
+                        <time>
+                            <oe:value>2002-12-15T00:00:00</oe:value>
+                        </time>
+                        <description archetype_node_id="at0001" type="ITEM_TREE">
+                            <Medication_item type="CLUSTER" archetype_node_id="openEHR-EHR-CLUSTER.medication_item.v1">
+                                <name>
+                                    <value>Medication item</value>
+                                </name>
+                                <Medication_name archetype_node_id="at0001" type="ELEMENT" valueType="DV_TEXT">
+                                    <name>
+                                        <value>asasda</value>
+                                    </name>
+                                    <value>
+                                        <!-- /openHealthRecord/healthDomain[]/event/displayTerm -->
+                                        <oe:value>Salbutamol 100micrograms/dose inhaler CFC
+                                            free</oe:value>
+                                    </value>
+                                </Medication_name>
+                       
+                  </Medication_item>
+                            <Authorisation
+                                archetype_node_id="openEHR-EHR-CLUSTER.medication_event.v1"
+                                type="CLUSTER">
+                                <name>
+                                    <value>Authorisation</value>
+                                </name>
+                                
+                                <Authorisation archetype_node_id="at0033" type="CLUSTER">
+                                    <name>
+                                        <value>Authorisation</value>
+                                    </name>
+                                    <Repeat_issues_authorised archetype_node_id="at0034"
+                                        type="ELEMENT" valueType="DV_COUNT">
+                                        <name>
+                                            <value>Repeat issues authorised</value>
+                                        </name>
+                                        <!-- openHR Map /openHealthRecord/healthDomain[1]/event[152]/medication[1]/authorisedIssues[1]/authorisedIssues[1] -->
+                                        <value>
+                                            <magnitude>12</magnitude>
+                                        </value>
+                                    </Repeat_issues_authorised>
+                                </Authorisation>
+                            </Authorisation>
+                        </description>
+                        <!-- ism_transitions is 'fixed' boilerplate for all authorisations -->
+                        <ism_transition>
+                            <current_state>
+                                <oe:value>active</oe:value>
+                                <oe:defining_code>
+                                    <oe:terminology_id>
+                                        <oe:value>openehr</oe:value>
+                                    </oe:terminology_id>
+                                    <oe:code_string>245</oe:code_string>
+                                </oe:defining_code>
+                            </current_state>
+                            <careflow_step>
+                                <oe:value>Authorised</oe:value>
+                                <oe:defining_code>
+                                    <oe:terminology_id>
+                                        <oe:value>local</oe:value>
+                                    </oe:terminology_id>
+                                    <oe:code_string>at0010</oe:code_string>
+                                </oe:defining_code>
+                            </careflow_step>
+                        </ism_transition>
+                    </Medication_action>
+                    <Cancellation archetype_node_id="openEHR-EHR-ACTION.medication_action.v1"
+                        type="ACTION">
+                        <name>
+                            <value>Cancellation</value>
+                        </name>
+                        <!-- Taken from parent Medication event -->
+                        <feeder_audit>
+                            <oe:originating_system_item_ids>
+                                <!-- Fixed value -->
+                                <oe:issuer>EMISWEB</oe:issuer>
+                                <!-- Fixed value -->
+                                <oe:assigner>EMISWEB</oe:assigner>
+                                <!-- /openHealthRecord/healthDomain[1]/event[152]/medication[1]/cancellation[1]/id -->
+                                <oe:id>f0d81601-75d6-4a79-a17c-c6f885b0c3ba</oe:id>
+                                <!-- Fixed value -->
+                                <oe:type>EventID</oe:type>
+                            </oe:originating_system_item_ids>
+                            <oe:originating_system_audit>
+                                <oe:system_id>EMISWEB</oe:system_id>
+                                <oe:location>
+                                    <!-- Identical to Composition/content/healthcare_organisation and probably not needed -->
+                                    <!-- /openHealthRecord/clinicalDomain/encounter/organisation (dereference) -->
+                                    <!-- then /openHealthRecord/adminDomain/organisation/name/     -->
+                                    <oe:name>Old Kilpatrick Medical Practice</oe:name>
+                                    <oe:identifiers>
+                                        <!-- Fixed value -->
+                                        <oe:issuer>NHS</oe:issuer>
+                                        <!-- Fixed value -->
+                                        <oe:assigner>NHS</oe:assigner>
+                                        <!-- /openHealthRecord/lDomain[]/organisation[]/nationalPracticeCode[] -->
+                                        <oe:id>V1234</oe:id>
+                                        <oe:type>National Practice Code</oe:type>
+                                    </oe:identifiers>
+                                </oe:location>
+                                <oe:time>
+                                    <!-- /openHealthRecord/healthDomain[]/event[]/availabilitytime -->
+                                    <oe:value>2002-12-15T00:00:00</oe:value>
+                                </oe:time>
+                            </oe:originating_system_audit>
+                        </feeder_audit>
+                        <language>
+                            <terminology_id>
+                                <value>ISO_639-1</value>
+                            </terminology_id>
+                            <code_string>en</code_string>
+                        </language>
+                        <encoding>
+                            <terminology_id>
+                                <value>IANA_character-sets</value>
+                            </terminology_id>
+                            <code_string>UTF-8</code_string>
+                        </encoding>
+                        <subject xsi:type="oe:PARTY_SELF"/>
+                        <provider xsi:type="oe:PARTY_IDENTIFIED">
+                            <!-- person/title + person/forenames + person/surname -->
+                            <oe:name>Dr McNicoll</oe:name>
+                            <!-- /openHealthRecord/healthDomain[1]/event[152]/medication[1]/cancellation[1]/cancelledbyUserInRole[1] (dereferenced) then UserInRole/userIdentifier  [0..*] -->
+                            <!-- Pull in all identifiers -->
+                            <oe:identifiers>
+                                <!-- Fixed value -->
+                                <oe:issuer>EMIS</oe:issuer>
+                                <!-- Fixed value -->
+                                <oe:assigner>EMIS</oe:assigner>
+                                <!-- ./UserInRole/userIdentifier/value -->
+                                <oe:id>3312182</oe:id>
+                                <!-- ./UserInRole/userIdentifier/identifierType -->
+                                <oe:type>GP</oe:type>
+                            </oe:identifiers>
+                        </provider>
+                        <!-- /openHealthRecord/healthDomain[1]/event[152]/medication[1]/cancellation[1]/cancellationDateTime -->
+                        <time>
+                            <oe:value>2002-12-15T00:00:00</oe:value>
+                        </time>
+                        <description archetype_node_id="at0001" type="ITEM_TREE">
+                            <Medication_item type="CLUSTER" archetype_node_id="openEHR-EHR-CLUSTER.medication_item.v1">
+                                <name>
+                                    <value>Medication item</value>
+                                </name>
+                                <Medication_name archetype_node_id="at0001" type="ELEMENT" valueType="DV_TEXT">
+                                    <name>
+                                        <value>asasda</value>
+                                    </name>
+                                    <value>
+                                        <!-- /openHealthRecord/healthDomain[]/event/displayTerm -->
+                                        <oe:value>Salbutamol 100micrograms/dose inhaler CFC
+                                            free</oe:value>
+                                    </value>
+                                </Medication_name>
+                                
+                            </Medication_item>
+                            <Discontinuation
+                                archetype_node_id="openEHR-EHR-CLUSTER.medication_event.v1"
+                                type="CLUSTER">
+                                <name>
+                                    <value>Discontinuation</value>
+                                </name>
+                                
+                                <Discontinutation archetype_node_id="at0122" type="CLUSTER">
+                                    <name>
+                                        <value>Discontinutation</value>
+                                    </name>
+                                    <Reason_discontinued archetype_node_id="at0125" type="ELEMENT"
+                                        valueType="DV_TEXT">
+                                        <name>
+                                            <value>Reason discontinued</value>
+                                        </name>
+                                        <!-- /openHealthRecord/healthDomain[1]/event[152]/medication[1]/cancellation[1]/cancellationText -->
+                                        <value>
+                                            <oe:value>Vomiting</oe:value>
+                                        </value>
+                                    </Reason_discontinued>
+                                </Discontinutation>
+                            </Discontinuation>
+                        </description>
+                        <!-- Boilerplated for Course Discontinued (cancellation)-->
+                        <ism_transition>
+                            <current_state>
+                                <oe:value>aborted</oe:value>
+                                <oe:defining_code>
+                                    <oe:terminology_id>
+                                        <oe:value>openehr</oe:value>
+                                    </oe:terminology_id>
+                                    <oe:code_string>531</oe:code_string>
+                                </oe:defining_code>
+                            </current_state>
+                            <careflow_step>
+                                <oe:value>Course discontunued</oe:value>
+                                <oe:defining_code>
+                                    <oe:terminology_id>
+                                        <oe:value>local</oe:value>
+                                    </oe:terminology_id>
+                                    <oe:code_string>at0017</oe:code_string>
+                                </oe:defining_code>
+                            </careflow_step>
+                        </ism_transition>
+                    </Cancellation>
+
+                </openHR_Medication>
+                <openHR_Issues archetype_node_id="at0007" type="SECTION">
+                    <name>
+                        <value>openHR Issues</value>
+                    </name>
+                    <Medication_action archetype_node_id="openEHR-EHR-ACTION.medication_action.v1"
+                        type="ACTION">
+                        <name>
+                            <value>Medication action</value>
+                        </name>
+                        <!-- Taken from MedicationIssue event -->
+                        <feeder_audit>
+                            <oe:originating_system_item_ids>
+                                <!-- Fixed value -->
+                                <oe:issuer>EMISWEB</oe:issuer>
+                                <!-- Fixed value -->
+                                <oe:assigner>EMISWEB</oe:assigner>
+                                <!-- /openHealthRecord/healthDomain[]/event[]/id -->
+                                <oe:id>f0d81601-75d6-4a79-a17c-c6f885b0c3ba</oe:id>
+                                <!-- Fixed value -->
+                                <oe:type>EventID</oe:type>
+                            </oe:originating_system_item_ids>
+                            <oe:originating_system_audit>
+                                <oe:system_id>EMISWEB</oe:system_id>
+                                <oe:location>
+                                    <!-- Identical to Composition/content/healthcare_organisation and probably not needed -->
+                                    <!-- /openHealthRecord/clinicalDomain/encounter/organisation (dereference) -->
+                                    <!-- then /openHealthRecord/adminDomain/organisation/name/     -->
+                                    <oe:name>Old Kilpatrick Medical Practice</oe:name>
+                                    <oe:identifiers>
+                                        <!-- Fixed value -->
+                                        <oe:issuer>NHS</oe:issuer>
+                                        <!-- Fixed value -->
+                                        <oe:assigner>NHS</oe:assigner>
+                                        <!-- /openHealthRecord/lDomain[]/organisation[]/nationalPracticeCode[] -->
+                                        <oe:id>V1234</oe:id>
+                                        <oe:type>National Practice Code</oe:type>
+                                    </oe:identifiers>
+                                </oe:location>
+                                <oe:time>
+                                    <!-- /openHealthRecord/healthDomain[]/event[]/availabilitytime -->
+                                    <oe:value>2002-12-15T00:00:00</oe:value>
+                                </oe:time>
+                            </oe:originating_system_audit>
+                            <oe:feeder_system_audit>
+                                <oe:system_id>EMISWEB</oe:system_id>
+                                <!-- /openHealthRecord/healthDomain[]/event[]/effectivetime -->
+                                <oe:time>
+                                    <oe:value>2002-12-15T00:00:00</oe:value>
+                                </oe:time>
+                                <oe:version_id>event_effectivetime</oe:version_id>
+                            </oe:feeder_system_audit>
+                        </feeder_audit>
+                        <language>
+                            <terminology_id>
+                                <value>ISO_639-1</value>
+                            </terminology_id>
+                            <code_string>en</code_string>
+                        </language>
+                        <encoding>
+                            <terminology_id>
+                                <value>IANA_character-sets</value>
+                            </terminology_id>
+                            <code_string>UTF-8</code_string>
+                        </encoding>
+                        <subject/>
+                        <!-- /openHealthRecord/healthDomain[]/event[]/effectivetime -->
+                        <time>
+                            <oe:value>2002-12-15T00:00:00</oe:value>
+                        </time>
+                        <description archetype_node_id="at0001" type="ITEM_TREE">
+                            <Medication_item
+                                archetype_node_id="openEHR-EHR-CLUSTER.medication_item.v1"
+                                type="CLUSTER">
+                                <name>
+                                    <value>Medication item</value>
+                                </name>
+                                <Medication_name archetype_node_id="at0001" type="ELEMENT"
+                                    valueType="DV_TEXT">
+                                    <name>
+                                        <value>Medication name</value>
+                                    </name>
+                                    <!-- DISCUSS with Thomas - to avoid havingto look up original record to retreive name -->
+                                    <!-- Boilerplated null flavour coding -->
+                                    <null_flavour>
+                                        <oe:value>not applicable</oe:value>
+                                        <oe:defining_code>
+                                            <oe:terminology_id>
+                                                <oe:value>openehr</oe:value>
+                                            </oe:terminology_id>
+                                            <oe:code_string>273</oe:code_string>
+                                        </oe:defining_code>
+                                    </null_flavour>
+                                </Medication_name>
+                                <Dose_directions archetype_node_id="at0019" type="CLUSTER">
+                                    <name>
+                                        <value>Dose directions</value>
+                                    </name>
+                                    <Dose_directions_description archetype_node_id="at0003"
+                                        type="ELEMENT" valueType="DV_TEXT">
+                                        <name>
+                                            <value>Dose directions description</value>
+                                        </name>
+                                        <value>
+                                            <!-- /openHealthRecord/healthDomain[]/event[]/medication[]/dosage[] -->
+                                            <oe:value>2PUFFS PRN</oe:value>
+                                        </value>
+                                    </Dose_directions_description>
+                                </Dose_directions>
+                                
+                            </Medication_item>
+                            
+                            <Issue archetype_node_id="openEHR-EHR-CLUSTER.medication_event.v1"
+                                type="CLUSTER">
+                                <name>
+                                    <value>Issue</value>
+                                </name>
+                                <Prescription_supply archetype_node_id="at0121" type="CLUSTER">
+                                    <name>
+                                        <value>Prescription supply</value>
+                                    </name>
+                                    <Prescription_type archetype_node_id="at0129" type="ELEMENT"
+                                        valueType="DV_CODED_TEXT">
+                                        <name>
+                                            <value>Prescription type</value>
+                                        </name>
+                                        <!-- openHR MAP /openHealthRecord/healthDomain[1]/event[152]/medicationIssue[1]/prescriptionType[1] -->
+                                        <!-- A (Acute) => local::at0130::Acute prescription -->
+                                        <!-- R (Repeat prescribed => local::at0087::Repeat prescription -->
+                                        <!-- D (Repaet dispensed => local::at0088::Repeat dispensing -->
+                                        <!-- U (Automatic) => Need to check -->
+                                        <value>
+                                            <value>Repeat prescription</value>
+                                            <defining_code>
+                                                <terminology_id>
+                                                    <value>local</value>
+                                                </terminology_id>
+                                                <code_string>at0087</code_string>
+                                            </defining_code>
+                                        </value>
+                                    </Prescription_type>
+                                    
+                                    <!-- Prescription Endorsement does not cleanly map from a single openHR node -->
+                                    
+                                    <!-- if /openHealthRecord/healthDomain[1]/event[152]/medicationIssue[1]/private[1] = 'true' then -->
+                                    <!-- add  local::at0065::Private as a Prescription Endorsement-->
+                                    
+                                    <!-- if /openHealthRecord/healthDomain[1]/event[152]/medicationIssue[1]/prescribedAsContraceptive[1] = 'true' then -->
+                                    <!-- add local::at0061::Contraceptive as a Prescription Endorsement-->
+                                    
+                                    
+                                    <Prescription_endorsement archetype_node_id="at0004"
+                                        type="ELEMENT" valueType="DV_CODED_TEXT">
+                                        <name>
+                                            <value>Prescription endorsement</value>
+                                        </name>
+                                        <value>
+                                            <value>Private</value>
+                                            <defining_code>
+                                                <terminology_id>
+                                                    <value>local</value>
+                                                </terminology_id>
+                                                <code_string>at0065</code_string>
+                                            </defining_code>
+                                        </value>
+                                    </Prescription_endorsement>
+                                    <Prescription_endorsement archetype_node_id="at0004"
+                                        type="ELEMENT" valueType="DV_CODED_TEXT">
+                                        <name>
+                                            <value>Prescription endorsement</value>
+                                        </name>
+                                        <value>
+                                            <value>Contraceptive</value>
+                                            <defining_code>
+                                                <terminology_id>
+                                                    <value>local</value>
+                                                </terminology_id>
+                                                <code_string>at0061</code_string>
+                                            </defining_code>
+                                        </value>
+                                    </Prescription_endorsement>
+                                    
+                                    <!-- openHR MAP /openHealthRecord/healthDomain[1]/event[152]/medicationIssue[1]/IssueMethod[1] -->
+                                    <!-- Maps to Presscribing method OR Prescribing_agency depending on code -->
+                                    <!-- Prescribing_method maps -->
+                                    <!-- P (Printed) => local::at0132::Printed-->
+                                    <!-- Q (Issue without script) => local::at0137::Issued without script-->
+                                    <!-- H (Handwritten) => local::at0133::Handwritten-->
+                                    <!-- D (Dispensing) => local::at0140::Dispensing -->
+                                    <!-- B (Repeat Dispensing) => local::at0139::Repeat dispensing-->
+                                    <!-- S (Store) => Need to check -->
+                                    <!-- A (Automatic) => Need to check -->
+                                    <!-- E (Electronic) => local::at0138::Electronic-->
+                                    <!-- OTC (over the counter) => local::at0116::Over the counter (OTC) -->
+                                    
+                                    <Prescribing_method archetype_node_id="at0036" type="ELEMENT"
+                                        valueType="DV_CODED_TEXT">
+                                        <name>
+                                            <value>Prescribing method</value>
+                                        </name>
+                                        <value>
+                                            <value>Printed</value>
+                                            <defining_code>
+                                                <terminology_id>
+                                                    <value>local</value>
+                                                </terminology_id>
+                                                <code_string>at0132</code_string>
+                                            </defining_code>
+                                        </value>
+                                    </Prescribing_method>
+                                    
+                                    <!-- openHR MAP /openHealthRecord/healthDomain[1]/event[152]/medicationissue[1]/IssueMethod[1] -->
+                                    <!-- Prescribing agency maps -->
+                                    <!-- O (Outside) =>  local::at0115::Outside-->
+                                    <!-- OH (Outside hosp[ital) => local::at0117::Outside - Hospital -->
+                                    <!-- OOOH Outside out-of-hours local::at0131::Outside - Out of Hours service -->
+                                    
+                                    <Prescribing_agency archetype_node_id="at0113" type="ELEMENT"
+                                        valueType="DV_CODED_TEXT">
+                                        <name>
+                                            <value>Prescribing agency</value>
+                                        </name>
+                                        <value>
+                                            <value>GP practice</value>
+                                            <defining_code>
+                                                <terminology_id>
+                                                    <value>local</value>
+                                                </terminology_id>
+                                                <code_string>at0114</code_string>
+                                            </defining_code>
+                                        </value>
+                                    </Prescribing_agency>
+                                </Prescription_supply>
+                                <Product archetype_node_id="at0135" type="CLUSTER">
+                                    <name>
+                                        <value>Product</value>
+                                    </name>
+                                    <Medication_quantity
+                                        archetype_node_id="openEHR-EHR-CLUSTER.medication_quantity_sct.v1"
+                                        type="CLUSTER">
+                                        <name>
+                                            <value>Medication quantity</value>
+                                        </name>
+                                        <Quantity_description archetype_node_id="at0003"
+                                            type="ELEMENT" valueType="DV_TEXT">
+                                            <name>
+                                                <value>Quantity description</value>
+                                            </name>
+                                            <value>
+                                                <!-- openHR MAP /openHealthRecord/healthDomain[1]/event[152]/medicationissue[1]/quantityRepresentation -->
+                                                <oe:value>20 mls</oe:value>
+                                            </value>
+                                        </Quantity_description>
+                                 
+                                    </Medication_quantity>
+                                    <Batch_number archetype_node_id="at0051" type="ELEMENT"
+                                        valueType="DV_TEXT">
+                                        <name>
+                                            <value>Batch number</value>
+                                        </name>
+                                        <!-- openHR MAP /openHealthRecord/healthDomain[1]/event[152]/medicationissue[1]/batchNumber -->
+                                        <value>
+                                            <oe:value>XYZ 2</oe:value>
+                                        </value>
+                                    </Batch_number>
+                                
+                                </Product>
+                                <Issue archetype_node_id="at0037" type="CLUSTER">
+                                    <name>
+                                        <value>Issue</value>
+                                    </name>
+                                    <Duration_of_issue archetype_node_id="at0083" type="ELEMENT"
+                                        valueType="DV_DURATION">
+                                        <name>
+                                            <value>Duration of issue</value>
+                                        </name>
+                                        <!-- openHR MAP /openHealthRecord/healthDomain[1]/event[152]/medication[1]/durationOfIssues -->
+                                        <value>
+                                            <value>P28D</value>
+                                        </value>
+                                    </Duration_of_issue>
+                                    <Link_to_authorisation_record archetype_node_id="at0040" type="ELEMENT" valueType="DV_EHR_URI">
+                                        <name>
+                                            <value>Link to authorisation record</value>
+                                        </name>
+                                        <!-- /openHealthRecord/healthDomain[1]/event[177]/medicationIssue[1]/medication[1] -->
+                                        <!-- Need to discuss exact format of URI with Thomas -->
+                                        <value>
+                                            <oe:value>Something</oe:value>
+                                        </value>
+                                    </Link_to_authorisation_record>
+                                    
+                                </Issue>
+                                <Comment archetype_node_id="at0136" type="ELEMENT"
+                                    valueType="DV_TEXT">
+                                    <name>
+                                        <value>Comment</value>
+                                    </name>
+                                    <!-- openHR MAP /openHealthRecord/healthDomain[]/event/medicationissue[]/additionalText -->
+                                    <!-- Same rules for handling PRE/POST concatenation as for allergies -->
+                                    <value>
+                                        <oe:value>An additional text</oe:value>
+                                    </value>
+                                </Comment>
+                            </Issue>
+                        </description>
+                        <!-- Boilerplate for Issues -->
+                        <ism_transition>
+                            <current_state>
+                                <oe:value>active</oe:value>
+                                <oe:defining_code>
+                                    <oe:terminology_id>
+                                        <oe:value>openehr</oe:value>
+                                    </oe:terminology_id>
+                                    <oe:code_string>245</oe:code_string>
+                                </oe:defining_code>
+                            </current_state>
+                            <careflow_step>
+                                <oe:value>Prescription issued</oe:value>
+                                <oe:defining_code>
+                                    <oe:terminology_id>
+                                        <oe:value>local</oe:value>
+                                    </oe:terminology_id>
+                                    <oe:code_string>at0009</oe:code_string>
+                                </oe:defining_code>
+                            </careflow_step>
+                        </ism_transition>
+                    </Medication_action>
+                </openHR_Issues>
+
+            </openHR_Medication_Events>
+        </Medications>
+    </openHR_heading>
+</GP_encounter_event>

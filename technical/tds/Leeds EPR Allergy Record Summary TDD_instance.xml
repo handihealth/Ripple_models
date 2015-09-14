@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EPR_Allergy_Record_Summary xmlns:oe="http://schemas.openehr.org/v1"
+ xmlns="http://schemas.oceanehr.com/templates"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://schemas.oceanehr.com/templates file:/C:/Users/ian/Documents/Dropbox/Modelling/Leeds%20CRS/models/local/templates/tds/Leeds%20EPR%20Allergy%20Record%20Summary.xsd" template_id="Leeds EPR Allergy Record Summary">
+    <name>
+        <value>EPR Allergy Record Summary</value>
+    </name>
+    <language>
+        <terminology_id>
+            <value>ISO_639-1</value>
+        </terminology_id>
+        <code_string>en</code_string>
+    </language>
+    <territory>
+        <terminology_id>
+            <value>ISO_3166-1</value>
+        </terminology_id>
+        <code_string>EN</code_string>
+    </territory>
+    <category>
+        <value>event</value>
+        <defining_code>
+            <terminology_id>
+                <value>openehr</value>
+            </terminology_id>
+            <code_string>433</code_string>
+        </defining_code>
+    </category>
+    <composer xsi:type="oe:PARTY_IDENTIFIED">
+        <oe:name>Dr McNicoll</oe:name>
+        <oe:identifiers>
+            <oe:issuer>NHS</oe:issuer>
+            <oe:assigner>NHS</oe:assigner>
+            <oe:id>1234567</oe:id>
+            <oe:type></oe:type>
+        </oe:identifiers>
+    </composer>
+    <Allergies archetype_node_id="openEHR-EHR-SECTION.rcp_allergies_heading.v1" type="SECTION">
+        <name>
+            <value>Allergies</value>
+        </name>
+        <Current_allergies__fslash__adverse_reactions__fslash__contraindications archetype_node_id="at0002" type="SECTION">
+            <name>
+                <value>Current allergies / adverse reactions / contraindications</value>
+            </name>
+            <Adverse_reaction archetype_node_id="openEHR-EHR-EVALUATION.adverse_reaction_uk.v1"
+                type="EVALUATION">
+                <name>
+                    <value>Adverse reaction</value>
+                </name>
+                <!-- Standard ENTRY pattern for feeder_audit can be used in any ENTRY under an event Composition -->
+                <language>
+                    <terminology_id>
+                        <value>ISO_639-1</value>
+                    </terminology_id>
+                    <code_string>en</code_string>
+                </language>
+                <encoding>
+                    <terminology_id>
+                        <value>IANA_character-sets</value>
+                    </terminology_id>
+                    <code_string>UTF-8</code_string>
+                </encoding>
+                <subject xsi:type="oe:PARTY_SELF"/>
+                <data archetype_node_id="at0001" type="ITEM_TREE">
+                    <Causative_agent archetype_node_id="at0002" type="ELEMENT" valueType="DV_TEXT">
+                        <name>
+                            <value>Causative agent</value>
+                        </name>
+                        <text_value>
+                            <oe:value>Penicillin Allergy</oe:value>
+                            <oe:mappings>
+                                <oe:match>=</oe:match>
+                                <oe:target>
+                                    <oe:terminology_id>
+                                        <oe:value>SNOMED-CT</oe:value>
+                                    </oe:terminology_id>
+                                    <oe:code_string>code_string139</oe:code_string>
+                                </oe:target>
+                            </oe:mappings>
+                        </text_value>
+                    </Causative_agent>
+                    <Reaction_details archetype_node_id="at0025" type="CLUSTER">
+                        <name>
+                            <value>Reaction details</value>
+                        </name>
+                        <!-- /openHealthRecord/healthDomain[]/event[]/effectiveTime -->
+                        <Date_recorded archetype_node_id="at0021" type="ELEMENT"
+                            valueType="DV_DATE_TIME">
+                            <name>
+                                <value>Date recorded</value>
+                            </name>
+                            <value>
+                                <oe:value>1973-08-15T00:00:00</oe:value>
+                            </value>
+                        </Date_recorded>
+                        <Comment archetype_node_id="at0022" type="ELEMENT" valueType="DV_TEXT">
+                            <name>
+                                <value>Comment</value>
+                            </name>
+                            <!-- concatenated from associatedText and displayTerm -->
+                            <value>
+                                <oe:value>After given Penicillin-V 250mg tab at OOH centre, possibly
+                                    a Penicillin Allergy as he developed an exfoliative
+                                    rash</oe:value>
+                            </value>
+                        </Comment>
+                    </Reaction_details>
+                </data>
+            </Adverse_reaction>
+            <!-- Contraindication - READ Coded -->
+            <Contraindication type="EVALUATION"
+                archetype_node_id="openEHR-EHR-EVALUATION.contraindication.v1">
+                <name>
+                    <value>Contraindication</value>
+                </name>
+               <language>
+                    <terminology_id>
+                        <value>ISO_639-1</value>
+                    </terminology_id>
+                    <code_string>en</code_string>
+                </language>
+                <encoding>
+                    <terminology_id>
+                        <value>IANA_character-sets</value>
+                    </terminology_id>
+                    <code_string>UTF-8</code_string>
+                </encoding>
+                <subject xsi:type="oe:PARTY_SELF"/>
+                <protocol archetype_node_id="at0006" type="ITEM_TREE">
+                    <!-- IMCN 08 11 2013 Changed element name !-->
+                    <Date_Last_Updated archetype_node_id="at0004" type="ELEMENT" valueType="DV_DATE_TIME">
+                        <name>
+                            <value>Date Last Updated</value>
+                        </name>
+                        <value>
+                            <oe:value>2002-12-15T00:00:00</oe:value>
+                        </value>
+                    </Date_Last_Updated>
+                </protocol>
+                <data archetype_node_id="at0001" type="ITEM_TREE">
+                    <Contraindication type="ELEMENT" archetype_node_id="at0002" valueType="DV_TEXT">
+                        <name>
+                            <value>Contraindication</value>
+                        </name>
+                        <value>
+                            <oe:value>Beta blocker contraindicated</oe:value>
+                            <!-- Ignore schema validation error which is due to XSD not handling DV_CODED_TEXT as a sub-class of DV_TEXT -->
+                            <oe:defining_code>
+                                <oe:terminology_id>
+                                    <oe:value></oe:value>
+                                </oe:terminology_id>
+                                <oe:code_string>SNOMED-CT</oe:code_string>
+                            </oe:defining_code>
+                        </value>
+                    </Contraindication>
+                    <Evidence_fslash_Rationale archetype_node_id="at0003" type="ELEMENT"
+                        valueType="DV_TEXT">
+                        <name>
+                            <value>Evidence/Rationale</value>
+                        </name>
+                        <value>
+                           <oe:value>Has asthma</oe:value>
+                        </value>
+                    </Evidence_fslash_Rationale>
+                </data>
+                
+            </Contraindication>
+
+        </Current_allergies__fslash__adverse_reactions__fslash__contraindications>
+        <Exclusion_of_an_Adverse_Reaction
+            archetype_node_id="openEHR-EHR-EVALUATION.exclusion-adverse_reaction.v1"
+            type="EVALUATION">
+            <name>
+                <value>Exclusion of an Adverse Reaction</value>
+            </name>
+            
+            <language>
+                <terminology_id>
+                    <value>ISO_639-1</value>
+                </terminology_id>
+                <code_string>en</code_string>
+            </language>
+            <encoding>
+                <terminology_id>
+                    <value>IANA_character-sets</value>
+                </terminology_id>
+                <code_string>UTF-8</code_string>
+            </encoding>
+            <subject xsi:type="oe:PARTY_SELF"/>
+            <protocol archetype_node_id="at0006" type="ITEM_TREE">
+                <!-- IMCN 08 11 2013 Changed element name !-->
+                <Date_Last_Updated archetype_node_id="at0004" type="ELEMENT"
+                    valueType="DV_DATE_TIME">
+                    <name>
+                        <value>Date Last Updated</value>
+                    </name>
+                    <value>
+                        <!-- 05/08 /openHealthRecord/healthDomain[]/event[]/effectivetime -->
+                        <oe:value>2002-12-15T00:00:00</oe:value>
+                    </value>
+                </Date_Last_Updated>
+            </protocol>
+            <data archetype_node_id="at0001" type="ITEM_TREE">
+                <Exclusion_Statement archetype_node_id="at0002.1" type="ELEMENT"
+                    valueType="DV_TEXT">
+                    <name>
+                        <value>Exclusion Statement</value>
+                    </name>
+                    <value>
+                        <oe:value>No known adverse reactions</oe:value>
+                        <oe:mappings>
+                            <oe:match>=</oe:match>
+                            <oe:target>
+                                <oe:terminology_id>
+                                    <oe:value>READ2</oe:value>
+                                </oe:terminology_id>
+                                <oe:code_string>1151.</oe:code_string>
+                            </oe:target>
+                        </oe:mappings>
+                        <oe:mappings>
+                            <oe:match>=</oe:match>
+                            <oe:target>
+                                <oe:terminology_id>
+                                    <oe:value>SNOMED-CT</oe:value>
+                                </oe:terminology_id>
+                                <oe:code_string>code_string139</oe:code_string>
+                            </oe:target>
+                        </oe:mappings>
+                        <oe:defining_code>
+                            <terminology_id>
+                                <value>local</value>
+                            </terminology_id>
+                            <code_string>at0.3</code_string>
+                        </oe:defining_code>
+                    </value>
+                </Exclusion_Statement>
+                
+                
+                <!-- IMCN 08 11 2013 Added Comment back in for Adverese Reaction exclusions !-->                  
+                <Comment archetype_node_id="at0007" type="ELEMENT" valueType="DV_TEXT">
+                    <name>
+                        <value>Comment</value>
+                    </name>
+                    <value>
+                        
+                        <!-- /openHealthRecord/healthDomain[]/event[]/availabilitytime -->
+                        <!-- Same rules for handling PRE/POST concatenation as for allergies -->
+                        <oe:value>Has asthma</oe:value>
+                    </value>
+                </Comment>
+            </data>
+        </Exclusion_of_an_Adverse_Reaction>
+    </Allergies>
+    
+</EPR_Allergy_Record_Summary>

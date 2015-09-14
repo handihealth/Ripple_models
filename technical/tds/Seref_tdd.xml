@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GP_Adverse_Reaction_Summary template_id="COMPOSITION - LCRS - GP Adverse Reaction Summary" archetype_node_id="openEHR-EHR-COMPOSITION.adverse_reaction_list.v1" type="COMPOSITION" xmlns="http://schemas.oceanehr.com/templates" xmlns:myns="http://www.oceaninformatics.com" xmlns:oe="http://schemas.openehr.org/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<name>
+		<value>GP Adverse Reaction Summary</value>
+	</name>
+	<language>
+		<terminology_id>
+			<value>ISO_639-1</value>
+		</terminology_id>
+		<code_string>en</code_string>
+	</language>
+	<territory>
+		<terminology_id>
+			<value>ISO_3166-1</value>
+		</terminology_id>
+		<code_string>GB</code_string>
+	</territory>
+	<category>
+		<value>persistent</value>
+		<defining_code>
+			<terminology_id>
+				<value>openehr</value>
+			</terminology_id>
+			<code_string>431</code_string>
+		</defining_code>
+	</category>
+	<composer xsi:type="oe:PARTY_IDENTIFIED">
+		<oe:name>Netherfield House Hospital</oe:name>
+		<oe:identifiers>
+			<oe:issuer>EMIS</oe:issuer>
+			<oe:assigner>EMIS</oe:assigner>
+			<oe:id>4A3EA1CF-7F01-4F61-9654-B07DD51A34F8</oe:id>
+			<oe:type>Organisation</oe:type>
+		</oe:identifiers>
+	</composer>
+	<Drug_allergy archetype_node_id="openEHR-EHR-EVALUATION.drugallergy.v1" type="EVALUATION">
+		<name>
+			<value>Drug allergy</value>
+		</name>
+		<language>
+			<terminology_id>
+				<value>ISO_639-1</value>
+			</terminology_id>
+			<code_string>en</code_string>
+		</language>
+		<encoding>
+			<terminology_id>
+				<value>IANA_character-sets</value>
+			</terminology_id>
+			<code_string>UTF-8</code_string>
+		</encoding>
+		<subject xsi:type="oe:PARTY_SELF" />
+		<data archetype_node_id="at0001" type="ITEM_TREE">
+			<Causative_agent archetype_node_id="at0002" type="ELEMENT" valueType="DV_TEXT">
+				<name>
+					<value>Causative agent</value>
+				</name>
+				<value>
+					<oe:value>Penicillin Allergy</oe:value>
+					<oe:mappings>
+						<oe:match>=</oe:match>
+						<oe:target>
+							<oe:terminology_id>
+								<oe:value>2.16.840.1.113883.2.1.6.2</oe:value>
+							</oe:terminology_id>
+							<oe:code_string>14L1</oe:code_string>
+						</oe:target>
+					</oe:mappings>
+				</value>
+			</Causative_agent>
+			<Severity archetype_node_id="at0005" type="ELEMENT" valueType="DV_CODED_TEXT">
+				<name>
+					<value>Severity</value>
+					<mappings>
+						<oe:match>=</oe:match>
+						<oe:target>
+							<oe:terminology_id>
+								<oe:value>SNOMED-CT</oe:value>
+							</oe:terminology_id>
+							<oe:code_string>246112005</oe:code_string>
+						</oe:target>
+					</mappings>
+				</name>
+				<value>
+					<value>Severe</value>
+					<mappings>
+						<oe:match>=</oe:match>
+						<oe:target>
+							<oe:terminology_id>
+								<oe:value>SNOMED-CT</oe:value>
+							</oe:terminology_id>
+							<oe:code_string>2448400</oe:code_string>
+						</oe:target>
+					</mappings>
+					<defining_code>
+						<terminology_id>
+							<value>local</value>
+						</terminology_id>
+						<code_string>at0011</code_string>
+					</defining_code>
+				</value>
+			</Severity>
+			<Comment archetype_node_id="at0022" type="ELEMENT" valueType="DV_TEXT">
+				<name>
+					<value>Comment</value>
+				</name>
+				<value>
+					<oe:value>After given penicillin tabs at OOH centre, possibly a Penicillin Allergyas he developed an exfoliative rash</oe:value>
+				</value>
+			</Comment>
+		</data>
+	</Drug_allergy>
+</GP_Adverse_Reaction_Summary>
